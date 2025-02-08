@@ -145,8 +145,8 @@ export default function Home() {
               />
             </div>
             <div className="z-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 items-center">
-              <FacebookButton />
-              <InstagramButton />
+              <FacebookButton href="https://www.facebook.com" />
+              <InstagramButton href="https://www.instagram.com" />
               <Link href="mailto:treeworkersindustrialgroup@gmail.com">
                 treeworkersindustrialgroup@gmail.com
               </Link>

@@ -6,7 +6,25 @@ const landingButtonStyle =
 const actionButtonStyle =
   "bg-slate-950 outline outline-2 px-3 py-2 text-m text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-opacity-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate";
 
-export function LandingButton({ link, text, target, rel }) {
+interface LandingButtonChildren {
+  link?: string;
+  text?: string;
+  target?: string;
+  rel?: string;
+}
+
+interface ActionButtonChildren {
+  type?: "submit" | "reset" | "button" | undefined;
+  text?: string;
+  disabled?: boolean;
+}
+
+export const LandingButton: React.FC<LandingButtonChildren> = ({
+  link,
+  text,
+  target,
+  rel,
+}) => {
   return (
     <>
       <a
@@ -19,9 +37,13 @@ export function LandingButton({ link, text, target, rel }) {
       </a>
     </>
   );
-}
+};
 
-export function ActionButton({ type, text, disabled }) {
+export const ActionButton: React.FC<ActionButtonChildren> = ({
+  type,
+  text,
+  disabled,
+}) => {
   return (
     <>
       <button
@@ -33,4 +55,4 @@ export function ActionButton({ type, text, disabled }) {
       </button>
     </>
   );
-}
+};
