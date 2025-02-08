@@ -11,8 +11,28 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
-    name: "Home",
+    name: "HOME",
     route: "/",
+  },
+  {
+    name: "CONTACT",
+    route: "/contact",
+  },
+  {
+    name: "THE STICK(BLOG)",
+    route: "/the-stick",
+  },
+  {
+    name: "INDIGENOUS SOLIDARITY",
+    route: "/indigenous",
+  },
+  {
+    name: "KNOW YOUR RIGHTS",
+    route: "/rights",
+  },
+  {
+    name: "ZINES!",
+    route: "/zines",
   },
 ];
 
@@ -58,13 +78,13 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <div className="hidden md:flex space-x-8">
+        <div className="flex justify-items-center py-4">
+          <div className="mx-auto hidden md:flex md:space-x-8 lg:space-x-16 xl:space-x-24">
             {navItems.map((item) => (
               <Link
                 key={item.route}
                 href={item.route}
-                className="hover:text-green-500 transition-colors"
+                className=" hover:text-green-500 transition-colors"
               >
                 {item.name.valueOf()}
               </Link>
@@ -94,20 +114,17 @@ export default function Navigation() {
       {isMobileMenuOpen && (
         <div
           ref={menuRef}
-          className="md:hidden px-4 py-2 space-y-4 bg-black/90"
+          className="md:hidden px-4 py-2 space-y-4 bg-gray-900/90"
         >
-          <Link href="/submissions" className="block hover:text-green-500">
-            Submit
-          </Link>
-          <Link href="/films" className="block hover:text-green-500">
-            Films
-          </Link>
-          <Link href="/events" className="block hover:text-green-500">
-            Events
-          </Link>
-          <Link href="/about" className="block hover:text-green-500">
-            About
-          </Link>
+          {navItems.map((item) => (
+            <Link
+              key={item.route}
+              href={item.route}
+              className="block hover:text-green-500 transition-colors"
+            >
+              {item.name.valueOf()}
+            </Link>
+          ))}
         </div>
       )}
     </nav>
