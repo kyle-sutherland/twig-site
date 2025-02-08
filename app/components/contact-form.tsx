@@ -69,12 +69,7 @@ export default function ContactForm() {
         <input type="hidden" name="form-name" value="contact-form" />
         <p hidden>
           <label>
-            <input
-              type="text"
-              name="_gotcha"
-              className="hidden"
-              {...register("_gotcha")}
-            />
+            <input type="text" className="hidden" {...register("_gotcha")} />
           </label>
         </p>
 
