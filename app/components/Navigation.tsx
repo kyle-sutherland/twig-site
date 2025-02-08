@@ -19,7 +19,7 @@ const navItems: NavItem[] = [
     route: "/contact",
   },
   {
-    name: "THE STICK(BLOG)",
+    name: "THE STICK (BLOG)",
     route: "/the-stick",
   },
   {
@@ -74,7 +74,9 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/90 backdrop-blur-md" : "bg-transparent"
+        isScrolled
+          ? "bg-black/90 backdrop-blur-md text-white"
+          : "bg-transparent text-gray-950"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4">
@@ -84,7 +86,7 @@ export default function Navigation() {
               <Link
                 key={item.route}
                 href={item.route}
-                className=" hover:text-green-500 transition-colors"
+                className="transition-colors"
               >
                 {item.name.valueOf()}
               </Link>
@@ -114,13 +116,13 @@ export default function Navigation() {
       {isMobileMenuOpen && (
         <div
           ref={menuRef}
-          className="md:hidden px-4 py-2 space-y-4 bg-gray-900/90"
+          className={"md:hidden px-4 py-2 space-y-4 bg-gray-900/90 text-white"}
         >
           {navItems.map((item) => (
             <Link
               key={item.route}
               href={item.route}
-              className="block hover:text-green-500 transition-colors"
+              className="block transition-colors"
             >
               {item.name.valueOf()}
             </Link>
