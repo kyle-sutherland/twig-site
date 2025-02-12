@@ -6,16 +6,15 @@ import { ActionButton } from "./buttons";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 interface FormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  phone?: string;
-  guests: number;
-  cocktails?: boolean;
-  date: {
-    startDate: Date;
-    endDate: Date;
-  };
-  message: string;
+  offSeasonBase?: string;
+  currentCompany?: string;
+  pastCompanies?: string;
+  positions?: string;
+  refer?: string;
+  desiredChange?: string;
   "g-recaptcha-response"?: string;
   _gotcha?: string;
 }
@@ -24,10 +23,6 @@ export default function ContactForm() {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const { register, handleSubmit } = useForm<FormData>();
   const [submitterName, setSubmitterName] = useState("");
-  const [value, setValue] = useState({
-    startDate: new Date(),
-    endDate: new Date(new Date().setMonth(11)),
-  });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const onSubmit: SubmitHandler<FormData> = async (data) => {
@@ -41,11 +36,6 @@ export default function ContactForm() {
     } catch (error) {
       console.error("Error submitting form:", error);
     }
-  };
-
-  const handleValueChange = (newValue: typeof value) => {
-    console.log("newValue:", newValue);
-    setValue(newValue);
   };
 
   const confirmationMessage = (
@@ -73,21 +63,42 @@ export default function ContactForm() {
           </label>
         </p>
 
-        <div className="mt-0">
-          <label htmlFor="name" className="block text-sm font-medium leading-6">
-            Name
-          </label>
-          <input
-            id="name"
-            required
-            type="text"
-            className="block flex-1 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
-            {...register("name", { required: true })}
-            onChange={(e) => setSubmitterName(e.target.value)}
-          />
+        <div className="mt-0 flex flex-row">
+          <div className="flex-grow">
+            <label
+              htmlFor="firstName"
+              className="block text-sm font-medium leading-6"
+            >
+              First Name
+            </label>
+            <input
+              id="firstName"
+              required
+              type="text"
+              className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
+              {...register("firstName", { required: true })}
+              onChange={(e) => setSubmitterName(e.target.value)}
+            />
+          </div>
+          <div className="flex-grow">
+            <label
+              htmlFor="lastName"
+              className="block text-sm font-medium leading-6"
+            >
+              Last Name
+            </label>
+            <input
+              id="lastName"
+              required
+              type="text"
+              className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
+              {...register("lastName", { required: true })}
+              onChange={(e) => setSubmitterName(e.target.value)}
+            />
+          </div>
         </div>
 
-        <div className="mt-6">
+        <div>
           <label
             htmlFor="email"
             className="block text-sm font-medium leading-6"
@@ -98,52 +109,92 @@ export default function ContactForm() {
             id="email"
             required
             type="email"
-            className="block flex-1 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
+            className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
             {...register("email", { required: true })}
           />
         </div>
 
         <div>
           <label
-            htmlFor="guests"
+            htmlFor="offSeasonBase"
             className="block text-sm font-medium leading-6"
           >
-            No. Guests
+            Where are you based in the off season?
           </label>
           <input
-            id="guests"
+            id="offSeasonBase"
             required
-            type="number"
-            className="block flex-1 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
-            {...register("guests", { required: true, valueAsNumber: true })}
+            type="text"
+            className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
+            {...register("offSeasonBase", { required: true })}
           />
         </div>
 
         <div>
-          <label htmlFor="cocktails" className="text-sm font-medium leading-6">
-            Will you be having Signature Cocktails?
+          <label
+            htmlFor="currentCompany"
+            className="text-sm font-medium leading-6"
+          >
+            Which company are you currently, or most recently working for?
           </label>
           <input
-            id="cocktails"
-            type="checkbox"
-            className="flex-1 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4"
-            {...register("cocktails")}
+            id="currentCompany"
+            type="text"
+            className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
+            {...register("currentCompany")}
           />
         </div>
 
-        <div className="mt-6">
+        <div>
           <label
-            htmlFor="message"
+            htmlFor="pastComapinies"
+            className="text-sm font-medium leading-6"
+          >
+            What other companies have you worked for in the past?
+          </label>
+          <input
+            id="otherCompanies"
+            type="text"
+            className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
+            {...register("pastCompanies")}
+          />
+        </div>
+        <div>
+          <label htmlFor="positions" className="text-sm font-medium leading-6">
+            What positions have you held in those companies?
+          </label>
+          <input
+            id="positions"
+            type="text"
+            className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
+            {...register("positions")}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="refer" className="text-sm font-medium leading-6">
+            how did you hear about us?
+          </label>
+          <input
+            id="refer"
+            type="text"
+            className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
+            {...register("refer")}
+          />
+        </div>
+
+        <div>
+          <label
+            htmlFor="desiredChange"
             className="block text-sm font-medium leading-6"
           >
-            Message
+            What would you like to change about the industry?
           </label>
           <textarea
-            id="message"
-            required
+            id="desiredChange"
             className="block w-full border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-4 sm:text-sm"
             rows={3}
-            {...register("message", { required: true })}
+            {...register("desiredChange")}
           />
         </div>
 

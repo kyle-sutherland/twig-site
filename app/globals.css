@@ -19,3 +19,16 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.heading {
+  font-family: ayuthaya, sans-serif;
+}
+
+.green-section {
+  background: #032001;
+  color: #eeeded;
+}
+
+.grey-section {
+  background: #d5d5d6;
+}

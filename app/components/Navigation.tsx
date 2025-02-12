@@ -73,7 +73,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`heading fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-black/90 backdrop-blur-md text-white"
           : "bg-transparent text-gray-950"

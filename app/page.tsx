@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <div className="relative h-screen overflow-hidden" id="banner">
         <Image
-          src="/photo/twig-blog.png"
+          src="/photo/IMG_1832.jpeg"
           alt="Misty mountains"
           fill
           className="object-cover"
@@ -25,7 +25,7 @@ export default function Home() {
               height={400}
               className="animate-fade-in mb-16"
             />
-            <p className="text-2xl md:text-7xl mb-8 animate-fade-in-delay text-center px-4">
+            <p className="heading text-2xl md:text-7xl mb-8 animate-fade-in-delay text-center px-4">
               TREE WORKER INDUSTRIAL GROUP
             </p>
             <div className="animate-bounce mt-16">
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
       </div>
       <div className="justify-center">
-        <div className=" bg-emerald-950">
+        <div className="green-section">
           <div className="max-w-7xl flex flex-col md:flex-row mx-auto px-4 py-24 text-lg space-x-6">
             <div className="w-3/4">
               <p className="pb-10">
@@ -118,11 +118,13 @@ export default function Home() {
             height={500}
           />
         </div>
-        <div className="bg-gray-400 text-gray-950">
+        <div className="text-gray-950 grey-section">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="py-12 lg:py-16">
               <div className="pb-4">
-                <p className="md:text-7xl pb-2">WANT TO BECOME A MEMBER?</p>
+                <p className="heading md:text-7xl pb-2">
+                  WANT TO BECOME A MEMBER?
+                </p>
                 <p className="text-lg">
                   Have questions about... blah blah blah let's get in touch
                   about it! Some one will reach out to within a week or an
