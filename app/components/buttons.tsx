@@ -7,7 +7,7 @@ const actionButtonStyle =
   "bg-slate-950 outline outline-2 px-3 py-2 text-m text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-opacity-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate";
 
 interface LandingButtonChildren {
-  link?: string;
+  href?: string;
   text?: string;
   target?: string;
   rel?: string;
@@ -19,8 +19,8 @@ interface ActionButtonChildren {
   disabled?: boolean;
 }
 
-export const LandingButton: React.FC<LandingButtonChildren> = ({
-  link,
+export const LinkButton: React.FC<LandingButtonChildren> = ({
+  href,
   text,
   target,
   rel,
@@ -28,7 +28,7 @@ export const LandingButton: React.FC<LandingButtonChildren> = ({
   return (
     <>
       <a
-        href={link ? link : "#"}
+        href={href ? href : "#"}
         target={target ? target : ""}
         rel={rel ? rel : ""}
         className={landingButtonStyle}
