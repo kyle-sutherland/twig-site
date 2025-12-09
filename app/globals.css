@@ -1,6 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* Migrate CSS variable colors from tailwind.config.ts */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Define custom animations (currently broken, will now work) */
+  --animate-fade-in: fade-in 1s ease-in forwards;
+  --animate-fade-in-delay: fade-in-delay 1.3s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-delay {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 :root {
   --background: #ffffff;

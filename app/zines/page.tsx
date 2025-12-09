@@ -1,8 +1,10 @@
 import React from "react";
 import ZineCard from "../components/zinecard";
 
-interface ZinesProps {
-  zines: (typeof ZineCard)[];
+export default function Zines() {
+  return (
+    <div>
+      <h1>Zines</h1>
+    </div>
+  );
 }
-
-const Zines: React.FC<ZinesProps> = ({ zines }) => {};
