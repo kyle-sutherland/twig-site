@@ -50,12 +50,41 @@ The project uses Next.js 15's App Router:
 - Shows confirmation message on successful submission
 
 **Buttons** (`app/components/buttons.tsx`)
-- Two button variants: `LandingButton` (outline style) and `ActionButton` (filled style)
+- Two button variants: `LinkButton` (outline style) and `ActionButton` (filled style)
 - Styles defined as string constants at top of file
 - TypeScript interfaces for props
+- Used throughout site for CTAs and downloads
 
 **Social Buttons** (`facebook-button.tsx`, `instagram-button.tsx`)
 - SVG-based icon buttons linking to social media
+
+**PageHero** (`app/components/PageHero.tsx`)
+- Reusable hero section for internal pages
+- Props: `title` (string or bilingual object), `subtitle`, `backgroundImage`, `height`
+- Supports three heights: "tall", "medium" (default), "short"
+- Handles bilingual titles with inline display (e.g., "Contact / Contactez-nous")
+- Uses fade-in animations
+- Gradient fallback background if no image provided
+
+**ContentSection** (`app/components/ContentSection.tsx`)
+- Standardizes green/grey/white alternating sections
+- Props: `variant` ("green" | "grey" | "white"), `children`
+- Encapsulates `.green-section` and `.grey-section` patterns
+- Handles padding (`py-12 lg:py-24`) and max-width (`max-w-7xl`) automatically
+
+**PDFCard** (`app/components/PDFCard.tsx`)
+- Publication download card with cover image
+- Props: `coverImage`, `title`, `description`, `pdfUrl`, `fileSize`
+- Hover effect reveals description overlay
+- Download button using `LinkButton` component
+- Used on Zines and Indigenous pages
+
+**BlogPostCard** (`app/components/BlogPostCard.tsx`)
+- Blog post preview card for feed page
+- Props: `title`, `date`, `excerpt`, `slug`, `featuredImage`
+- Links to individual post route via `/the-stick/[slug]`
+- Hover effects on image (scale) and title (color change)
+- Automatic date formatting
 
 ### Styling Approach
 
@@ -96,6 +125,32 @@ Custom color palette:
 - Target: ES2017
 - Module resolution: bundler (Next.js specific)
 
+## Data Files Structure
+
+The site uses TypeScript data files for centralized content management:
+
+**`app/data/blogPosts.ts`**
+- Contains all blog post content for The Stick
+- Interface: `BlogPost` with slug, title, date, author, excerpt, content, featuredImage
+- Content stored as HTML strings for rich formatting
+- 4 posts currently: Storming the Kingdom, TWIG history, Treehab, Coast Range petition
+- Used by both feed page and dynamic `[slug]` routes
+
+**`app/data/publications.ts`**
+- Contains all Fireweed publication metadata
+- Interface: `Publication` with id, title, volume, issue, year, description, coverImage, pdfUrl, fileSize
+- Helper functions: `getPublicationsByVolume()`, `getAllVolumes()`
+- Organized by volume (1: 2021, 2: 2022)
+- 5 publications total
+
+**`app/data/rightsContent.ts`**
+- Contains employment standards data for all provinces
+- Interfaces: `ProvinceRights`, `RightsLink`, `EmploymentStandard`
+- Bilingual support: intro text in both EN and FR
+- Includes government links, NGO resources, and detailed standards
+- Helper function: `getProvinceBySlug()`
+- BC and Alberta have full content; Quebec is placeholder
+
 ## Important Notes
 
 ### Contact Form API Endpoint
@@ -106,21 +161,53 @@ The contact form posts to `/api/contact` but this API route does not exist yet. 
 - Process honeypot field for spam detection
 
 ### Navigation Routes
-Several routes referenced in Navigation component don't exist yet:
-- `/contact`
-- `/the-stick` (blog)
-- `/indigenous`
-- `/rights`
-- `/zines`
-
-These will need corresponding `app/[route]/page.tsx` files.
+All navigation routes are now implemented:
+- `/` - Homepage (existing)
+- `/contact` - Contact page with bilingual contact info and social media links
+- `/the-stick` - Blog feed page with 4 blog posts
+- `/the-stick/[slug]` - Dynamic routes for individual blog posts (SSG)
+- `/indigenous` - Indigenous Solidarity page with PDF resource
+- `/rights` - Know Your Rights hub page with province selector
+- `/rights/bc` - British Columbia employment standards (full content)
+- `/rights/alberta` - Alberta employment standards (full content)
+- `/rights/quebec` - Quebec placeholder (bilingual, awaiting contributions)
+- `/zines` - Fireweed publications page with all PDFs and covers
 
 ### Assets Structure
 - `/public/logo/` - TWIG logos (transparent white PNG)
-- `/public/photo/` - Photography assets
+- `/public/photo/` - Photography assets (misty mountains, etc.)
 - `/public/graphic/` - Graphics and prints
+- `/public/pdfs/` - Downloadable publications (7 PDFs: Fireweed series, Indigenous Solidarity, guides)
+- `/public/covers/` - Publication cover images for PDFCard components
+- `/public/blog/` - Blog post featured images
+
+**Note**: Original source assets remain in `/art-assets/` directory (not in public)
 
 ### Client vs Server Components
-- Most components are client components (`"use client"`) due to interactivity
-- Navigation, contact form, and buttons all use client-side features
-- Consider server components for static content pages when creating new routes
+- Navigation and contact form are client components (`"use client"`) due to interactivity
+- Most page components are server components (no "use client" directive)
+- Reusable components (PageHero, ContentSection, PDFCard, BlogPostCard) are server components
+- Individual blog post pages (`[slug]/page.tsx`) are async server components using Next.js 15's Promise-based params
+- Button components don't require "use client" as they're simple link/button elements
+
+### Bilingual Content Pattern
+The site uses **inline bilingual content** (not a language toggle):
+- Both English and French text appear in the same section
+- Pattern: English content → separator `* * * En français * * *` → French content
+- PageHero component accepts bilingual titles: `{ en: "Contact", fr: "Contactez-nous" }`
+- Data files (rightsContent.ts) use objects with `en` and `fr` properties
+- Maintains consistency with existing homepage approach
+
+### Blog Implementation
+- **Static generation (SSG)**: Blog posts use `generateStaticParams()` for build-time generation
+- **Dynamic routing**: `/the-stick/[slug]` pattern with Next.js 15 async params
+- **Content storage**: HTML strings in TypeScript data file (simple, no markdown processing needed)
+- **Date formatting**: Uses native `toLocaleDateString()` for consistent formatting
+- **Prose styling**: Uses Tailwind prose classes with custom font family for headings
+
+### PDF Downloads
+- All PDFs referenced with `/pdfs/` prefix (served from public directory)
+- File sizes displayed prominently (some files are 76MB)
+- PDFs never auto-load - only downloaded on click
+- Cover images use aspect ratio 3:4 for consistency
+- Hover effects reveal descriptions without obscuring covers
