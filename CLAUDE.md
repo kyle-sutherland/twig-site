@@ -60,7 +60,7 @@ The project uses Next.js 15's App Router:
 ### Styling Approach
 
 The project combines three styling methods:
-1. **Tailwind CSS** - Utility classes for layout and responsive design
+1. **Tailwind CSS v4** - Utility classes for layout and responsive design
 2. **Global CSS** - Custom `.heading`, `.green-section`, `.grey-section` classes in `globals.css`
 3. **Styled Components** - Available in dependencies but not widely used
 
@@ -68,6 +68,26 @@ Custom color palette:
 - Green section background: `#032001`
 - Grey section background: `#d5d5d6`
 - Heading font: Ayuthaya
+
+#### Tailwind CSS v4 Configuration
+
+**Important:** This project uses Tailwind CSS v4 with CSS-based configuration:
+
+- **No JavaScript config file** - The `tailwind.config.ts` file has been removed
+- **CSS-based configuration** - All Tailwind configuration is in `app/globals.css` using the `@theme` directive
+- **PostCSS plugin** - Uses `@tailwindcss/postcss` instead of `tailwindcss` in `postcss.config.mjs`
+- **Import syntax** - Uses `@import "tailwindcss"` instead of `@tailwind` directives
+
+**Custom animations** defined in `@theme` block:
+- `animate-fade-in` - Logo fade-in animation (1s ease-in)
+- `animate-fade-in-delay` - Heading fade-in with delay (1.3s ease-in)
+
+**Opacity utilities** use the `/0` syntax:
+- ✅ `bg-white/0` (correct)
+- ❌ `bg-opacity-0` (deprecated, don't use)
+
+**CSS variable colors** registered in `@theme`:
+- `--color-background` and `--color-foreground` mapped to CSS variables
 
 ### TypeScript Configuration
 
