@@ -1,8 +1,5 @@
 import Image from "next/image";
 import ContactForm from "./components/contact-form";
-import Link from "next/link";
-import FacebookButton from "./components/facebook-button";
-import InstagramButton from "./components/instagram-button";
 
 export default function Home() {
   return (
@@ -16,7 +13,7 @@ export default function Home() {
           priority
         />
         <div className="absolute inset-0 bg-black/10">
-          <div className="relative h-full flex flex-col items-center justify-center">
+          <div className="relative h-full flex flex-col items-center justify-start pt-40">
             {" "}
             <Image
               src="/logo/twig-logo-transparent-white.png"
@@ -28,21 +25,21 @@ export default function Home() {
             <p className="heading text-2xl md:text-7xl mb-8 animate-fade-in-delay text-center px-4">
               TREE WORKER INDUSTRIAL GROUP
             </p>
-            <div className="animate-bounce mt-16">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                />
-              </svg>
-            </div>
+          </div>
+          <div className="absolute bottom-8 left-8 animate-bounce">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
           </div>
         </div>
       </div>
@@ -144,25 +141,6 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-black text-white">
-          <div className="py-12 items-center justify-center flex flex-col lg:flex-row space-y-6 lg:space-x-10 lg:space-y-0">
-            <div>
-              <Image
-                src="/logo/twig-logo-transparent-white.png"
-                alt="twig logo"
-                width={300}
-                height={300}
-              />
-            </div>
-            <div className="z-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 items-center">
-              <FacebookButton href="https://www.facebook.com" />
-              <InstagramButton href="https://www.instagram.com" />
-              <Link href="mailto:treeworkersindustrialgroup@gmail.com">
-                treeworkersindustrialgroup@gmail.com
-              </Link>
             </div>
           </div>
         </div>

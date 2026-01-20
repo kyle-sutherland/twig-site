@@ -42,14 +42,18 @@ export default function Navigation() {
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
+    // Only add scroll listener on homepage
+    if (!isHomePage) return;
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
@@ -74,9 +78,11 @@ export default function Navigation() {
   return (
     <nav
       className={`heading fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+        !isHomePage
           ? "bg-black/90 backdrop-blur-md text-white"
-          : "bg-transparent text-gray-950"
+          : isScrolled
+            ? "bg-black/90 backdrop-blur-md text-white"
+            : "bg-transparent text-gray-950"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4">

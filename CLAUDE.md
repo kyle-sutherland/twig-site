@@ -28,7 +28,7 @@ Development server runs at `http://localhost:3000`.
 
 ### App Router Structure
 The project uses Next.js 15's App Router:
-- `app/layout.tsx` - Root layout with Geist fonts, global Navigation component
+- `app/layout.tsx` - Root layout with Geist fonts, global Navigation and Footer components
 - `app/page.tsx` - Homepage with hero banner, about section, contact form
 - `app/components/` - Reusable React components
 - `app/globals.css` - Global styles including Tailwind directives and custom classes
@@ -36,7 +36,9 @@ The project uses Next.js 15's App Router:
 ### Key Components
 
 **Navigation** (`app/components/Navigation.tsx`)
-- Client component with scroll-based styling (transparent → dark background)
+- Client component with conditional scroll-based styling
+- Scroll animation (transparent → dark background) **only on homepage** (`/`)
+- All other pages have static black navbar with white text
 - Mobile hamburger menu with click-outside-to-close behavior
 - Fixed positioning with z-index management
 - Uses refs for menu/button DOM access
@@ -48,6 +50,9 @@ The project uses Next.js 15's App Router:
 - Honeypot field (`_gotcha`) for spam prevention
 - Submits to `/api/contact` endpoint (not yet implemented)
 - Shows confirmation message on successful submission
+- **Design**: Inline labels via placeholders, white backgrounds on all fields
+- Consistent spacing with `mt-4` between field groups
+- Clean, modern form styling with focus rings
 
 **Buttons** (`app/components/buttons.tsx`)
 - Two button variants: `LinkButton` (outline style) and `ActionButton` (filled style)
@@ -55,8 +60,13 @@ The project uses Next.js 15's App Router:
 - TypeScript interfaces for props
 - Used throughout site for CTAs and downloads
 
-**Social Buttons** (`facebook-button.tsx`, `instagram-button.tsx`)
-- SVG-based icon buttons linking to social media
+**Footer** (`app/components/Footer.tsx`)
+- Global footer component included in `app/layout.tsx`
+- Appears on all pages across the site
+- Contains TWIG logo and contact information
+- Inline SVG social media glyphs (Facebook, Instagram) with hover scale effects
+- Email link with subtle hover effect
+- Black background with white text and icons
 
 **PageHero** (`app/components/PageHero.tsx`)
 - Reusable hero section for internal pages
@@ -74,9 +84,13 @@ The project uses Next.js 15's App Router:
 
 **PDFCard** (`app/components/PDFCard.tsx`)
 - Publication download card with cover image
-- Props: `coverImage`, `title`, `description`, `pdfUrl`, `fileSize`
-- Hover effect reveals description overlay
-- Download button using `LinkButton` component
+- Props: `coverImage`, `title`, `description`, `pdfUrl`, `fileSize`, `maxWidth` (optional, default 500px)
+- **Square frames** with `aspect-square` for consistent sizing
+- **Side cropping** using `object-cover` to fill square consistently
+- Title and simple "PDF" text link appear **below the image frame**
+- Dark text (`text-gray-900`) for title
+- Hover effect reveals description overlay on cover image
+- Cards grow to fill available space up to `maxWidth`
 - Used on Zines and Indigenous pages
 
 **BlogPostCard** (`app/components/BlogPostCard.tsx`)
@@ -190,6 +204,14 @@ All navigation routes are now implemented:
 - Individual blog post pages (`[slug]/page.tsx`) are async server components using Next.js 15's Promise-based params
 - Button components don't require "use client" as they're simple link/button elements
 
+### Homepage Hero Header Design
+- Full-screen height (`h-screen`) hero banner with background image
+- Logo and heading positioned with `pt-40` (160px from top) for generous headroom
+- Fade-in animations: logo (`animate-fade-in`), heading (`animate-fade-in-delay`)
+- Small bouncing down arrow in bottom-left corner (`bottom-8 left-8`)
+- Arrow is minimal size (`w-4 h-4`) and non-intrusive
+- Background overlay: `bg-black/10` for subtle darkening
+
 ### Bilingual Content Pattern
 The site uses **inline bilingual content** (not a language toggle):
 - Both English and French text appear in the same section
@@ -205,9 +227,11 @@ The site uses **inline bilingual content** (not a language toggle):
 - **Date formatting**: Uses native `toLocaleDateString()` for consistent formatting
 - **Prose styling**: Uses Tailwind prose classes with custom font family for headings
 
-### PDF Downloads
+### PDF Downloads & Zine Cards
 - All PDFs referenced with `/pdfs/` prefix (served from public directory)
 - File sizes displayed prominently (some files are 76MB)
 - PDFs never auto-load - only downloaded on click
-- Cover images use aspect ratio 3:4 for consistency
+- Cover images displayed in **square frames** (1:1 aspect ratio) with side cropping
+- Cards grow to fill available grid space up to configurable maximum width (default 500px)
+- Title and "PDF" link positioned below the cover image frame
 - Hover effects reveal descriptions without obscuring covers
