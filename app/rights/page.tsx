@@ -132,16 +132,14 @@ export default function RightsHubPage() {
                 <Bilingual en="Quebec" fr="Québec" />
               </h3>
               <p className="text-gray-700 mb-6">
-                <Bilingual
-                  en="Information coming soon."
-                  fr="Nous recherchons des contributeurs."
-                />
+                Normes du travail et protections des travailleurs spécifiques au
+                Québec.
               </p>
               <Link
                 href="/rights/quebec"
                 className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
-                <Bilingual en="Learn More →" fr="À venir →" />
+                En savoir plus →
               </Link>
             </div>
           </div>
