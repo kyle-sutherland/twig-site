@@ -61,7 +61,7 @@ export default function RightsHubPage() {
           <h2 className="heading text-3xl md:text-4xl mb-8 text-center text-gray-900">
             <Bilingual en="Select Your Province" fr="Choisissez votre province" />
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* BC Card */}
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
               <h3 className="heading text-2xl text-gray-900 mb-4">
@@ -90,6 +90,39 @@ export default function RightsHubPage() {
                 className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
                 <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* Ontario Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">Ontario</h3>
+              <p className="heading text-xl text-gray-700 mb-4">Ontario</p>
+              <p className="text-gray-700 mb-6">
+                Employment standards and worker protections specific to Ontario.
+              </p>
+              <Link
+                href="/rights/ontario"
+                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                Learn More →
+              </Link>
+            </div>
+
+            {/* Saskatchewan Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                Saskatchewan
+              </h3>
+              <p className="heading text-xl text-gray-700 mb-4">Saskatchewan</p>
+              <p className="text-gray-700 mb-6">
+                Employment standards and worker protections specific to
+                Saskatchewan.
+              </p>
+              <Link
+                href="/rights/saskatchewan"
+                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                Learn More →
               </Link>
             </div>
 
