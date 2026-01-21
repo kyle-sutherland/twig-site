@@ -1,111 +1,111 @@
 import Image from "next/image";
-import Link from "next/link";
-import PageHero from "../components/PageHero";
 import ContentSection from "../components/ContentSection";
-import FacebookButton from "../components/facebook-button";
-import InstagramButton from "../components/instagram-button";
 
 export default function ContactPage() {
   return (
     <main>
-      <PageHero title={{ en: "Contact", fr: "Contactez-nous" }} />
-
-      <ContentSection variant="green">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="heading text-3xl md:text-5xl mb-6">Get in Touch</h2>
-            <p className="text-lg mb-6">
-              Got questions about TWIG, your work conditions or simply want to
-              get in touch?
-            </p>
-
-            <div className="space-y-4 mb-8">
-              <div>
-                <h3 className="heading text-xl mb-2">Email</h3>
-                <a
-                  href="mailto:treeworkersindustrialgroup@gmail.com"
-                  className="text-lg hover:underline"
-                >
-                  treeworkersindustrialgroup@gmail.com
-                </a>
-              </div>
-
-              <div>
-                <h3 className="heading text-xl mb-2">Social Media</h3>
-                <div className="flex space-x-4">
-                  <FacebookButton href="https://www.facebook.com/TreeWorkersIndustrialGroup" />
-                  <InstagramButton href="https://www.instagram.com/tree_workers_industrial_group/" />
-                </div>
-              </div>
-
-              <div>
-                <h3 className="heading text-xl mb-2">Become a Member</h3>
-                <p className="text-lg mb-3">Wanna become a member?</p>
-                <a
-                  href="https://forms.gle/cxuJdMJtgmm9QQU89"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-white/0 outline outline-2 px-6 py-3 text-lg outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
-                >
-                  Join TWIG
-                </a>
-              </div>
-            </div>
-
-            <div className="border-t border-white/20 pt-6 mt-8">
-              <p className="text-lg mb-2">* * * En français * * *</p>
-            </div>
-
-            <h2 className="heading text-3xl md:text-5xl mb-6 mt-6">
-              Prenez contact
-            </h2>
-            <p className="text-lg mb-6">
-              Tu as des questions sur TWIG, tes conditions de travail ou tu
-              veux simplement prendre contact?
-            </p>
-
-            <div className="space-y-4">
-              <div>
-                <h3 className="heading text-xl mb-2">Courriel</h3>
-                <a
-                  href="mailto:treeworkersindustrialgroup@gmail.com"
-                  className="text-lg hover:underline"
-                >
-                  treeworkersindustrialgroup@gmail.com
-                </a>
-              </div>
-
-              <div>
-                <h3 className="heading text-xl mb-2">Réseaux sociaux</h3>
-                <div className="flex space-x-4">
-                  <FacebookButton href="https://www.facebook.com/TreeWorkersIndustrialGroup" />
-                  <InstagramButton href="https://www.instagram.com/tree_workers_industrial_group/" />
-                </div>
-              </div>
-
-              <div>
-                <h3 className="heading text-xl mb-2">Devenir membre</h3>
-                <p className="text-lg mb-3">Tu veux devenir membre?</p>
-                <a
-                  href="https://forms.gle/cxuJdMJtgmm9QQU89"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-white/0 outline outline-2 px-6 py-3 text-lg outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
-                >
-                  Rejoindre TWIG
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex justify-center">
+      <ContentSection variant="grey">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="flex justify-center mb-12">
             <Image
-              src="/logo/twig-logo-transparent-white.png"
+              src="/logo/twig-logo-transparent.png"
               alt="TWIG Logo"
               width={400}
               height={400}
               className="animate-fade-in"
             />
+          </div>
+
+          <h1 className="heading text-4xl md:text-6xl mb-8">Contact</h1>
+
+          <div className="text-lg space-y-6 mb-12">
+            <p>
+              Got questions about TWIG, your work conditions or simply want to get in touch? Reach out via our{" "}
+              <a
+                href="https://www.facebook.com/TreeWorkersIndustrialGroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-black/70"
+              >
+                Facebook page
+              </a>
+              ,{" "}
+              <a
+                href="https://www.instagram.com/tree_workers_industrial_group/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-black/70"
+              >
+                Instagram
+              </a>
+              , or email us at{" "}
+              <a
+                href="mailto:treeworkersindustrialgroup@gmail.com"
+                className="underline hover:text-black/70"
+              >
+                treeworkersindustrialgroup@gmail.com
+              </a>
+              .
+            </p>
+            <p>
+              Wanna become a member? Fill out{" "}
+              <a
+                href="https://forms.gle/cxuJdMJtgmm9QQU89"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-black/70"
+              >
+                this form
+              </a>
+              .
+            </p>
+          </div>
+
+          <div className="border-t border-black/20 pt-10 mt-10">
+            <p className="text-lg mb-8">* * * En français * * *</p>
+          </div>
+
+          <div className="text-lg space-y-6">
+            <p>
+              Tu as des questions sur TWIG, tes conditions de travail ou tu veux simplement prendre contact? Contacte-nous via{" "}
+              <a
+                href="https://www.facebook.com/TreeWorkersIndustrialGroup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-black/70"
+              >
+                notre page Facebook
+              </a>
+              ,{" "}
+              <a
+                href="https://www.instagram.com/tree_workers_industrial_group/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-black/70"
+              >
+                Instagram
+              </a>
+              , ou envoie-nous un courriel à{" "}
+              <a
+                href="mailto:treeworkersindustrialgroup@gmail.com"
+                className="underline hover:text-black/70"
+              >
+                treeworkersindustrialgroup@gmail.com
+              </a>
+              .
+            </p>
+            <p>
+              Tu veux devenir membre? Remplis{" "}
+              <a
+                href="https://forms.gle/cxuJdMJtgmm9QQU89"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-black/70"
+              >
+                ce formulaire
+              </a>
+              .
+            </p>
           </div>
         </div>
       </ContentSection>

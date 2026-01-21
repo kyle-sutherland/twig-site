@@ -61,18 +61,18 @@ export default function AlbertaRightsPage() {
           </h2>
           <div className="space-y-4">
             {albertaData.ngoLinks.map((link, index) => (
-              <div key={index} className="bg-black/20 p-6 rounded-lg">
-                <h3 className="heading text-xl mb-2">
+              <div key={index} className="bg-white p-6 rounded-lg shadow">
+                <h3 className="heading text-xl text-gray-900 mb-2">
                   <a
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:underline"
+                    className="text-green-700 hover:underline"
                   >
                     {link.title} →
                   </a>
                 </h3>
-                <p>{link.description}</p>
+                <p className="text-gray-700">{link.description}</p>
               </div>
             ))}
           </div>

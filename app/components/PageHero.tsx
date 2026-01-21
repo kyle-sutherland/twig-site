@@ -19,11 +19,6 @@ export default function PageHero({
     short: "h-[40vh]",
   }[height];
 
-  const titleText =
-    typeof title === "string"
-      ? title
-      : `${title.en} / ${title.fr}`;
-
   return (
     <div className={`relative ${heightClass} overflow-hidden`}>
       {backgroundImage ? (
@@ -39,9 +34,22 @@ export default function PageHero({
       )}
       <div className="absolute inset-0 bg-black/30">
         <div className="relative h-full flex flex-col items-center justify-center px-4">
-          <h1 className="heading text-3xl md:text-6xl lg:text-7xl mb-4 animate-fade-in text-center text-white">
-            {titleText}
-          </h1>
+          <div className="flex flex-col items-center animate-fade-in mb-4">
+            {typeof title === "string" ? (
+              <h1 className="heading text-3xl md:text-6xl lg:text-7xl text-center text-white">
+                {title}
+              </h1>
+            ) : (
+              <>
+                <h1 className="heading text-3xl md:text-6xl lg:text-7xl text-center text-white">
+                  {title.en}
+                </h1>
+                <h1 className="heading text-3xl md:text-6xl lg:text-7xl text-center text-white">
+                  {title.fr}
+                </h1>
+              </>
+            )}
+          </div>
           {subtitle && (
             <p className="text-lg md:text-2xl animate-fade-in-delay text-center text-white max-w-3xl">
               {subtitle}

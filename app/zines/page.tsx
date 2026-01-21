@@ -1,11 +1,12 @@
 import PageHero from "../components/PageHero";
 import ContentSection from "../components/ContentSection";
 import PDFCard from "../components/PDFCard";
-import { publications, getPublicationsByVolume } from "../data/publications";
+import { publications, getPublicationsByVolume, getFormattedTitle, getFormattedTitleFr } from "../data/publications";
 
 export default function ZinesPage() {
   const volume1 = getPublicationsByVolume(1);
   const volume2 = getPublicationsByVolume(2);
+  const volume3 = getPublicationsByVolume(3);
 
   return (
     <main>
@@ -16,23 +17,23 @@ export default function ZinesPage() {
         }}
       />
 
-      <ContentSection variant="green">
+      <ContentSection variant="grey">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="heading text-3xl md:text-5xl mb-6">
+          <h2 className="heading text-3xl md:text-5xl mb-6 text-gray-900">
             Fireweed: Educational Resources for Tree Workers
           </h2>
-          <p className="text-lg mb-6">
+          <p className="text-lg mb-6 text-gray-900">
             Fireweed is TWIG's publication series, offering comprehensive
             resources on workers' rights, mental health, harm reduction, and
             building safer, more equitable work environments in the silviculture
             industry.
           </p>
 
-          <div className="border-t border-white/20 pt-6 mt-8 mb-6">
-            <p className="text-lg mb-2">* * * En français * * *</p>
+          <div className="border-t border-black/20 pt-6 mt-8 mb-6">
+            <p className="text-lg mb-2 text-gray-900">* * * En français * * *</p>
           </div>
 
-          <p className="text-lg">
+          <p className="text-lg text-gray-900">
             Fireweed est la série de publications de TWIG, offrant des
             ressources complètes sur les droits des travailleurs, la santé
             mentale, la réduction des méfaits et la création d'environnements de
@@ -44,37 +45,69 @@ export default function ZinesPage() {
       <ContentSection variant="grey">
         <div className="max-w-7xl mx-auto">
           <h2 className="heading text-4xl md:text-5xl mb-8 text-center text-gray-900">
-            Volume 1 (2021)
+            Volume 3 (2025)
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {volume1.map((pub) => (
+          <div className="flex justify-center max-w-2xl mx-auto">
+            {volume3.map((pub) => (
               <PDFCard
                 key={pub.id}
                 coverImage={pub.coverImage}
-                title={pub.title}
+                title={getFormattedTitle(pub)}
+                titleFr={getFormattedTitleFr(pub)}
                 description={pub.description}
                 pdfUrl={pub.pdfUrl}
+                pdfUrlFr={pub.pdfUrlFr}
                 fileSize={pub.fileSize}
+                fileSizeFr={pub.fileSizeFr}
+                backgroundColor={pub.backgroundColor}
               />
             ))}
           </div>
         </div>
       </ContentSection>
 
-      <ContentSection variant="green">
+      <ContentSection variant="grey">
         <div className="max-w-7xl mx-auto">
-          <h2 className="heading text-4xl md:text-5xl mb-8 text-center">
+          <h2 className="heading text-4xl md:text-5xl mb-8 text-center text-gray-900">
             Volume 2 (2022)
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center max-w-4xl mx-auto">
             {volume2.map((pub) => (
               <PDFCard
                 key={pub.id}
                 coverImage={pub.coverImage}
-                title={pub.title}
+                title={getFormattedTitle(pub)}
+                titleFr={getFormattedTitleFr(pub)}
                 description={pub.description}
                 pdfUrl={pub.pdfUrl}
+                pdfUrlFr={pub.pdfUrlFr}
                 fileSize={pub.fileSize}
+                fileSizeFr={pub.fileSizeFr}
+                backgroundColor={pub.backgroundColor}
+              />
+            ))}
+          </div>
+        </div>
+      </ContentSection>
+
+      <ContentSection variant="grey">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="heading text-4xl md:text-5xl mb-8 text-center text-gray-900">
+            Volume 1 (2021)
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            {volume1.map((pub) => (
+              <PDFCard
+                key={pub.id}
+                coverImage={pub.coverImage}
+                title={getFormattedTitle(pub)}
+                titleFr={getFormattedTitleFr(pub)}
+                description={pub.description}
+                pdfUrl={pub.pdfUrl}
+                pdfUrlFr={pub.pdfUrlFr}
+                fileSize={pub.fileSize}
+                fileSizeFr={pub.fileSizeFr}
+                backgroundColor={pub.backgroundColor}
               />
             ))}
           </div>
