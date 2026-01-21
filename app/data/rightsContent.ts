@@ -314,22 +314,78 @@ export const provinceRights: ProvinceRights[] = [
     slug: "quebec",
     name: { en: "Quebec", fr: "Québec" },
     intro: {
-      en: "Employment standards information for Quebec is currently being compiled. If you have expertise in Quebec labour law or French translation skills, we'd love your help!",
-      fr: "Les informations sur les normes d'emploi pour le Québec sont en cours de compilation. Si vous avez une expertise en droit du travail québécois ou des compétences en traduction, nous aimerions votre aide!",
+      en: "In Quebec, workers are protected by the Loi sur les normes du travail (Labour Standards Act). Tree planters have specific rights regarding wages, overtime, and working conditions.",
+      fr: "Au Québec, les travailleurs et travailleuses sont protégés par la Loi sur les normes du travail. Les planteurs d'arbres ont des droits spécifiques concernant les salaires, les heures supplémentaires et les conditions de travail.",
     },
     governmentLinks: [
       {
-        title: "Commission des normes du travail",
+        title: "Commission des normes de l'équité de la santé et de la sécurité du travail (CNESST)",
         url: "https://www.cnesst.gouv.qc.ca/",
-        description: "Official Quebec employment standards commission",
+        description: "Commission officielle des normes du travail et de la santé et sécurité au travail",
+      },
+      {
+        title: "Loi sur les normes du travail",
+        url: "https://www.legisquebec.gouv.qc.ca/fr/document/lc/N-1.1",
+        description: "Texte complet de la Loi sur les normes du travail",
+      },
+      {
+        title: "Conditions de travail - CNESST",
+        url: "https://www.cnesst.gouv.qc.ca/fr/conditions-travail",
+        description: "Informations détaillées sur les conditions de travail au Québec",
       },
     ],
-    ngoLinks: [],
+    ngoLinks: [
+      {
+        title: "Fédération des travailleurs et travailleuses du Québec (FTQ)",
+        url: "https://ftq.qc.ca/",
+        description: "Plus grande centrale syndicale au Québec, représentant plus de 600 000 membres",
+      },
+      {
+        title: "Au bas de l'échelle",
+        url: "https://www.aubasdelechelle.ca/",
+        description: "Organisme de défense des droits des personnes non syndiquées",
+      },
+      {
+        title: "Centrale des syndicats du Québec (CSQ)",
+        url: "https://www.lacsq.org/",
+        description: "Organisation syndicale représentant 225 000 personnes",
+      },
+    ],
     standards: [
       {
-        title: "Coming Soon / À venir",
+        title: "Salaire minimum",
         content:
-          "We are working to compile comprehensive employment standards information for Quebec tree planters. If you can help contribute content or translations, please contact us at treeworkersindustrialgroup@gmail.com.",
+          "<strong>16,10 $/heure</strong> (en vigueur depuis le 1er mai 2025)<br/>Toutes les heures de travail, y compris la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement doivent être rémunérées au salaire minimum.",
+      },
+      {
+        title: "Heures supplémentaires",
+        content:
+          "Les heures travaillées au-delà de <strong>40 heures par semaine</strong> doivent être rémunérées au taux de <strong>1,5 fois le salaire horaire régulier</strong> (minimum 24,15 $/heure au salaire minimum). Les heures supplémentaires peuvent aussi être compensées par un congé équivalent payé.",
+      },
+      {
+        title: "Durée maximale du travail",
+        content:
+          "Un salarié peut refuser de travailler plus de <strong>2 heures au-delà de ses heures habituelles de travail</strong> ou plus de <strong>14 heures de travail par période de 24 heures</strong>. Le salarié peut aussi refuser de travailler si l'horaire n'est pas fixé pour s'occuper d'un membre de sa famille ou d'un proche.",
+      },
+      {
+        title: "Déductions",
+        content:
+          "L'employeur peut effectuer des déductions sur le salaire seulement si la loi, un règlement, une ordonnance judiciaire, une convention collective, un décret ou un mandat écrit du salarié l'y autorise. Les déductions arbitraires pour dommages à l'équipement ou erreurs de production ne sont pas permises.",
+      },
+      {
+        title: "Jours fériés",
+        content:
+          "Le Québec compte <strong>8 jours fériés chômés et payés</strong> par année. L'indemnité versée pour chaque jour férié est égale à <strong>1/20 du salaire gagné au cours des 4 semaines complètes de paie précédant la semaine du congé</strong>. Si vous travaillez un jour férié, vous recevez votre indemnité de jour férié plus votre salaire régulier pour les heures travaillées.",
+      },
+      {
+        title: "Vacances annuelles",
+        content:
+          "Après 1 an de service continu : <strong>2 semaines de vacances continues</strong> (4% du salaire brut). Après 3 ans de service continu : <strong>3 semaines de vacances continues</strong> (6% du salaire brut). L'employeur ne peut remplacer les vacances par une indemnité compensatoire, sauf exceptions prévues dans une convention collective.",
+      },
+      {
+        title: "Santé et sécurité au travail (CNESST)",
+        content:
+          "Pour les préoccupations de santé et sécurité, y compris les maladies, blessures, refus de travail dangereux, harcèlement et problèmes d'assainissement, contactez la CNESST au <strong>1-844-838-0808</strong>. Tous les travailleurs ont le droit de refuser d'exécuter un travail s'ils croient que cela met en danger leur santé, leur sécurité ou leur intégrité physique ou psychologique.",
       },
     ],
   },
