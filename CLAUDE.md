@@ -206,7 +206,7 @@ All navigation routes are now implemented:
 
 ### Homepage Hero Header Design
 - Full-screen height (`h-screen`) hero banner with background image
-- Logo and heading positioned with `pt-40` (160px from top) for generous headroom
+- Logo and heading vertically centered (`justify-center`) with slight upward offset (`pb-16`)
 - Fade-in animations: logo (`animate-fade-in`), heading (`animate-fade-in-delay`)
 - Small bouncing down arrow in bottom-left corner (`bottom-8 left-8`)
 - Arrow is minimal size (`w-4 h-4`) and non-intrusive

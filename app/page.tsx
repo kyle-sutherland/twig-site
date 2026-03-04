@@ -9,11 +9,11 @@ export default function Home() {
           src="/photo/IMG_1832.jpeg"
           alt="Misty mountains"
           fill
-          className="object-cover object-bottom"
+          className="object-cover [object-position:25%_100%] md:object-bottom"
           priority
         />
         <div className="absolute inset-0 bg-black/10">
-          <div className="relative h-full flex flex-col items-center justify-start pt-40">
+          <div className="relative h-full flex flex-col items-center justify-center pb-16 md:pt-12 lg:pt-0">
             {" "}
             <Image
               src="/logo/twig-logo-transparent-white.png"

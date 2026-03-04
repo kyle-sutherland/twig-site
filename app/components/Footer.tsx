@@ -13,7 +13,7 @@ export default function Footer() {
             height={300}
           />
         </div>
-        <div className="z-10 flex flex-row space-x-6 items-center">
+        <div className="z-10 flex flex-wrap gap-6 items-center justify-center px-4">
           <Link
             href="https://www.facebook.com"
             target="_blank"
