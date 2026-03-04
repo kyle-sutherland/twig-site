@@ -1,5 +1,6 @@
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import { LanguageProvider } from "./context/LanguageContext";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -25,13 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navigation />
-        {children}
-        <Footer />
+        <LanguageProvider>
+          <Navigation />
+          {children}
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

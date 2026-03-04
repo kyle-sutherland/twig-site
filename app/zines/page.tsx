@@ -1,7 +1,8 @@
 import PageHero from "../components/PageHero";
 import ContentSection from "../components/ContentSection";
 import PDFCard from "../components/PDFCard";
-import { publications, getPublicationsByVolume, getFormattedTitle, getFormattedTitleFr } from "../data/publications";
+import Bilingual from "../components/Bilingual";
+import { getPublicationsByVolume, getFormattedTitle, getFormattedTitleFr } from "../data/publications";
 
 export default function ZinesPage() {
   const volume1 = getPublicationsByVolume(1);
@@ -22,23 +23,24 @@ export default function ZinesPage() {
           <h2 className="heading text-3xl md:text-5xl mb-6 text-gray-900">
             Fireweed: Educational Resources for Tree Workers
           </h2>
-          <p className="text-lg mb-6 text-gray-900">
-            Fireweed is TWIG's publication series, offering comprehensive
-            resources on workers' rights, mental health, harm reduction, and
-            building safer, more equitable work environments in the silviculture
-            industry.
-          </p>
-
-          <div className="border-t border-black/20 pt-6 mt-8 mb-6">
-            <p className="text-lg mb-2 text-gray-900">* * * En français * * *</p>
-          </div>
-
-          <p className="text-lg text-gray-900">
-            Fireweed est la série de publications de TWIG, offrant des
-            ressources complètes sur les droits des travailleurs, la santé
-            mentale, la réduction des méfaits et la création d'environnements de
-            travail plus sûrs et équitables dans l'industrie sylvicole.
-          </p>
+          <Bilingual
+            en={
+              <p className="text-lg mb-6 text-gray-900">
+                Fireweed is TWIG's publication series, offering comprehensive
+                resources on workers' rights, mental health, harm reduction, and
+                building safer, more equitable work environments in the silviculture
+                industry.
+              </p>
+            }
+            fr={
+              <p className="text-lg text-gray-900">
+                Fireweed est la série de publications de TWIG, offrant des
+                ressources complètes sur les droits des travailleurs, la santé
+                mentale, la réduction des méfaits et la création d'environnements de
+                travail plus sûrs et équitables dans l'industrie sylvicole.
+              </p>
+            }
+          />
         </div>
       </ContentSection>
 
