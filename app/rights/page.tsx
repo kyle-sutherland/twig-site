@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PageHero from "../components/PageHero";
 import ContentSection from "../components/ContentSection";
-import { LinkButton } from "../components/buttons";
+import Bilingual from "../components/Bilingual";
 
 export default function RightsHubPage() {
   return (
@@ -15,53 +15,58 @@ export default function RightsHubPage() {
 
       <ContentSection variant="green">
         <div className="max-w-4xl mx-auto">
-          <h2 className="heading text-3xl md:text-5xl mb-6">
-            Employment Standards for Tree Workers
-          </h2>
-          <p className="text-lg mb-6">
-            When you work in so-called Canada, you are entitled to minimal work
-            conditions. These vary from province to province, and employment
-            standards are not the same across the country.
-          </p>
-          <p className="text-lg mb-6">
-            It is crucial to keep track daily of the trees you plant, the piece
-            rates paid, hours worked, and any deductions made. Documentation is
-            your strongest tool when enforcing your rights.
-          </p>
-
-          <div className="border-t border-white/20 pt-6 mt-8 mb-6">
-            <p className="text-lg mb-2">* * * En français * * *</p>
-          </div>
-
-          <p className="text-lg mb-6">
-            Lorsque vous travaillez dans le soi-disant Canada, vous avez droit à
-            des conditions de travail minimales. Celles-ci varient d'une
-            province à l'autre, et les normes d'emploi ne sont pas les mêmes
-            dans tout le pays.
-          </p>
-          <p className="text-lg">
-            Il est crucial de suivre quotidiennement les arbres que vous
-            plantez, les tarifs à la pièce payés, les heures travaillées et
-            toute déduction effectuée. La documentation est votre meilleur outil
-            pour faire respecter vos droits.
-          </p>
+          <Bilingual
+            en={
+              <>
+                <h2 className="heading text-3xl md:text-5xl mb-6">
+                  Employment Standards for Tree Workers
+                </h2>
+                <p className="text-lg mb-6">
+                  When you work in so-called Canada, you are entitled to minimal work
+                  conditions. These vary from province to province, and employment
+                  standards are not the same across the country.
+                </p>
+                <p className="text-lg mb-6">
+                  It is crucial to keep track daily of the trees you plant, the piece
+                  rates paid, hours worked, and any deductions made. Documentation is
+                  your strongest tool when enforcing your rights.
+                </p>
+              </>
+            }
+            fr={
+              <>
+                <h2 className="heading text-3xl md:text-5xl mb-6">
+                  Normes d'emploi pour les travailleurs forestiers
+                </h2>
+                <p className="text-lg mb-6">
+                  Lorsque vous travaillez dans le soi-disant Canada, vous avez droit à
+                  des conditions de travail minimales. Celles-ci varient d'une
+                  province à l'autre, et les normes d'emploi ne sont pas les mêmes
+                  dans tout le pays.
+                </p>
+                <p className="text-lg">
+                  Il est crucial de suivre quotidiennement les arbres que vous
+                  plantez, les tarifs à la pièce payés, les heures travaillées et
+                  toute déduction effectuée. La documentation est votre meilleur outil
+                  pour faire respecter vos droits.
+                </p>
+              </>
+            }
+          />
         </div>
       </ContentSection>
 
       <ContentSection variant="grey">
         <div className="max-w-6xl mx-auto">
           <h2 className="heading text-3xl md:text-4xl mb-8 text-center text-gray-900">
-            Select Your Province / Choisissez votre province
+            <Bilingual en="Select Your Province" fr="Choisissez votre province" />
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* BC Card */}
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
               <h3 className="heading text-2xl text-gray-900 mb-4">
-                British Columbia
+                <Bilingual en="British Columbia" fr="Colombie-Britannique" />
               </h3>
-              <p className="heading text-xl text-gray-700 mb-4">
-                Colombie-Britannique
-              </p>
               <p className="text-gray-700 mb-6">
                 Comprehensive employment standards information for tree workers
                 in BC.
@@ -70,14 +75,13 @@ export default function RightsHubPage() {
                 href="/rights/bc"
                 className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
-                Learn More →
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
               </Link>
             </div>
 
             {/* Alberta Card */}
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
               <h3 className="heading text-2xl text-gray-900 mb-4">Alberta</h3>
-              <p className="heading text-xl text-gray-700 mb-4">Alberta</p>
               <p className="text-gray-700 mb-6">
                 Employment standards and worker protections specific to Alberta.
               </p>
@@ -85,22 +89,26 @@ export default function RightsHubPage() {
                 href="/rights/alberta"
                 className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
-                Learn More →
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
               </Link>
             </div>
 
             {/* Quebec Card */}
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <h3 className="heading text-2xl text-gray-900 mb-4">Quebec</h3>
-              <p className="heading text-xl text-gray-700 mb-4">Québec</p>
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                <Bilingual en="Quebec" fr="Québec" />
+              </h3>
               <p className="text-gray-700 mb-6">
-                Information coming soon. Nous recherchons des contributeurs.
+                <Bilingual
+                  en="Information coming soon."
+                  fr="Nous recherchons des contributeurs."
+                />
               </p>
               <Link
                 href="/rights/quebec"
                 className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
-                À venir →
+                <Bilingual en="Learn More →" fr="À venir →" />
               </Link>
             </div>
           </div>
