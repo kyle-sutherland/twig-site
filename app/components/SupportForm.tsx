@@ -60,7 +60,7 @@ export default function SupportForm() {
         body = { type: "membership" };
       }
 
-      const res = await fetch("/api/checkout", {
+      const res = await fetch("/api/checkout_sessions", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
