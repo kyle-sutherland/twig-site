@@ -24,7 +24,7 @@ export default function Home() {
               height={400}
               className="animate-fade-in mb-16"
             />
-            <p className="heading text-2xl md:text-7xl mb-8 animate-fade-in-delay text-center px-4">
+            <p className="heading text-2xl md:text-7xl mb-8 animate-fade-in-delay text-center px-4 text-white">
               TREE WORKER INDUSTRIAL GROUP
             </p>
             <HeroLangToggle />
