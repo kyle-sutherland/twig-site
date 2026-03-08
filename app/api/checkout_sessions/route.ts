@@ -45,11 +45,7 @@ export async function POST(request: NextRequest) {
             price_data: {
               currency: "cad",
               unit_amount: amount,
-              product_data: {
-                name: "Donation to TWIG",
-                description:
-                  "Tree Workers' Industrial Group — supporting silviculture workers across Canada",
-              },
+              product: process.env.STRIPE_DONATION_PRODUCT_ID ?? "",
             },
           },
         ],
@@ -76,11 +72,7 @@ export async function POST(request: NextRequest) {
             price_data: {
               currency: "cad",
               unit_amount: feeCents,
-              product_data: {
-                name: "TWIG Annual Membership Dues",
-                description:
-                  "Tree Workers' Industrial Group — annual membership dues",
-              },
+              product: process.env.STRIPE_MEMBERSHIP_PRODUCT_ID ?? "",
             },
           },
         ],
