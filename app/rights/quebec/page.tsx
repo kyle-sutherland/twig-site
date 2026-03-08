@@ -5,15 +5,18 @@ import Bilingual from "@/app/components/Bilingual";
 import { getProvinceBySlug } from "@/app/data/rightsContent";
 
 export default function QuebecRightsPage() {
-  const quebecData = getProvinceBySlug("quebec");
+  const data = getProvinceBySlug("quebec");
 
-  if (!quebecData) {
+  if (!data) {
     return <div>Contenu non trouvé</div>;
   }
 
   return (
     <main>
-      <PageHero title="Connaissez vos droits - Québec" height="short" />
+      <PageHero
+        title={{ en: "Know Your Rights — Quebec", fr: "Connaissez vos droits — Québec" }}
+        height="short"
+      />
 
       <ContentSection variant="white">
         <div className="max-w-4xl mx-auto">
@@ -21,11 +24,13 @@ export default function QuebecRightsPage() {
             href="/rights"
             className="text-green-700 hover:underline inline-flex items-center mb-8"
           >
-            ← Retour à toutes les provinces
+            <Bilingual en="← Back to all provinces" fr="← Retour à toutes les provinces" />
           </Link>
 
           <div className="prose prose-lg max-w-none mb-12">
-            <p className="text-lg text-gray-800">{quebecData.intro.fr}</p>
+            <p className="text-lg text-gray-800">
+              <Bilingual en={data.intro.en} fr={data.intro.fr} />
+            </p>
           </div>
         </div>
       </ContentSection>
@@ -33,10 +38,10 @@ export default function QuebecRightsPage() {
       <ContentSection variant="grey">
         <div className="max-w-4xl mx-auto">
           <h2 className="heading text-3xl md:text-4xl mb-6 text-gray-900">
-            Ressources gouvernementales
+            <Bilingual en="Government Resources" fr="Ressources gouvernementales" />
           </h2>
           <div className="space-y-4">
-            {quebecData.governmentLinks.map((link, index) => (
+            {data.governmentLinks.map((link, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow">
                 <h3 className="heading text-xl text-gray-900 mb-2">
                   <a
@@ -45,10 +50,12 @@ export default function QuebecRightsPage() {
                     rel="noopener noreferrer"
                     className="text-green-700 hover:underline"
                   >
-                    {link.title} →
+                    <Bilingual en={`${link.title.en} →`} fr={`${link.title.fr} →`} />
                   </a>
                 </h3>
-                <p className="text-gray-700">{link.description}</p>
+                <p className="text-gray-700">
+                  <Bilingual en={link.description.en} fr={link.description.fr} />
+                </p>
               </div>
             ))}
           </div>
@@ -58,10 +65,10 @@ export default function QuebecRightsPage() {
       <ContentSection variant="green">
         <div className="max-w-4xl mx-auto">
           <h2 className="heading text-3xl md:text-4xl mb-6">
-            Ressources non gouvernementales
+            <Bilingual en="Non-Governmental Resources" fr="Ressources non gouvernementales" />
           </h2>
           <div className="space-y-4">
-            {quebecData.ngoLinks.map((link, index) => (
+            {data.ngoLinks.map((link, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow">
                 <h3 className="heading text-xl text-gray-900 mb-2">
                   <a
@@ -70,10 +77,12 @@ export default function QuebecRightsPage() {
                     rel="noopener noreferrer"
                     className="text-green-700 hover:underline"
                   >
-                    {link.title} →
+                    <Bilingual en={`${link.title.en} →`} fr={`${link.title.fr} →`} />
                   </a>
                 </h3>
-                <p className="text-gray-700">{link.description}</p>
+                <p className="text-gray-700">
+                  <Bilingual en={link.description.en} fr={link.description.fr} />
+                </p>
               </div>
             ))}
           </div>
@@ -83,17 +92,17 @@ export default function QuebecRightsPage() {
       <ContentSection variant="grey">
         <div className="max-w-4xl mx-auto">
           <h2 className="heading text-3xl md:text-4xl mb-8 text-gray-900">
-            Normes du travail essentielles
+            <Bilingual en="Key Employment Standards" fr="Normes d'emploi essentielles" />
           </h2>
           <div className="space-y-6">
-            {quebecData.standards.map((standard, index) => (
+            {data.standards.map((standard, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow">
                 <h3 className="heading text-2xl text-gray-900 mb-3">
-                  {standard.title}
+                  <Bilingual en={standard.title.en} fr={standard.title.fr} />
                 </h3>
-                <div
-                  className="text-gray-800 text-lg"
-                  dangerouslySetInnerHTML={{ __html: standard.content }}
+                <Bilingual
+                  en={<div className="text-gray-800 text-lg" dangerouslySetInnerHTML={{ __html: standard.content.en }} />}
+                  fr={<div className="text-gray-800 text-lg" dangerouslySetInnerHTML={{ __html: standard.content.fr }} />}
                 />
               </div>
             ))}
@@ -104,19 +113,19 @@ export default function QuebecRightsPage() {
       <ContentSection variant="green">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading text-3xl md:text-4xl mb-6">
-            Des questions sur vos droits?
+            <Bilingual en="Questions About Your Rights?" fr="Des questions sur vos droits ?" />
           </h2>
           <p className="text-lg mb-8">
-            Si vous faites face à des violations des normes du travail ou avez
-            des questions sur votre situation spécifique, contactez TWIG. Nous
-            pouvons vous aider à vous connecter avec des ressources et du
-            soutien.
+            <Bilingual
+              en="If you're facing issues with employment standards violations or have questions about your specific situation, get in touch with TWIG. We can help connect you with resources and support."
+              fr="Si vous faites face à des violations des normes du travail ou avez des questions sur votre situation spécifique, contactez TWIG. Nous pouvons vous aider à vous connecter avec des ressources et du soutien."
+            />
           </p>
           <a
             href="mailto:treeworkersindustrialgroup@gmail.com"
             className="inline-block bg-white/0 outline outline-2 px-8 py-4 text-xl outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
           >
-            Contactez TWIG
+            <Bilingual en="Contact TWIG" fr="Contactez TWIG" />
           </a>
         </div>
       </ContentSection>
