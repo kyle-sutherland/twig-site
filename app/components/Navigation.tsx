@@ -14,26 +14,32 @@ type NavItem = {
 const navItems: NavItem[] = [
   {
     name: "HOME",
+    nameFr: "ACCUEIL",
     route: "/",
   },
   {
     name: "CONTACT",
+    nameFr: "CONTACT",
     route: "/contact",
   },
   {
     name: "THE STICK (BLOG)",
+    nameFr: "LE BÂTON (BLOGUE)",
     route: "/the-stick",
   },
   {
     name: "INDIGENOUS SOLIDARITY",
+    nameFr: "SOLIDARITÉ AUTOCHTONE",
     route: "/indigenous",
   },
   {
     name: "KNOW YOUR RIGHTS",
+    nameFr: "CONNAÎTRE VOS DROITS",
     route: "/rights",
   },
   {
     name: "ZINES!",
+    nameFr: "ZINES\u00a0!",
     route: "/zines",
   },
   {
@@ -90,9 +96,9 @@ export default function Navigation() {
         <div className="flex items-center justify-center py-4">
 
           {/* Desktop nav links — centered, visible at lg+ */}
-          <div className="hidden lg:flex lg:gap-8 xl:gap-16">
+          <div className="hidden lg:flex lg:gap-4 xl:gap-8 lg:text-sm xl:text-base">
             {navItems.map((item) => (
-              <Link key={item.route} href={item.route} className="transition-colors">
+              <Link key={item.route} href={item.route} className="transition-colors whitespace-nowrap">
                 {lang === "fr" && item.nameFr ? item.nameFr : item.name}
               </Link>
             ))}
@@ -148,7 +154,7 @@ export default function Navigation() {
         >
           {navItems.map((item) => (
             <Link key={item.route} href={item.route} className="block transition-colors">
-              {item.name}
+              {lang === "fr" && item.nameFr ? item.nameFr : item.name}
             </Link>
           ))}
         </div>

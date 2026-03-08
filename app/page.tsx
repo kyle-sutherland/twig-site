@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ContactForm from "./components/contact-form";
 import Bilingual from "./components/Bilingual";
+import HeroLangToggle from "./components/HeroLangToggle";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
             <p className="heading text-2xl md:text-7xl mb-8 animate-fade-in-delay text-center px-4">
               TREE WORKER INDUSTRIAL GROUP
             </p>
+            <HeroLangToggle />
           </div>
           <div className="absolute bottom-8 left-8 animate-bounce">
             <svg

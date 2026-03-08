@@ -12,8 +12,11 @@ export default function TheStickPage() {
   return (
     <main>
       <PageHero
-        title="The Stick"
-        subtitle="Stories and updates from the field"
+        title={{ en: "The Stick", fr: "Le Bâton" }}
+        subtitle={{
+          en: "Stories and updates from the field",
+          fr: "Histoires et nouvelles du terrain",
+        }}
       />
 
       <ContentSection variant="grey">

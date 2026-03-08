@@ -4,7 +4,7 @@ import { useLang } from "../context/LanguageContext";
 
 interface PageHeroProps {
   title: string | { en: string; fr: string };
-  subtitle?: string;
+  subtitle?: string | { en: string; fr: string };
   backgroundImage?: string;
   height?: "tall" | "medium" | "short";
 }
@@ -24,6 +24,7 @@ export default function PageHero({
   }[height];
 
   const titleText = typeof title === "string" ? title : title[lang];
+  const subtitleText = typeof subtitle === "string" ? subtitle : subtitle?.[lang];
 
   return (
     <div className={`relative ${heightClass} overflow-hidden`}>
@@ -45,9 +46,9 @@ export default function PageHero({
               {titleText}
             </h1>
           </div>
-          {subtitle && (
+          {subtitleText && (
             <p className="text-lg md:text-2xl animate-fade-in-delay text-center text-white max-w-3xl">
-              {subtitle}
+              {subtitleText}
             </p>
           )}
         </div>
