@@ -7,6 +7,7 @@ import { useLang } from "../context/LanguageContext";
 
 type NavItem = {
   name: string;
+  nameFr?: string;
   route: string;
 };
 
@@ -34,6 +35,11 @@ const navItems: NavItem[] = [
   {
     name: "ZINES!",
     route: "/zines",
+  },
+  {
+    name: "SUPPORT US",
+    nameFr: "NOUS SOUTENIR",
+    route: "/support",
   },
 ];
 
@@ -87,7 +93,7 @@ export default function Navigation() {
           <div className="hidden lg:flex lg:gap-8 xl:gap-16">
             {navItems.map((item) => (
               <Link key={item.route} href={item.route} className="transition-colors">
-                {item.name}
+                {lang === "fr" && item.nameFr ? item.nameFr : item.name}
               </Link>
             ))}
           </div>
