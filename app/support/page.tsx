@@ -30,7 +30,7 @@ export default function SupportPage() {
                 </p>
                 <p className="text-lg">
                   A donation or membership directly funds our advocacy work, publications,
-                  and outreach to workers in remote camps and contract crews.
+                  and outreach to workers.
                 </p>
               </>
             }
@@ -48,7 +48,7 @@ export default function SupportPage() {
                 <p className="text-lg">
                   Un don ou une adhésion finance directement nos activités de défense
                   des droits, nos publications et notre sensibilisation auprès des
-                  travailleurs dans les camps éloignés et les équipes contractuelles.
+                  travailleurs.
                 </p>
               </>
             }
