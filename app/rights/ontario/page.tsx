@@ -4,17 +4,17 @@ import ContentSection from "@/app/components/ContentSection";
 import Bilingual from "@/app/components/Bilingual";
 import { getProvinceBySlug } from "@/app/data/rightsContent";
 
-export default function QuebecRightsPage() {
-  const data = getProvinceBySlug("quebec");
+export default function OntarioRightsPage() {
+  const data = getProvinceBySlug("ontario");
 
   if (!data) {
-    return <div>Contenu non trouvé</div>;
+    return <div>Content not found</div>;
   }
 
   return (
     <main>
       <PageHero
-        title={{ en: "Know Your Rights — Quebec", fr: "Connaissez vos droits — Québec" }}
+        title={{ en: "Know Your Rights — Ontario", fr: "Connaissez vos droits — Ontario" }}
         height="short"
       />
 
