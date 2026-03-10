@@ -21,12 +21,12 @@ export default function ZinesPage() {
       <ContentSection variant="grey">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading text-3xl md:text-5xl mb-6 text-gray-900">
-            Fireweed: Educational Resources for Tree Workers
+            Fireweed: The Planters' Zine!
           </h2>
           <Bilingual
             en={
               <p className="text-lg mb-6 text-gray-900">
-                Fireweed is TWIG's publication series, offering comprehensive
+                Fireweed is TWIG's zine series, offering informative
                 resources on workers' rights, mental health, harm reduction, and
                 building safer, more equitable work environments in the silviculture
                 industry.
@@ -35,7 +35,7 @@ export default function ZinesPage() {
             fr={
               <p className="text-lg text-gray-900">
                 Fireweed est la série de publications de TWIG, offrant des
-                ressources complètes sur les droits des travailleurs, la santé
+                ressources informative sur les droits des travailleurs, la santé
                 mentale, la réduction des méfaits et la création d'environnements de
                 travail plus sûrs et équitables dans l'industrie sylvicole.
               </p>
@@ -122,7 +122,7 @@ export default function ZinesPage() {
             Want to Contribute?
           </h2>
           <p className="text-gray-900 text-lg mb-6">
-            Fireweed is created by and for tree workers. If you have knowledge
+            Fireweed is created by and for tree planters. If you have knowledge
             to share, experiences to document, or skills in writing, design, or
             translation, we'd love to hear from you.
           </p>
