@@ -23,8 +23,8 @@ export const provinceRights: ProvinceRights[] = [
     slug: "bc",
     name: { en: "British Columbia", fr: "Colombie-Britannique" },
     intro: {
-      en: "In British Columbia, workers are protected by the Employment Standards Act. Tree planters have specific rights regarding wages, overtime, and working conditions.",
-      fr: "En Colombie-Britannique, les travailleurs sont protégés par la Loi sur les normes d'emploi. Les planteurs d'arbres ont des droits spécifiques concernant les salaires, les heures supplémentaires et les conditions de travail.",
+      en: "In British Columbia, workers are protected by the Employment Standards Act, with special rules for silviculture workers paid by piece rate. BC is one of the few provinces whose employment standards explicitly address tree planting — including piece-rate overtime, camp costs, and record-keeping.",
+      fr: "En Colombie-Britannique, les travailleurs sont protégés par la Loi sur les normes d'emploi, avec des règles particulières pour les travailleurs en sylviculture payés à la pièce. La C.-B. est l'une des rares provinces dont les normes d'emploi traitent explicitement de la plantation d'arbres — y compris les heures supplémentaires à la pièce, les frais de camp et la tenue de registres.",
     },
     governmentLinks: [
       {
@@ -51,13 +51,13 @@ export const provinceRights: ProvinceRights[] = [
       },
       {
         title: {
-          en: "Silviculture Exception Regulations",
-          fr: "Règlements d'exception pour la sylviculture",
+          en: "Silviculture Workers — Special Rules",
+          fr: "Travailleurs en sylviculture — règles particulières",
         },
-        url: "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/forms-resources/igm/esa-part-4-section-37",
+        url: "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/hiring/silviculture-workers",
         description: {
-          en: "Specific regulations for silviculture workers",
-          fr: "Règlements spécifiques aux travailleurs en sylviculture",
+          en: "Official guide to the special employment standards for silviculture workers, including piece rates and overtime",
+          fr: "Guide officiel des normes d'emploi particulières pour les travailleurs en sylviculture, y compris les tarifs à la pièce et les heures supplémentaires",
         },
       },
     ],
@@ -75,13 +75,24 @@ export const provinceRights: ProvinceRights[] = [
       },
       {
         title: {
-          en: "BC Employment Standards Coalition",
-          fr: "Coalition des normes d'emploi de la C.-B.",
+          en: "BC Federation of Labour",
+          fr: "Fédération du travail de la C.-B.",
         },
-        url: "https://www.bcemploymentstandards.ca/",
+        url: "https://bcfed.ca/",
         description: {
-          en: "Legal support and resources for workers",
-          fr: "Soutien juridique et ressources pour les travailleurs",
+          en: "Central labour body advocating for workers across British Columbia",
+          fr: "Organisation syndicale centrale défendant les travailleurs de toute la Colombie-Britannique",
+        },
+      },
+      {
+        title: {
+          en: "Replant.ca — Employment Standards for Tree Planters",
+          fr: "Replant.ca — Normes d'emploi pour les planteurs d'arbres",
+        },
+        url: "https://www.replant.ca/employmentstandards.html",
+        description: {
+          en: "Industry resource explaining employment standards as they apply to tree planters",
+          fr: "Ressource de l'industrie expliquant les normes d'emploi telles qu'elles s'appliquent aux planteurs d'arbres",
         },
       },
     ],
@@ -89,43 +100,50 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$17.85/hour</strong> (effective June 1, 2025)<br/>This includes pre-season training, camp meetings, setup time, and most travel time. All work time must be compensated at minimum wage.",
-          fr: "<strong>17,85 $/heure</strong> (en vigueur depuis le 1er juin 2025)<br/>Cela inclut la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement. Tout le temps de travail doit être rémunéré au salaire minimum.",
+          en: "<strong>$18.25/hour</strong> (effective June 1, 2026), adjusted every June 1 based on BC's average inflation<br/>This includes pre-season training, camp meetings, setup time, and most travel time. If you are paid piece rates, your earnings each pay period must average at least minimum wage for all hours worked — employers must top up any shortfall and cannot offset it against better pay periods.",
+          fr: "<strong>18,25 $/heure</strong> (en vigueur depuis le 1er juin 2026), ajusté chaque 1er juin selon l'inflation moyenne de la C.-B.<br/>Cela inclut la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement. Si vous êtes payé à la pièce, vos gains de chaque période de paie doivent équivaloir au moins au salaire minimum pour toutes les heures travaillées — l'employeur doit combler tout écart et ne peut pas le compenser avec de meilleures périodes de paie.",
         },
       },
       {
         title: { en: "Overtime", fr: "Heures supplémentaires" },
         content: {
-          en: "Hours beyond 8 per day (up to 12 hours) require premium pay at <strong>1.5 times your regular wage</strong> (minimum $26.78/hour at minimum wage). Hours exceeding 12 per day must be paid at <strong>double your regular wage rate</strong> (minimum $35.70/hour at minimum wage).",
-          fr: "Les heures au-delà de 8 par jour (jusqu'à 12 heures) nécessitent une prime de <strong>1,5 fois votre salaire régulier</strong> (minimum 26,78 $/heure au salaire minimum). Les heures dépassant 12 par jour doivent être payées au <strong>double de votre taux de salaire régulier</strong> (minimum 35,70 $/heure au salaire minimum).",
+          en: "If you are paid <strong>piece rates</strong>: for hours between 8 and 12 in a day you must receive the greater of your piece-rate earnings or <strong>1.5 times minimum wage</strong> ($27.38/hour); hours beyond 12 in a day must be paid at <strong>double your piece rate</strong>. If you are paid hourly, standard overtime applies: 1.5 times your wage after 8 hours in a day and double after 12.",
+          fr: "Si vous êtes payé <strong>à la pièce</strong> : pour les heures entre 8 et 12 par jour, vous devez recevoir le plus élevé de vos gains à la pièce ou de <strong>1,5 fois le salaire minimum</strong> (27,38 $/heure) ; les heures au-delà de 12 par jour doivent être payées au <strong>double de votre tarif à la pièce</strong>. Si vous êtes payé à l'heure, les heures supplémentaires standard s'appliquent : 1,5 fois votre salaire après 8 heures par jour et le double après 12.",
+        },
+      },
+      {
+        title: { en: "Piece Rates and Records", fr: "Tarifs à la pièce et registres" },
+        content: {
+          en: "Your piece rate must be set before work begins. Employers must keep <strong>daily records</strong> of trees planted, area worked, unit prices, hours worked, and camp costs — and both you and the employer must <strong>sign these records each pay period</strong>. Keep your own daily tally to compare.",
+          fr: "Votre tarif à la pièce doit être fixé avant le début du travail. Les employeurs doivent tenir des <strong>registres quotidiens</strong> des arbres plantés, de la superficie travaillée, des prix unitaires, des heures travaillées et des frais de camp — et vous et l'employeur devez <strong>signer ces registres à chaque période de paie</strong>. Tenez votre propre décompte quotidien pour comparer.",
         },
       },
       {
         title: { en: "Camp Costs", fr: "Frais de camp" },
         content: {
-          en: "Employers may deduct up to <strong>$25 per day</strong> for camp or motel costs with written agreement. Deductions cannot exceed actual costs.",
-          fr: "Les employeurs peuvent déduire jusqu'à <strong>25 $ par jour</strong> pour les frais de camp ou de motel avec accord écrit. Les déductions ne peuvent pas dépasser les coûts réels.",
+          en: "Employers may deduct up to <strong>$25 per day</strong> for camp costs — or the actual cost of a motel room — only with your written agreement. Deductions cannot exceed actual costs.",
+          fr: "Les employeurs peuvent déduire jusqu'à <strong>25 $ par jour</strong> pour les frais de camp — ou le coût réel d'une chambre de motel — seulement avec votre accord écrit. Les déductions ne peuvent pas dépasser les coûts réels.",
         },
       },
       {
         title: { en: "Deductions", fr: "Déductions" },
         content: {
-          en: "Employers cannot make deductions for equipment damage, production mistakes, or other arbitrary reasons without proper authorization and documentation.",
-          fr: "Les employeurs ne peuvent pas effectuer de déductions pour des dommages à l'équipement, des erreurs de production ou d'autres raisons arbitraires sans autorisation et documentation appropriées.",
+          en: "Employers cannot deduct their business costs from your wages — including equipment damage, production mistakes, or missing gear. Any permitted deduction requires proper authorization and must appear on your pay stub.",
+          fr: "Les employeurs ne peuvent pas déduire leurs coûts d'entreprise de votre salaire — y compris les dommages à l'équipement, les erreurs de production ou le matériel manquant. Toute déduction permise nécessite une autorisation appropriée et doit figurer sur votre talon de paie.",
         },
       },
       {
         title: { en: "Statutory Holidays", fr: "Jours fériés" },
         content: {
-          en: "Workers are entitled to statutory holiday pay. If required to work on a statutory holiday, you receive your average daily wage plus time-and-a-half for hours worked.",
-          fr: "Les travailleurs ont droit à une indemnité de jour férié. Si vous êtes obligé de travailler un jour férié, vous recevez votre salaire quotidien moyen plus une fois et demie pour les heures travaillées.",
+          en: "Workers are entitled to statutory holiday pay. If required to work on a statutory holiday, you receive your average daily wage plus time-and-a-half for hours worked. For silviculture workers, employers may instead pay an additional <strong>4.4% of gross earnings</strong> in lieu of statutory holiday pay — check your pay stubs to make sure you receive one or the other.",
+          fr: "Les travailleurs ont droit à une indemnité de jour férié. Si vous êtes obligé de travailler un jour férié, vous recevez votre salaire quotidien moyen plus une fois et demie pour les heures travaillées. Pour les travailleurs en sylviculture, l'employeur peut plutôt verser un supplément de <strong>4,4 % des gains bruts</strong> au lieu de l'indemnité de jour férié — vérifiez vos talons de paie pour vous assurer de recevoir l'un ou l'autre.",
         },
       },
       {
         title: { en: "Vacation Pay", fr: "Indemnité de vacances" },
         content: {
-          en: "Tree planters are entitled to <strong>4% vacation pay</strong> on all earnings. This should be clearly indicated on pay stubs.",
-          fr: "Les planteurs d'arbres ont droit à une <strong>indemnité de vacances de 4 %</strong> sur tous leurs gains. Cela doit être clairement indiqué sur les talons de paie.",
+          en: "Tree planters are entitled to <strong>4% vacation pay</strong> on all earnings (<strong>6%</strong> after 5 years with the same employer). For silviculture workers this is often paid as a percentage added to each cheque instead of vacation time — it must be clearly indicated on pay stubs.",
+          fr: "Les planteurs d'arbres ont droit à une <strong>indemnité de vacances de 4 %</strong> sur tous leurs gains (<strong>6 %</strong> après 5 ans chez le même employeur). Pour les travailleurs en sylviculture, elle est souvent versée en pourcentage ajouté à chaque paie au lieu de vacances — cela doit être clairement indiqué sur les talons de paie.",
         },
       },
       {
@@ -161,7 +179,7 @@ export const provinceRights: ProvinceRights[] = [
           en: "Employment Standards Code",
           fr: "Code des normes d'emploi",
         },
-        url: "https://www.alberta.ca/employment-standards-code",
+        url: "https://open.alberta.ca/publications/e09",
         description: {
           en: "Full text of Alberta's Employment Standards Code",
           fr: "Texte complet du Code des normes d'emploi de l'Alberta",
@@ -196,8 +214,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$15.00/hour</strong> (students under 18: $13.00/hour)<br/>All work hours including training, camp meetings, setups, and travel time must be compensated at minimum wage.",
-          fr: "<strong>15,00 $/heure</strong> (étudiants de moins de 18 ans : 13,00 $/heure)<br/>Toutes les heures de travail, y compris la formation, les réunions de camp, les préparations et le temps de déplacement, doivent être rémunérées au salaire minimum.",
+          en: "<strong>$15.00/hour</strong> (students under 18: $13.00/hour for the first 28 hours in a week)<br/>Alberta's minimum wage has not increased since October 2018 and is now the lowest in Canada. All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage.",
+          fr: "<strong>15,00 $/heure</strong> (étudiants de moins de 18 ans : 13,00 $/heure pour les 28 premières heures d'une semaine)<br/>Le salaire minimum de l'Alberta n'a pas augmenté depuis octobre 2018 et est maintenant le plus bas au Canada. Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum.",
         },
       },
       {
@@ -220,15 +238,15 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Statutory Holiday Pay", fr: "Indemnité de jour férié" },
         content: {
-          en: "After 30 days with the same employer, workers qualify for holiday compensation. If working the holiday, employees receive average daily wage plus time-and-a-half pay (minimum $22.50/hour at minimum wage rate).",
-          fr: "Après 30 jours chez le même employeur, les travailleurs ont droit à une indemnité de congé. Si vous travaillez le jour férié, vous recevez votre salaire quotidien moyen plus une fois et demie (minimum 22,50 $/heure au salaire minimum).",
+          en: "To qualify, you must have worked at least <strong>30 workdays for the employer in the 12 months</strong> before the holiday. If you don't work a holiday that falls on a regular workday, you receive your average daily wage. If you work it, you receive <strong>1.5 times your rate</strong> (minimum $22.50/hour at minimum wage) <strong>plus your average daily wage</strong> — or regular pay plus a future paid day off.",
+          fr: "Pour être admissible, vous devez avoir travaillé au moins <strong>30 jours de travail pour l'employeur dans les 12 mois</strong> précédant le jour férié. Si vous ne travaillez pas un jour férié qui tombe un jour de travail habituel, vous recevez votre salaire quotidien moyen. Si vous le travaillez, vous recevez <strong>1,5 fois votre taux</strong> (minimum 22,50 $/heure au salaire minimum) <strong>plus votre salaire quotidien moyen</strong> — ou votre salaire régulier plus un jour de congé payé ultérieur.",
         },
       },
       {
         title: { en: "Overtime", fr: "Heures supplémentaires" },
         content: {
-          en: "After 8 hours in a day or 44 hours in a week, overtime must be paid at <strong>1.5 times the regular rate</strong>.",
-          fr: "Après 8 heures par jour ou 44 heures par semaine, les heures supplémentaires doivent être payées à <strong>1,5 fois le taux régulier</strong>.",
+          en: "Overtime is the <strong>greater</strong> of hours beyond 8 in a day or beyond 44 in a week, paid at <strong>1.5 times your regular rate</strong> (minimum $22.50/hour at minimum wage). Keep daily records of your hours.",
+          fr: "Les heures supplémentaires correspondent au <strong>plus élevé</strong> des heures au-delà de 8 par jour ou de 44 par semaine, payées à <strong>1,5 fois votre taux régulier</strong> (minimum 22,50 $/heure au salaire minimum). Tenez un registre quotidien de vos heures.",
         },
       },
       {
@@ -272,13 +290,13 @@ export const provinceRights: ProvinceRights[] = [
       },
       {
         title: {
-          en: "Employment Standards Information Centre",
-          fr: "Centre d'information sur les normes d'emploi",
+          en: "Filing an Employment Standards Claim",
+          fr: "Déposer une réclamation relative aux normes d'emploi",
         },
-        url: "https://www.ontario.ca/page/employment-standards-information-centre",
+        url: "https://www.ontario.ca/document/your-guide-employment-standards-act-0/filing-claim",
         description: {
-          en: "Contact for general information: 1-800-531-5551",
-          fr: "Pour information générale : 1-800-531-5551",
+          en: "How to file a claim if your rights have been violated. Employment Standards Information Centre: 1-800-531-5551",
+          fr: "Comment déposer une réclamation si vos droits ont été violés. Centre d'information sur les normes d'emploi : 1-800-531-5551",
         },
       },
     ],
@@ -321,8 +339,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$17.60/hour</strong> (effective October 1, 2025)<br/>All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage. Students under 18 working 28 hours/week or less: $16.60/hour.",
-          fr: "<strong>17,60 $/heure</strong> (en vigueur depuis le 1er octobre 2025)<br/>Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum. Étudiants de moins de 18 ans travaillant 28 heures/semaine ou moins : 16,60 $/heure.",
+          en: "<strong>$17.60/hour</strong>, rising to <strong>$17.95/hour</strong> on October 1, 2026 (adjusted annually based on the Consumer Price Index)<br/>All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage. Students under 18 working 28 hours/week or less: $16.60/hour, rising to $16.90 on October 1, 2026.",
+          fr: "<strong>17,60 $/heure</strong>, passant à <strong>17,95 $/heure</strong> le 1er octobre 2026 (ajusté annuellement selon l'Indice des prix à la consommation)<br/>Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum. Étudiants de moins de 18 ans travaillant 28 heures/semaine ou moins : 16,60 $/heure, passant à 16,90 $ le 1er octobre 2026.",
         },
       },
       {
@@ -364,7 +382,7 @@ export const provinceRights: ProvinceRights[] = [
         title: { en: "Workplace Safety", fr: "Sécurité au travail" },
         content: {
           en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the Ministry of Labour. All workers have the right to refuse unsafe work. The Office of the Worker Adviser provides free services for workplace insurance matters.",
-          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, contactez le ministère du Travail. Tous les travailleurs ont le droit de refuser un travail dangereux. Le Bureau du conseiller des travailleurs offre des services gratuits pour les questions d'assurance-emploi.",
+          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, contactez le ministère du Travail. Tous les travailleurs ont le droit de refuser un travail dangereux. Le Bureau des conseillers des travailleurs offre des services gratuits pour les questions d'assurance contre les accidents du travail (WSIB).",
         },
       },
     ],
@@ -439,8 +457,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$15.35/hour</strong> (effective October 1, 2025)<br/>Saskatchewan's minimum wage is indexed annually using a formula that gives equal weight to changes in the Consumer Price Index and Average Hourly Wage for Saskatchewan. All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage.",
-          fr: "<strong>15,35 $/heure</strong> (en vigueur depuis le 1er octobre 2025)<br/>Le salaire minimum de la Saskatchewan est indexé annuellement selon une formule accordant un poids égal aux variations de l'Indice des prix à la consommation et du salaire horaire moyen en Saskatchewan. Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum.",
+          en: "<strong>$15.35/hour</strong>, rising to <strong>$15.70/hour</strong> on October 1, 2026<br/>Saskatchewan's minimum wage is indexed annually using a formula that gives equal weight to changes in the Consumer Price Index and the Average Hourly Wage for Saskatchewan. All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage.",
+          fr: "<strong>15,35 $/heure</strong>, passant à <strong>15,70 $/heure</strong> le 1er octobre 2026<br/>Le salaire minimum de la Saskatchewan est indexé annuellement selon une formule accordant un poids égal aux variations de l'Indice des prix à la consommation et du salaire horaire moyen en Saskatchewan. Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum.",
         },
       },
       {
@@ -500,8 +518,8 @@ export const provinceRights: ProvinceRights[] = [
     governmentLinks: [
       {
         title: {
-          en: "Commission des normes de l'équité de la santé et de la sécurité du travail (CNESST)",
-          fr: "Commission des normes de l'équité de la santé et de la sécurité du travail (CNESST)",
+          en: "Commission des normes, de l'équité, de la santé et de la sécurité du travail (CNESST)",
+          fr: "Commission des normes, de l'équité, de la santé et de la sécurité du travail (CNESST)",
         },
         url: "https://www.cnesst.gouv.qc.ca/",
         description: {
@@ -571,15 +589,15 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$16.10/hour</strong> (effective May 1, 2025)<br/>All work hours including pre-season training, camp meetings, setup time, and most travel time must be compensated at minimum wage.",
-          fr: "<strong>16,10 $/heure</strong> (en vigueur depuis le 1er mai 2025)<br/>Toutes les heures de travail, y compris la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement doivent être rémunérées au salaire minimum.",
+          en: "<strong>$16.60/hour</strong> (effective May 1, 2026), adjusted each May 1<br/>All work hours including pre-season training, camp meetings, setup time, and most travel time must be compensated at minimum wage.",
+          fr: "<strong>16,60 $/heure</strong> (en vigueur depuis le 1er mai 2026), ajusté chaque 1er mai<br/>Toutes les heures de travail, y compris la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement doivent être rémunérées au salaire minimum.",
         },
       },
       {
         title: { en: "Overtime", fr: "Heures supplémentaires" },
         content: {
-          en: "Hours worked beyond <strong>40 hours per week</strong> must be paid at <strong>1.5 times the regular hourly rate</strong> (minimum $24.15/hour at minimum wage). Overtime may also be compensated with equivalent paid leave.",
-          fr: "Les heures travaillées au-delà de <strong>40 heures par semaine</strong> doivent être rémunérées au taux de <strong>1,5 fois le salaire horaire régulier</strong> (minimum 24,15 $/heure au salaire minimum). Les heures supplémentaires peuvent aussi être compensées par un congé équivalent payé.",
+          en: "Hours worked beyond <strong>40 hours per week</strong> must be paid at <strong>1.5 times the regular hourly rate</strong> (minimum $24.90/hour at minimum wage). Overtime may also be compensated with equivalent paid leave.",
+          fr: "Les heures travaillées au-delà de <strong>40 heures par semaine</strong> doivent être rémunérées au taux de <strong>1,5 fois le salaire horaire régulier</strong> (minimum 24,90 $/heure au salaire minimum). Les heures supplémentaires peuvent aussi être compensées par un congé équivalent payé.",
         },
       },
       {
@@ -744,6 +762,450 @@ export const provinceRights: ProvinceRights[] = [
         content: {
           en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the Safety Branch of the Department of Labour, Skills and Immigration at <strong>1-800-952-2687</strong> (1-800-9LABOUR), available 24/7. Under Section 43 of Nova Scotia's Occupational Health and Safety Act, all workers have the right to refuse work they have reasonable grounds to believe is unsafe. Workplace injuries are covered by WCB Nova Scotia.",
           fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, contactez la Direction de la sécurité du ministère du Travail, des Compétences et de l'Immigration au <strong>1-800-952-2687</strong> (1-800-9LABOUR), disponible 24 heures sur 24, 7 jours sur 7. En vertu de l'article 43 de la Loi sur la santé et la sécurité au travail de la Nouvelle-Écosse, tous les travailleurs ont le droit de refuser un travail qu'ils ont des motifs raisonnables de croire dangereux. Les accidents du travail sont couverts par la WCB Nova Scotia.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "manitoba",
+    name: { en: "Manitoba", fr: "Manitoba" },
+    intro: {
+      en: "In Manitoba, workers are protected by the Employment Standards Code. Unlike some provinces, Manitoba has no special exemption for silviculture workers — general employment standards, including daily and weekly overtime, apply to tree planters.",
+      fr: "Au Manitoba, les travailleurs sont protégés par le Code des normes d'emploi. Contrairement à certaines provinces, le Manitoba n'a pas d'exemption particulière pour les travailleurs en sylviculture — les normes d'emploi générales, y compris les heures supplémentaires quotidiennes et hebdomadaires, s'appliquent aux planteurs d'arbres.",
+    },
+    governmentLinks: [
+      {
+        title: {
+          en: "Manitoba Employment Standards",
+          fr: "Normes d'emploi du Manitoba",
+        },
+        url: "https://www.gov.mb.ca/labour/standards/",
+        description: {
+          en: "Official government employment standards information. Contact: 204-945-3352 or 1-800-821-4307",
+          fr: "Informations officielles du gouvernement sur les normes d'emploi. Contact : 204-945-3352 ou 1-800-821-4307",
+        },
+      },
+      {
+        title: {
+          en: "The Employment Standards Code",
+          fr: "Code des normes d'emploi",
+        },
+        url: "https://www.canlii.org/en/mb/laws/stat/ccsm-c-e110/latest/",
+        description: {
+          en: "Full text of Manitoba's Employment Standards Code",
+          fr: "Texte complet du Code des normes d'emploi du Manitoba",
+        },
+      },
+      {
+        title: {
+          en: "Manitoba Workplace Safety and Health",
+          fr: "Sécurité et santé au travail du Manitoba",
+        },
+        url: "https://www.gov.mb.ca/labour/safety/",
+        description: {
+          en: "Government branch responsible for workplace safety, unsafe work reports, and inspections",
+          fr: "Direction gouvernementale responsable de la sécurité au travail, des signalements de travail dangereux et des inspections",
+        },
+      },
+    ],
+    ngoLinks: [
+      {
+        title: {
+          en: "Manitoba Federation of Labour",
+          fr: "Fédération du travail du Manitoba",
+        },
+        url: "https://mfl.ca/",
+        description: {
+          en: "Central labour body advocating for workers across Manitoba",
+          fr: "Organisation syndicale centrale défendant les travailleurs de tout le Manitoba",
+        },
+      },
+      {
+        title: {
+          en: "Community Legal Education Association",
+          fr: "Community Legal Education Association",
+        },
+        url: "https://www.communitylegal.mb.ca/",
+        description: {
+          en: "Free legal information for Manitobans, including workers' rights and a law phone-in line",
+          fr: "Informations juridiques gratuites pour les Manitobains, y compris sur les droits des travailleurs, avec une ligne téléphonique juridique",
+        },
+      },
+    ],
+    standards: [
+      {
+        title: { en: "Minimum Wage", fr: "Salaire minimum" },
+        content: {
+          en: "<strong>$16.00/hour</strong>, rising to <strong>$16.40/hour</strong> on October 1, 2026<br/>Manitoba's minimum wage is adjusted every October 1 based on inflation. All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage.",
+          fr: "<strong>16,00 $/heure</strong>, passant à <strong>16,40 $/heure</strong> le 1er octobre 2026<br/>Le salaire minimum du Manitoba est ajusté chaque 1er octobre en fonction de l'inflation. Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum.",
+        },
+      },
+      {
+        title: { en: "Overtime", fr: "Heures supplémentaires" },
+        content: {
+          en: "Overtime must be paid at <strong>1.5 times your regular wage</strong> after <strong>8 hours in a day or 40 hours in a week</strong> — one of the strongest overtime standards in Canada. Most employees qualify, including piece-rate and minimum wage earners. There is no silviculture exemption in Manitoba.",
+          fr: "Les heures supplémentaires doivent être payées à <strong>1,5 fois votre salaire régulier</strong> après <strong>8 heures par jour ou 40 heures par semaine</strong> — l'une des normes d'heures supplémentaires les plus fortes au Canada. La plupart des employés y ont droit, y compris les travailleurs à la pièce et au salaire minimum. Il n'y a pas d'exemption pour la sylviculture au Manitoba.",
+        },
+      },
+      {
+        title: { en: "Deductions", fr: "Déductions" },
+        content: {
+          en: "Employers can only deduct what is required by law (taxes, CPP, EI) or what you agree to in writing for things that directly benefit you. Deductions for <strong>equipment damage, faulty work, cash shortages, or uniforms are prohibited</strong>. Employers must provide personal protective equipment at no cost to workers.",
+          fr: "Les employeurs ne peuvent déduire que ce qui est exigé par la loi (impôts, RPC, AE) ou ce que vous acceptez par écrit pour des choses qui vous profitent directement. Les déductions pour <strong>dommages à l'équipement, travail défectueux, manques de caisse ou uniformes sont interdites</strong>. Les employeurs doivent fournir l'équipement de protection individuelle sans frais aux travailleurs.",
+        },
+      },
+      {
+        title: { en: "Room and Board", fr: "Chambre et pension" },
+        content: {
+          en: "Deductions for room and board require your consent and cannot reduce your earnings below minimum wage by more than <strong>$7 per week for the room</strong> and <strong>$1 per meal</strong>.",
+          fr: "Les déductions pour la chambre et la pension nécessitent votre consentement et ne peuvent pas faire descendre vos gains sous le salaire minimum de plus de <strong>7 $ par semaine pour la chambre</strong> et <strong>1 $ par repas</strong>.",
+        },
+      },
+      {
+        title: { en: "General Holidays", fr: "Jours fériés généraux" },
+        content: {
+          en: "Manitoba has <strong>9 general holidays</strong> per year, including Louis Riel Day and Orange Shirt Day. Holiday pay is <strong>5% of your gross wages</strong> (excluding overtime) in the 4 weeks before the holiday. If you work on a general holiday, you receive <strong>1.5 times your regular rate</strong> for hours worked plus your holiday pay. There is no minimum service period to qualify.",
+          fr: "Le Manitoba compte <strong>9 jours fériés généraux</strong> par année, y compris la Journée Louis Riel et la Journée du chandail orange. L'indemnité de jour férié est de <strong>5 % de votre salaire brut</strong> (heures supplémentaires exclues) des 4 semaines précédant le jour férié. Si vous travaillez un jour férié, vous recevez <strong>1,5 fois votre taux régulier</strong> pour les heures travaillées plus votre indemnité de jour férié. Aucune période de service minimale n'est requise pour y avoir droit.",
+        },
+      },
+      {
+        title: { en: "Vacation Pay", fr: "Indemnité de vacances" },
+        content: {
+          en: "Workers are entitled to <strong>4% vacation pay</strong> and 2 weeks of vacation per year for the first 4 years of employment. After 5 consecutive years with the same employer, this increases to <strong>6% and 3 weeks</strong>. Vacation pay should be clearly indicated on pay stubs.",
+          fr: "Les travailleurs ont droit à une <strong>indemnité de vacances de 4 %</strong> et à 2 semaines de vacances par année pour les 4 premières années d'emploi. Après 5 années consécutives chez le même employeur, cela passe à <strong>6 % et 3 semaines</strong>. Cela doit être clairement indiqué sur les talons de paie.",
+        },
+      },
+      {
+        title: { en: "Workplace Safety and Health", fr: "Sécurité et santé au travail" },
+        content: {
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact Manitoba Workplace Safety and Health at <strong>204-957-7233</strong> (204-957-SAFE) in Winnipeg or <strong>1-855-957-7233</strong> toll-free — a safety and health officer is available 24/7. All workers have the right to refuse work they reasonably believe is dangerous to themselves or others.",
+          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, contactez Sécurité et santé au travail du Manitoba au <strong>204-957-7233</strong> (204-957-SAFE) à Winnipeg ou au <strong>1-855-957-7233</strong> sans frais — un agent de sécurité et santé est disponible 24 h sur 24, 7 jours sur 7. Tous les travailleurs ont le droit de refuser un travail qu'ils croient raisonnablement dangereux pour eux-mêmes ou pour autrui.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "new-brunswick",
+    name: { en: "New Brunswick", fr: "Nouveau-Brunswick" },
+    intro: {
+      en: "In New Brunswick, workers are protected by the Employment Standards Act. Tree planters should note that overtime in New Brunswick is calculated at 1.5 times the minimum wage — not your regular wage — one of the weakest overtime standards in the country.",
+      fr: "Au Nouveau-Brunswick, les travailleurs sont protégés par la Loi sur les normes d'emploi. Les planteurs d'arbres doivent savoir que les heures supplémentaires au Nouveau-Brunswick sont calculées à 1,5 fois le salaire minimum — et non votre salaire régulier — l'une des normes d'heures supplémentaires les plus faibles au pays.",
+    },
+    governmentLinks: [
+      {
+        title: {
+          en: "Minimum Wage, Overtime and Reporting Pay",
+          fr: "Salaire minimum, heures supplémentaires et salaire minimum de présence au travail",
+        },
+        url: "https://www.gnb.ca/en/topic/jobs-workplaces/labour-market-workforce/employment-standards/wage-pay.html",
+        description: {
+          en: "Official government information on wages and pay. Employment Standards Branch: 1-888-452-2687",
+          fr: "Informations officielles du gouvernement sur les salaires. Direction des normes d'emploi : 1-888-487-2824",
+        },
+      },
+      {
+        title: {
+          en: "Employment Standards Act",
+          fr: "Loi sur les normes d'emploi",
+        },
+        url: "https://www.canlii.org/en/nb/laws/stat/snb-1982-c-e-7.2/latest/",
+        description: {
+          en: "Full text of New Brunswick's Employment Standards Act",
+          fr: "Texte complet de la Loi sur les normes d'emploi du Nouveau-Brunswick",
+        },
+      },
+      {
+        title: {
+          en: "WorkSafeNB",
+          fr: "Travail sécuritaire NB",
+        },
+        url: "https://www.worksafenb.ca/",
+        description: {
+          en: "Workplace health and safety, injury compensation, and unsafe work reports",
+          fr: "Santé et sécurité au travail, indemnisation des blessures et signalements de travail dangereux",
+        },
+      },
+    ],
+    ngoLinks: [
+      {
+        title: {
+          en: "New Brunswick Federation of Labour",
+          fr: "Fédération des travailleurs et travailleuses du Nouveau-Brunswick",
+        },
+        url: "https://fednb.ca/",
+        description: {
+          en: "Central labour body advocating for workers across New Brunswick",
+          fr: "Organisation syndicale centrale défendant les travailleurs de tout le Nouveau-Brunswick",
+        },
+      },
+      {
+        title: {
+          en: "Public Legal Education and Information Service of New Brunswick (PLEIS-NB)",
+          fr: "Service public d'éducation et d'information juridiques du Nouveau-Brunswick (SPEIJ-NB)",
+        },
+        url: "https://legalinfonb.ca/",
+        description: {
+          en: "Free bilingual legal information, including workplace rights",
+          fr: "Informations juridiques bilingues gratuites, y compris sur les droits au travail",
+        },
+      },
+    ],
+    standards: [
+      {
+        title: { en: "Minimum Wage", fr: "Salaire minimum" },
+        content: {
+          en: "<strong>$15.90/hour</strong> (effective April 1, 2026), adjusted each April based on the Consumer Price Index<br/>All employees paid by salary, commission, or <strong>piece work</strong> must receive at least minimum wage for every hour worked. All work hours including training, camp meetings, setup time, and travel time must be compensated.",
+          fr: "<strong>15,90 $/heure</strong> (en vigueur depuis le 1er avril 2026), ajusté chaque avril selon l'Indice des prix à la consommation<br/>Tous les employés payés au salaire, à la commission ou <strong>à la pièce</strong> doivent recevoir au moins le salaire minimum pour chaque heure travaillée. Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées.",
+        },
+      },
+      {
+        title: { en: "Overtime", fr: "Heures supplémentaires" },
+        content: {
+          en: "<strong>Important:</strong> Overtime applies after <strong>44 hours in a week</strong>, but the required rate is only <strong>1.5 times the minimum wage</strong> (<strong>$23.85/hour</strong> as of April 1, 2026) — not 1.5 times your regular wage. If your regular earnings are already above $23.85/hour, your employer is not required to pay a premium. Banking of overtime hours is prohibited. Keep detailed daily records of your hours.",
+          fr: "<strong>Important :</strong> Les heures supplémentaires s'appliquent après <strong>44 heures par semaine</strong>, mais le taux requis n'est que de <strong>1,5 fois le salaire minimum</strong> (<strong>23,85 $/heure</strong> depuis le 1er avril 2026) — et non 1,5 fois votre salaire régulier. Si vos gains réguliers dépassent déjà 23,85 $/heure, votre employeur n'est pas tenu de payer une prime. La mise en banque des heures supplémentaires est interdite. Tenez un registre quotidien détaillé de vos heures.",
+        },
+      },
+      {
+        title: { en: "Minimum Reporting Pay", fr: "Salaire minimum de présence au travail" },
+        content: {
+          en: "If you report to work at your employer's request, you are entitled to a minimum of <strong>3 hours of pay</strong> at the applicable rate (this applies to employees who regularly work more than 3 consecutive hours and earn less than twice the minimum wage).",
+          fr: "Si vous vous présentez au travail à la demande de votre employeur, vous avez droit à un minimum de <strong>3 heures de salaire</strong> au taux applicable (cela s'applique aux employés qui travaillent habituellement plus de 3 heures consécutives et gagnent moins de deux fois le salaire minimum).",
+        },
+      },
+      {
+        title: { en: "Paid Public Holidays", fr: "Jours fériés payés" },
+        content: {
+          en: "New Brunswick has <strong>8 paid public holidays</strong>, including New Brunswick Day, Family Day, and Remembrance Day. To qualify, you must be employed for at least 90 calendar days in the 12 months before the holiday and work your scheduled day before and after it. If you work on a public holiday, you receive your regular day's pay plus <strong>1.5 times your regular rate</strong> for hours worked — and all employees, even those who don't qualify, receive 1.5 times their regular rate for holiday hours.",
+          fr: "Le Nouveau-Brunswick compte <strong>8 jours fériés payés</strong>, y compris la Fête du Nouveau-Brunswick, le jour de la Famille et le jour du Souvenir. Pour être admissible, vous devez être à l'emploi depuis au moins 90 jours civils dans les 12 mois précédant le jour férié et avoir travaillé votre journée prévue avant et après celui-ci. Si vous travaillez un jour férié, vous recevez votre salaire régulier de la journée plus <strong>1,5 fois votre taux régulier</strong> pour les heures travaillées — et tous les employés, même ceux qui ne sont pas admissibles, reçoivent 1,5 fois leur taux régulier pour les heures d'un jour férié.",
+        },
+      },
+      {
+        title: { en: "Vacation Pay", fr: "Indemnité de vacances" },
+        content: {
+          en: "Workers with less than 8 years of service are entitled to <strong>4% vacation pay</strong> and 2 weeks of vacation per year (or 1 day per month worked, whichever is less). After 8 years with the same employer: <strong>6% and 3 weeks</strong>. All accumulated vacation pay must be paid out with your final cheque when employment ends.",
+          fr: "Les travailleurs ayant moins de 8 ans de service ont droit à une <strong>indemnité de vacances de 4 %</strong> et à 2 semaines de vacances par année (ou 1 jour par mois travaillé, selon le moindre des deux). Après 8 ans chez le même employeur : <strong>6 % et 3 semaines</strong>. Toute indemnité de vacances accumulée doit être versée avec votre dernier chèque de paie à la fin de l'emploi.",
+        },
+      },
+      {
+        title: { en: "Workplace Safety", fr: "Sécurité au travail" },
+        content: {
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact WorkSafeNB at <strong>1-800-999-9775</strong>. Under New Brunswick's Occupational Health and Safety Act, all workers have the right to refuse work they believe is dangerous to their health or safety. For employment standards questions, call the Employment Standards Branch at 1-888-452-2687 (English) or 1-888-487-2824 (French).",
+          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, contactez Travail sécuritaire NB au <strong>1-800-999-9775</strong>. En vertu de la Loi sur l'hygiène et la sécurité au travail du Nouveau-Brunswick, tous les travailleurs ont le droit de refuser un travail qu'ils croient dangereux pour leur santé ou leur sécurité. Pour les questions sur les normes d'emploi, appelez la Direction des normes d'emploi au 1-888-487-2824 (français) ou au 1-888-452-2687 (anglais).",
+        },
+      },
+    ],
+  },
+  {
+    slug: "pei",
+    name: { en: "Prince Edward Island", fr: "Île-du-Prince-Édouard" },
+    intro: {
+      en: "In Prince Edward Island, workers are protected by the Employment Standards Act — a completely new version of which came into force on June 30, 2026, strengthening overtime, vacation, and sick leave rights. PEI has the highest minimum wage in Atlantic Canada.",
+      fr: "À l'Île-du-Prince-Édouard, les travailleurs sont protégés par la Loi sur les normes d'emploi — dont une toute nouvelle version est entrée en vigueur le 30 juin 2026, renforçant les droits aux heures supplémentaires, aux vacances et aux congés de maladie. L'Î.-P.-É. a le salaire minimum le plus élevé du Canada atlantique.",
+    },
+    governmentLinks: [
+      {
+        title: {
+          en: "Employment Standards in PEI",
+          fr: "Normes d'emploi à l'Î.-P.-É.",
+        },
+        url: "https://www.princeedwardisland.ca/en/information/workforce-and-advanced-learning/employment-standards-in-pei",
+        description: {
+          en: "Official government employment standards information. Labour and Industrial Relations: 902-368-5550",
+          fr: "Informations officielles du gouvernement sur les normes d'emploi. Relations de travail et industrielles : 902-368-5550",
+        },
+      },
+      {
+        title: {
+          en: "Paid Holidays in PEI",
+          fr: "Jours fériés payés à l'Î.-P.-É.",
+        },
+        url: "https://www.princeedwardisland.ca/en/information/workforce-advanced-learning-and-population/paid-holidays",
+        description: {
+          en: "Official information on paid holidays and holiday pay",
+          fr: "Informations officielles sur les jours fériés et l'indemnité de jour férié",
+        },
+      },
+      {
+        title: {
+          en: "Employment Standards Act",
+          fr: "Loi sur les normes d'emploi",
+        },
+        url: "https://www.princeedwardisland.ca/sites/default/files/legislation/e-06-2-employment_standards_act.pdf",
+        description: {
+          en: "Full text of PEI's Employment Standards Act",
+          fr: "Texte complet de la Loi sur les normes d'emploi de l'Î.-P.-É.",
+        },
+      },
+    ],
+    ngoLinks: [
+      {
+        title: {
+          en: "PEI Federation of Labour",
+          fr: "Fédération du travail de l'Î.-P.-É.",
+        },
+        url: "https://peifed.ca/",
+        description: {
+          en: "Central labour body advocating for workers across Prince Edward Island",
+          fr: "Organisation syndicale centrale défendant les travailleurs de toute l'Île-du-Prince-Édouard",
+        },
+      },
+      {
+        title: {
+          en: "Community Legal Information",
+          fr: "Community Legal Information",
+        },
+        url: "https://legalinfopei.ca/",
+        description: {
+          en: "Free legal information for Islanders, including workplace rights. Toll-free: 1-800-240-9798",
+          fr: "Informations juridiques gratuites pour les Insulaires, y compris sur les droits au travail. Sans frais : 1-800-240-9798",
+        },
+      },
+    ],
+    standards: [
+      {
+        title: { en: "Minimum Wage", fr: "Salaire minimum" },
+        content: {
+          en: "<strong>$17.00/hour</strong> (effective April 1, 2026), rising to <strong>$17.30/hour</strong> on October 1, 2026 — the highest minimum wage in Atlantic Canada. All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage.",
+          fr: "<strong>17,00 $/heure</strong> (en vigueur depuis le 1er avril 2026), passant à <strong>17,30 $/heure</strong> le 1er octobre 2026 — le salaire minimum le plus élevé du Canada atlantique. Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum.",
+        },
+      },
+      {
+        title: { en: "Overtime", fr: "Heures supplémentaires" },
+        content: {
+          en: "Under the new Employment Standards Act (in force June 30, 2026), overtime applies after <strong>44 hours in a week</strong> (reduced from 48) at <strong>1.5 times your regular wage</strong>. With a written agreement, you may bank overtime as paid time off at 1.5 hours per overtime hour worked. Employers may only average hours over 2–4 weeks for overtime calculation with your written agreement.",
+          fr: "En vertu de la nouvelle Loi sur les normes d'emploi (en vigueur depuis le 30 juin 2026), les heures supplémentaires s'appliquent après <strong>44 heures par semaine</strong> (réduit de 48) à <strong>1,5 fois votre salaire régulier</strong>. Avec une entente écrite, vous pouvez mettre en banque les heures supplémentaires en congé payé à raison de 1,5 heure par heure supplémentaire travaillée. Les employeurs ne peuvent faire la moyenne des heures sur 2 à 4 semaines pour le calcul des heures supplémentaires qu'avec votre accord écrit.",
+        },
+      },
+      {
+        title: { en: "Paid Holidays", fr: "Jours fériés payés" },
+        content: {
+          en: "PEI has <strong>8 paid holidays</strong>, including Islander Day and the National Day for Truth and Reconciliation. Holiday pay is <strong>5% of your regular wages</strong> earned in the 4 weeks before the holiday (excluding overtime). If you work on a paid holiday, you receive <strong>1.5 times your regular wage</strong> for hours worked plus your holiday pay, or regular pay plus a paid day off.",
+          fr: "L'Î.-P.-É. compte <strong>8 jours fériés payés</strong>, y compris la Journée des Insulaires et la Journée nationale de la vérité et de la réconciliation. L'indemnité de jour férié est de <strong>5 % de votre salaire régulier</strong> gagné dans les 4 semaines précédant le jour férié (heures supplémentaires exclues). Si vous travaillez un jour férié, vous recevez <strong>1,5 fois votre salaire régulier</strong> pour les heures travaillées plus votre indemnité de jour férié, ou votre salaire régulier plus un jour de congé payé.",
+        },
+      },
+      {
+        title: { en: "Vacation Pay", fr: "Indemnité de vacances" },
+        content: {
+          en: "Workers are entitled to <strong>4% vacation pay</strong> and 2 weeks of vacation after 12 months of employment. Under the new Act, the threshold for increased entitlement was reduced from 8 years to <strong>5 years</strong>, after which you receive <strong>6% and 3 weeks</strong>. The new Act also adds specific vacation pay provisions for part-time, seasonal, and short-term employees.",
+          fr: "Les travailleurs ont droit à une <strong>indemnité de vacances de 4 %</strong> et à 2 semaines de vacances après 12 mois d'emploi. En vertu de la nouvelle Loi, le seuil d'admissibilité aux droits accrus a été réduit de 8 ans à <strong>5 ans</strong>, après quoi vous recevez <strong>6 % et 3 semaines</strong>. La nouvelle Loi ajoute aussi des dispositions spécifiques d'indemnité de vacances pour les employés à temps partiel, saisonniers et de courte durée.",
+        },
+      },
+      {
+        title: { en: "Sick Leave", fr: "Congés de maladie" },
+        content: {
+          en: "Under the new Act, after 30 days of continuous employment you are entitled to <strong>4 days of unpaid sick leave</strong> per year. Paid sick days accrue with service: <strong>1 paid day</strong> in your second year, <strong>2</strong> in your third, and <strong>3</strong> from your fourth year onward.",
+          fr: "En vertu de la nouvelle Loi, après 30 jours d'emploi continu, vous avez droit à <strong>4 jours de congé de maladie non payés</strong> par année. Les jours de maladie payés s'accumulent avec le service : <strong>1 jour payé</strong> dans votre deuxième année, <strong>2</strong> dans votre troisième et <strong>3</strong> à partir de votre quatrième année.",
+        },
+      },
+      {
+        title: { en: "Workplace Safety", fr: "Sécurité au travail" },
+        content: {
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the Occupational Health and Safety Division of the Workers Compensation Board of PEI at <strong>902-368-5680</strong> or <strong>1-800-237-5049</strong> (toll-free in Atlantic Canada). A 24-hour emergency line is available at 902-628-7513. All workers have the right to refuse work they have reasonable grounds to believe endangers their health or safety.",
+          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, contactez la Division de la santé et de la sécurité au travail de la Commission des accidents du travail de l'Î.-P.-É. au <strong>902-368-5680</strong> ou au <strong>1-800-237-5049</strong> (sans frais au Canada atlantique). Une ligne d'urgence 24 heures est disponible au 902-628-7513. Tous les travailleurs ont le droit de refuser un travail qu'ils ont des motifs raisonnables de croire dangereux pour leur santé ou leur sécurité.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "newfoundland-labrador",
+    name: { en: "Newfoundland and Labrador", fr: "Terre-Neuve-et-Labrador" },
+    intro: {
+      en: "In Newfoundland and Labrador, workers are protected by the Labour Standards Act. Tree planters should note that overtime is calculated at 1.5 times the minimum wage — not your regular wage — and that vacation entitlements only increase after 15 years of service.",
+      fr: "À Terre-Neuve-et-Labrador, les travailleurs sont protégés par la Loi sur les normes du travail (Labour Standards Act). Les planteurs d'arbres doivent savoir que les heures supplémentaires sont calculées à 1,5 fois le salaire minimum — et non votre salaire régulier — et que les droits aux vacances n'augmentent qu'après 15 ans de service.",
+    },
+    governmentLinks: [
+      {
+        title: {
+          en: "Labour Standards Division",
+          fr: "Division des normes du travail",
+        },
+        url: "https://www.gov.nl.ca/gs/labour/",
+        description: {
+          en: "Official government labour standards information. Contact: 709-729-4834",
+          fr: "Informations officielles du gouvernement sur les normes du travail. Contact : 709-729-4834",
+        },
+      },
+      {
+        title: {
+          en: "Your Rights at Work (Guide)",
+          fr: "Vos droits au travail (guide)",
+        },
+        url: "https://www.gov.nl.ca/gs/files/Your-Rights-At-Work.pdf",
+        description: {
+          en: "Government guide summarizing labour standards for workers",
+          fr: "Guide gouvernemental résumant les normes du travail pour les travailleurs",
+        },
+      },
+      {
+        title: {
+          en: "Labour Standards Act",
+          fr: "Loi sur les normes du travail",
+        },
+        url: "https://assembly.nl.ca/legislation/sr/statutes/l02.htm",
+        description: {
+          en: "Full text of the Labour Standards Act",
+          fr: "Texte complet de la Loi sur les normes du travail",
+        },
+      },
+    ],
+    ngoLinks: [
+      {
+        title: {
+          en: "Newfoundland and Labrador Federation of Labour",
+          fr: "Fédération du travail de Terre-Neuve-et-Labrador",
+        },
+        url: "https://nlfed.ca/",
+        description: {
+          en: "Central labour body advocating for workers across the province",
+          fr: "Organisation syndicale centrale défendant les travailleurs de toute la province",
+        },
+      },
+      {
+        title: {
+          en: "Workers' Action Network NL",
+          fr: "Workers' Action Network NL",
+        },
+        url: "https://workersactionnl.ca/",
+        description: {
+          en: "Grassroots network providing information and support for non-unionized workers",
+          fr: "Réseau communautaire offrant informations et soutien aux travailleurs non syndiqués",
+        },
+      },
+    ],
+    standards: [
+      {
+        title: { en: "Minimum Wage", fr: "Salaire minimum" },
+        content: {
+          en: "<strong>$16.35/hour</strong> (effective April 1, 2026), adjusted each April 1 based on the national Consumer Price Index<br/>All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage. Employers must pay you at least twice a month, within 7 days of the end of the pay period.",
+          fr: "<strong>16,35 $/heure</strong> (en vigueur depuis le 1er avril 2026), ajusté chaque 1er avril selon l'Indice des prix à la consommation national<br/>Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum. Les employeurs doivent vous payer au moins deux fois par mois, dans les 7 jours suivant la fin de la période de paie.",
+        },
+      },
+      {
+        title: { en: "Overtime", fr: "Heures supplémentaires" },
+        content: {
+          en: "<strong>Important:</strong> Overtime applies after <strong>40 hours in a week</strong>, but the required rate is only <strong>1.5 times the minimum wage</strong> (<strong>$24.53/hour</strong> as of April 1, 2026) — not 1.5 times your regular wage. If your piece-rate earnings already exceed $24.53/hour, your employer may not owe an overtime premium. Keep detailed daily records of your hours.",
+          fr: "<strong>Important :</strong> Les heures supplémentaires s'appliquent après <strong>40 heures par semaine</strong>, mais le taux requis n'est que de <strong>1,5 fois le salaire minimum</strong> (<strong>24,53 $/heure</strong> depuis le 1er avril 2026) — et non 1,5 fois votre salaire régulier. Si vos gains à la pièce dépassent déjà 24,53 $/heure, votre employeur pourrait ne pas devoir de prime d'heures supplémentaires. Tenez un registre quotidien détaillé de vos heures.",
+        },
+      },
+      {
+        title: { en: "Paid Holidays", fr: "Jours fériés payés" },
+        content: {
+          en: "Newfoundland and Labrador has <strong>6 paid holidays</strong>: New Year's Day, Good Friday, Memorial Day (July 1), Labour Day, Remembrance Day, and Christmas Day. If you work on a paid holiday, you are entitled to <strong>twice your regular wages</strong> for that day, or an additional paid day off within 30 days.",
+          fr: "Terre-Neuve-et-Labrador compte <strong>6 jours fériés payés</strong> : le jour de l'An, le Vendredi saint, le Jour commémoratif (1er juillet), la fête du Travail, le jour du Souvenir et le jour de Noël. Si vous travaillez un jour férié, vous avez droit au <strong>double de votre salaire régulier</strong> pour cette journée, ou à un jour de congé payé supplémentaire dans les 30 jours.",
+        },
+      },
+      {
+        title: { en: "Vacation Pay", fr: "Indemnité de vacances" },
+        content: {
+          en: "Workers are entitled to <strong>4% vacation pay</strong>, with 2 weeks of annual vacation after 12 months of continuous service (if you worked at least 90% of available working hours). Vacation pay increases to <strong>6% and 3 weeks</strong> only after <strong>15 years</strong> with the same employer — the longest threshold in Canada. Vacation pay should be clearly indicated on pay stubs.",
+          fr: "Les travailleurs ont droit à une <strong>indemnité de vacances de 4 %</strong>, avec 2 semaines de vacances annuelles après 12 mois de service continu (si vous avez travaillé au moins 90 % des heures de travail disponibles). L'indemnité ne passe à <strong>6 % et 3 semaines</strong> qu'après <strong>15 ans</strong> chez le même employeur — le seuil le plus long au Canada. Cela doit être clairement indiqué sur les talons de paie.",
+        },
+      },
+      {
+        title: { en: "Workplace Safety", fr: "Sécurité au travail" },
+        content: {
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the Occupational Health and Safety Division at <strong>709-729-4834</strong>, or the 24-hour accident reporting line at 709-729-4444. Under Section 45 of the Occupational Health and Safety Act, all workers have the right to refuse work they reasonably believe is dangerous. Workplace injuries are covered by WorkplaceNL.",
+          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, contactez la Division de la santé et de la sécurité au travail au <strong>709-729-4834</strong>, ou la ligne de signalement d'accidents 24 heures au 709-729-4444. En vertu de l'article 45 de la Loi sur la santé et la sécurité au travail, tous les travailleurs ont le droit de refuser un travail qu'ils croient raisonnablement dangereux. Les accidents du travail sont couverts par WorkplaceNL.",
         },
       },
     ],

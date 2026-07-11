@@ -171,32 +171,84 @@ export default function RightsHubPage() {
                 <Bilingual en="Learn More →" fr="En savoir plus →" />
               </Link>
             </div>
+
+            {/* Manitoba Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">Manitoba</h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to Manitoba."
+                  fr="Normes d'emploi et protections des travailleurs spécifiques au Manitoba."
+                />
+              </p>
+              <Link
+                href="/rights/manitoba"
+                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* New Brunswick Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                <Bilingual en="New Brunswick" fr="Nouveau-Brunswick" />
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to New Brunswick."
+                  fr="Normes d'emploi et protections des travailleurs spécifiques au Nouveau-Brunswick."
+                />
+              </p>
+              <Link
+                href="/rights/new-brunswick"
+                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* PEI Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                <Bilingual en="Prince Edward Island" fr="Île-du-Prince-Édouard" />
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to PEI."
+                  fr="Normes d'emploi et protections des travailleurs spécifiques à l'Î.-P.-É."
+                />
+              </p>
+              <Link
+                href="/rights/pei"
+                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* Newfoundland & Labrador Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                <Bilingual en="Newfoundland and Labrador" fr="Terre-Neuve-et-Labrador" />
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to Newfoundland and Labrador."
+                  fr="Normes d'emploi et protections des travailleurs spécifiques à Terre-Neuve-et-Labrador."
+                />
+              </p>
+              <Link
+                href="/rights/newfoundland-labrador"
+                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
           </div>
         </div>
       </ContentSection>
 
-      <ContentSection variant="green">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="heading text-3xl md:text-4xl mb-6">
-            <Bilingual
-              en="Want to Help Add Your Province?"
-              fr="Vous voulez aider à ajouter votre province ?"
-            />
-          </h2>
-          <p className="text-lg mb-8">
-            <Bilingual
-              en="We're working to compile comprehensive rights information for all provinces where tree planting occurs. If you have knowledge of employment standards in your region or can help with translations, we'd love to hear from you."
-              fr="Nous travaillons à compiler des informations complètes sur les droits pour toutes les provinces où la plantation d'arbres a lieu. Si vous connaissez les normes d'emploi dans votre région ou pouvez aider avec les traductions, nous aimerions vous entendre."
-            />
-          </p>
-          <a
-            href="mailto:treeworkersindustrialgroup@gmail.com"
-            className="inline-block bg-white/0 outline outline-2 px-8 py-4 text-xl outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
-          >
-            <Bilingual en="Get in Touch" fr="Contactez-nous" />
-          </a>
-        </div>
-      </ContentSection>
     </main>
   );
 }

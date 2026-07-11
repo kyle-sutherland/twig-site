@@ -17,7 +17,8 @@
       "Bash(pnpm run *)",
       "Bash(node -e ' *)",
       "Bash(node -e \"console.log\\(require.resolve\\('typescript/package.json'\\)\\)\")",
-      "Bash(node -e \"const p=require\\('typescript/package.json'\\); console.log\\(p.name, p.version\\)\")"
+      "Bash(node -e \"const p=require\\('typescript/package.json'\\); console.log\\(p.name, p.version\\)\")",
+      "WebFetch(domain:www.gov.mb.ca)"
     ],
     "deny": [],
     "ask": []
