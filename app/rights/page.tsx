@@ -62,6 +62,23 @@ export default function RightsHubPage() {
             <Bilingual en="Select Your Province" fr="Choisissez votre province" />
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Alberta Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">Alberta</h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to Alberta."
+                  fr="Normes d'emploi et protections des travailleurs spécifiques à l'Alberta."
+                />
+              </p>
+              <Link
+                href="/rights/alberta"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
             {/* BC Card */}
             <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
               <h3 className="heading text-2xl text-gray-900 mb-4">
@@ -75,98 +92,7 @@ export default function RightsHubPage() {
               </p>
               <Link
                 href="/rights/bc"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
-              >
-                <Bilingual en="Learn More →" fr="En savoir plus →" />
-              </Link>
-            </div>
-
-            {/* Alberta Card */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <h3 className="heading text-2xl text-gray-900 mb-4">Alberta</h3>
-              <p className="text-gray-700 mb-6">
-                <Bilingual
-                  en="Employment standards and worker protections specific to Alberta."
-                  fr="Normes d'emploi et protections des travailleurs spécifiques à l'Alberta."
-                />
-              </p>
-              <Link
-                href="/rights/alberta"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
-              >
-                <Bilingual en="Learn More →" fr="En savoir plus →" />
-              </Link>
-            </div>
-
-            {/* Ontario Card */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <h3 className="heading text-2xl text-gray-900 mb-4">Ontario</h3>
-              <p className="text-gray-700 mb-6">
-                <Bilingual
-                  en="Employment standards and worker protections specific to Ontario."
-                  fr="Normes d'emploi et protections des travailleurs spécifiques à l'Ontario."
-                />
-              </p>
-              <Link
-                href="/rights/ontario"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
-              >
-                <Bilingual en="Learn More →" fr="En savoir plus →" />
-              </Link>
-            </div>
-
-            {/* Saskatchewan Card */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <h3 className="heading text-2xl text-gray-900 mb-4">
-                Saskatchewan
-              </h3>
-              <p className="text-gray-700 mb-6">
-                <Bilingual
-                  en="Employment standards and worker protections specific to Saskatchewan."
-                  fr="Normes d'emploi et protections des travailleurs spécifiques à la Saskatchewan."
-                />
-              </p>
-              <Link
-                href="/rights/saskatchewan"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
-              >
-                <Bilingual en="Learn More →" fr="En savoir plus →" />
-              </Link>
-            </div>
-
-            {/* Quebec Card */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <h3 className="heading text-2xl text-gray-900 mb-4">
-                <Bilingual en="Quebec" fr="Québec" />
-              </h3>
-              <p className="text-gray-700 mb-6">
-                <Bilingual
-                  en="Employment standards and worker protections specific to Quebec."
-                  fr="Normes du travail et protections des travailleurs spécifiques au Québec."
-                />
-              </p>
-              <Link
-                href="/rights/quebec"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
-              >
-                <Bilingual en="Learn More →" fr="En savoir plus →" />
-              </Link>
-            </div>
-
-            {/* Nova Scotia Card */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <h3 className="heading text-2xl text-gray-900 mb-4">
-                <Bilingual en="Nova Scotia" fr="Nouvelle-Écosse" />
-              </h3>
-              <p className="text-gray-700 mb-6">
-                <Bilingual
-                  en="Employment standards and worker protections specific to Nova Scotia."
-                  fr="Normes du travail et protections des travailleurs spécifiques à la Nouvelle-Écosse."
-                />
-              </p>
-              <Link
-                href="/rights/nova-scotia"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
                 <Bilingual en="Learn More →" fr="En savoir plus →" />
               </Link>
@@ -183,7 +109,7 @@ export default function RightsHubPage() {
               </p>
               <Link
                 href="/rights/manitoba"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
                 <Bilingual en="Learn More →" fr="En savoir plus →" />
               </Link>
@@ -202,26 +128,7 @@ export default function RightsHubPage() {
               </p>
               <Link
                 href="/rights/new-brunswick"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
-              >
-                <Bilingual en="Learn More →" fr="En savoir plus →" />
-              </Link>
-            </div>
-
-            {/* PEI Card */}
-            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <h3 className="heading text-2xl text-gray-900 mb-4">
-                <Bilingual en="Prince Edward Island" fr="Île-du-Prince-Édouard" />
-              </h3>
-              <p className="text-gray-700 mb-6">
-                <Bilingual
-                  en="Employment standards and worker protections specific to PEI."
-                  fr="Normes d'emploi et protections des travailleurs spécifiques à l'Î.-P.-É."
-                />
-              </p>
-              <Link
-                href="/rights/pei"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
                 <Bilingual en="Learn More →" fr="En savoir plus →" />
               </Link>
@@ -240,7 +147,100 @@ export default function RightsHubPage() {
               </p>
               <Link
                 href="/rights/newfoundland-labrador"
-                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* Nova Scotia Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                <Bilingual en="Nova Scotia" fr="Nouvelle-Écosse" />
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to Nova Scotia."
+                  fr="Normes du travail et protections des travailleurs spécifiques à la Nouvelle-Écosse."
+                />
+              </p>
+              <Link
+                href="/rights/nova-scotia"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* Ontario Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">Ontario</h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to Ontario."
+                  fr="Normes d'emploi et protections des travailleurs spécifiques à l'Ontario."
+                />
+              </p>
+              <Link
+                href="/rights/ontario"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* PEI Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                <Bilingual en="Prince Edward Island" fr="Île-du-Prince-Édouard" />
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to PEI."
+                  fr="Normes d'emploi et protections des travailleurs spécifiques à l'Î.-P.-É."
+                />
+              </p>
+              <Link
+                href="/rights/pei"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* Quebec Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                <Bilingual en="Quebec" fr="Québec" />
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to Quebec."
+                  fr="Normes du travail et protections des travailleurs spécifiques au Québec."
+                />
+              </p>
+              <Link
+                href="/rights/quebec"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
+
+            {/* Saskatchewan Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                Saskatchewan
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to Saskatchewan."
+                  fr="Normes d'emploi et protections des travailleurs spécifiques à la Saskatchewan."
+                />
+              </p>
+              <Link
+                href="/rights/saskatchewan"
+                className="inline-block bg-slate-950 outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
               >
                 <Bilingual en="Learn More →" fr="En savoir plus →" />
               </Link>

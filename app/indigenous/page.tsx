@@ -97,7 +97,7 @@ export default function IndigenousSolidarityPage() {
           </p>
           <a
             href="mailto:treeworkersindustrialgroup@gmail.com"
-            className="inline-block bg-white/0 outline outline-2 px-8 py-4 text-xl outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
+            className="inline-block bg-white/0 outline-2 px-8 py-4 text-xl outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
           >
             Contact Us
           </a>

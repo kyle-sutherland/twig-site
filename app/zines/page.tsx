@@ -133,7 +133,7 @@ export default function ZinesPage() {
           </p>
           <a
             href="mailto:treeworkersindustrialgroup@gmail.com"
-            className="inline-block bg-slate-950 outline outline-2 px-8 py-4 text-xl text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+            className="inline-block bg-slate-950 outline-2 px-8 py-4 text-xl text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
           >
             Get in Touch
           </a>
