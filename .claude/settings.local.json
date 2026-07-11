@@ -9,7 +9,15 @@
       "WebFetch(domain:treeworkersindustrialgroup.work)",
       "Bash(tree:*)",
       "WebFetch(domain:novascotia.ca)",
-      "PowerShell(pnpm build)"
+      "PowerShell(pnpm build)",
+      "Bash(cd \"c:\\\\Users\\\\mynam\\\\Sync\\\\source\\\\twigSitePlusDocs\\\\twig-site\" && cat .npmrc 2>&1; echo \"---root npmrc---\"; cat ../.npmrc 2>&1; echo \"---env check---\"; grep -i \"NODE_ENV\\\\|production\" package.json pnpm-workspace.yaml 2>&1)",
+      "Read(//c/Users/mynam/Sync/source/twigSitePlusDocs/**)",
+      "Bash(rm -rf node_modules)",
+      "Bash(pnpm install *)",
+      "Bash(pnpm run *)",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"console.log\\(require.resolve\\('typescript/package.json'\\)\\)\")",
+      "Bash(node -e \"const p=require\\('typescript/package.json'\\); console.log\\(p.name, p.version\\)\")"
     ],
     "deny": [],
     "ask": []
