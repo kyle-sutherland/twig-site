@@ -27,7 +27,9 @@ Development server runs at `http://localhost:3000`.
 ## Architecture
 
 ### App Router Structure
+
 The project uses Next.js 15's App Router:
+
 - `app/layout.tsx` - Root layout with Geist fonts, global Navigation and Footer components
 - `app/page.tsx` - Homepage with hero banner, about section, contact form
 - `app/components/` - Reusable React components
@@ -36,6 +38,7 @@ The project uses Next.js 15's App Router:
 ### Key Components
 
 **Navigation** (`app/components/Navigation.tsx`)
+
 - Client component with conditional scroll-based styling
 - Scroll animation (transparent → dark background) **only on homepage** (`/`)
 - All other pages have static black navbar with white text
@@ -45,6 +48,7 @@ The project uses Next.js 15's App Router:
 - Navigation items defined in `navItems` array
 
 **Contact Form** (`app/components/contact-form.tsx`)
+
 - Client component using `react-hook-form` for form handling
 - Google reCAPTCHA v3 integration via `react-google-recaptcha-v3`
 - Honeypot field (`_gotcha`) for spam prevention
@@ -55,12 +59,14 @@ The project uses Next.js 15's App Router:
 - Clean, modern form styling with focus rings
 
 **Buttons** (`app/components/buttons.tsx`)
+
 - Two button variants: `LinkButton` (outline style) and `ActionButton` (filled style)
 - Styles defined as string constants at top of file
 - TypeScript interfaces for props
 - Used throughout site for CTAs and downloads
 
 **Footer** (`app/components/Footer.tsx`)
+
 - Global footer component included in `app/layout.tsx`
 - Appears on all pages across the site
 - Contains TWIG logo and contact information
@@ -69,6 +75,7 @@ The project uses Next.js 15's App Router:
 - Black background with white text and icons
 
 **PageHero** (`app/components/PageHero.tsx`)
+
 - Reusable hero section for internal pages
 - Props: `title` (string or bilingual object), `subtitle`, `backgroundImage`, `height`
 - Supports three heights: "tall", "medium" (default), "short"
@@ -77,12 +84,14 @@ The project uses Next.js 15's App Router:
 - Gradient fallback background if no image provided
 
 **ContentSection** (`app/components/ContentSection.tsx`)
+
 - Standardizes green/grey/white alternating sections
 - Props: `variant` ("green" | "grey" | "white"), `children`
 - Encapsulates `.green-section` and `.grey-section` patterns
 - Handles padding (`py-12 lg:py-24`) and max-width (`max-w-7xl`) automatically
 
 **PDFCard** (`app/components/PDFCard.tsx`)
+
 - Publication download card with cover image
 - Props: `coverImage`, `title`, `titleFr` (optional), `description`, `pdfUrl`, `pdfUrlFr` (optional), `fileSize`, `fileSizeFr` (optional), `maxWidth` (optional, default 500px), `backgroundColor` (optional, default "black")
 - Supports bilingual publications with separate French titles and PDFs
@@ -96,6 +105,7 @@ The project uses Next.js 15's App Router:
 - Used on Zines and Indigenous pages
 
 **BlogPostCard** (`app/components/BlogPostCard.tsx`)
+
 - Blog post preview card for feed page
 - Props: `title`, `date`, `excerpt`, `slug`, `featuredImage`
 - Links to individual post route via `/the-stick/[slug]`
@@ -105,11 +115,13 @@ The project uses Next.js 15's App Router:
 ### Styling Approach
 
 The project combines three styling methods:
+
 1. **Tailwind CSS v4** - Utility classes for layout and responsive design
 2. **Global CSS** - Custom `.heading`, `.green-section`, `.grey-section` classes in `globals.css`
 3. **Styled Components** - Available in dependencies but not widely used
 
 Custom color palette:
+
 - Green section background: `#032001`
 - Grey section background: `#d5d5d6`
 - Heading font: Ayuthaya
@@ -124,14 +136,17 @@ Custom color palette:
 - **Import syntax** - Uses `@import "tailwindcss"` instead of `@tailwind` directives
 
 **Custom animations** defined in `@theme` block:
+
 - `animate-fade-in` - Logo fade-in animation (1s ease-in)
 - `animate-fade-in-delay` - Heading fade-in with delay (1.3s ease-in)
 
 **Opacity utilities** use the `/0` syntax:
+
 - ✅ `bg-white/0` (correct)
 - ❌ `bg-opacity-0` (deprecated, don't use)
 
 **CSS variable colors** registered in `@theme`:
+
 - `--color-background` and `--color-foreground` mapped to CSS variables
 
 ### TypeScript Configuration
@@ -146,6 +161,7 @@ Custom color palette:
 The site uses TypeScript data files for centralized content management:
 
 **`app/data/blogPosts.ts`**
+
 - Contains all blog post content for The Stick
 - Interface: `BlogPost` with slug, title, date, author, excerpt, content, featuredImage
 - Content stored as HTML strings for rich formatting
@@ -153,6 +169,7 @@ The site uses TypeScript data files for centralized content management:
 - Used by both feed page and dynamic `[slug]` routes
 
 **`app/data/publications.ts`**
+
 - Contains all Fireweed publication metadata
 - Interface: `Publication` with id, title, titleFr (optional), volume, issue, year, description, coverImage, pdfUrl, pdfUrlFr (optional), fileSize, fileSizeFr (optional), backgroundColor (optional)
 - Helper functions: `getPublicationsByVolume()`, `getAllVolumes()`, `getFormattedTitle()`, `getFormattedTitleFr()`
@@ -162,6 +179,7 @@ The site uses TypeScript data files for centralized content management:
 - 6 publications total across 3 volumes
 
 **`app/data/rightsContent.ts`**
+
 - Contains employment standards data for all provinces
 - Interfaces: `ProvinceRights`, `RightsLink`, `EmploymentStandard`
 - Bilingual support: intro text in both EN and FR
@@ -174,14 +192,18 @@ The site uses TypeScript data files for centralized content management:
 ## Important Notes
 
 ### Contact Form API Endpoint
+
 The contact form posts to `/api/contact` but this API route does not exist yet. When implementing:
+
 - Create `app/api/contact/route.ts`
 - Handle POST requests with form data
 - Validate reCAPTCHA token server-side
 - Process honeypot field for spam detection
 
 ### Navigation Routes
+
 All navigation routes are now implemented:
+
 - `/` - Homepage (existing)
 - `/contact` - Contact page with bilingual contact info and social media links
 - `/the-stick` - Blog feed page with 4 blog posts
@@ -201,6 +223,7 @@ All navigation routes are now implemented:
 - `/zines` - Fireweed publications page with all PDFs and covers
 
 ### Assets Structure
+
 - `/public/logo/` - TWIG logos (transparent white PNG)
 - `/public/photo/` - Photography assets (misty mountains, etc.)
 - `/public/graphic/` - Graphics and prints
@@ -211,6 +234,7 @@ All navigation routes are now implemented:
 **Note**: Original source assets remain in `/art-assets/` directory (not in public)
 
 ### Client vs Server Components
+
 - Navigation and contact form are client components (`"use client"`) due to interactivity
 - Most page components are server components (no "use client" directive)
 - Reusable components (PageHero, ContentSection, PDFCard, BlogPostCard) are server components
@@ -218,6 +242,7 @@ All navigation routes are now implemented:
 - Button components don't require "use client" as they're simple link/button elements
 
 ### Homepage Hero Header Design
+
 - Full-screen height (`h-screen`) hero banner with background image
 - Logo and heading vertically centered (`justify-center`) with slight upward offset (`pb-16`)
 - Fade-in animations: logo (`animate-fade-in`), heading (`animate-fade-in-delay`)
@@ -226,7 +251,9 @@ All navigation routes are now implemented:
 - Background overlay: `bg-black/10` for subtle darkening
 
 ### Bilingual Content Pattern
+
 The site uses **inline bilingual content** (not a language toggle):
+
 - Both English and French text appear in the same section
 - Pattern: English content → separator `* * * En français * * *` → French content
 - PageHero component accepts bilingual titles: `{ en: "Contact", fr: "Contactez-nous" }`
@@ -234,6 +261,7 @@ The site uses **inline bilingual content** (not a language toggle):
 - Maintains consistency with existing homepage approach
 
 ### Blog Implementation
+
 - **Static generation (SSG)**: Blog posts use `generateStaticParams()` for build-time generation
 - **Dynamic routing**: `/the-stick/[slug]` pattern with Next.js 15 async params
 - **Content storage**: HTML strings in TypeScript data file (simple, no markdown processing needed)
@@ -241,6 +269,7 @@ The site uses **inline bilingual content** (not a language toggle):
 - **Prose styling**: Uses Tailwind prose classes with custom font family for headings
 
 ### Know Your Rights Implementation
+
 - Comprehensive employment standards information for all ten Canadian provinces
 - Each province page follows consistent template structure:
   - PageHero with province name
@@ -267,6 +296,7 @@ The site uses **inline bilingual content** (not a language toggle):
 - Data centralized in `app/data/rightsContent.ts` with `getProvinceBySlug()` helper function
 
 ### PDF Downloads & Zine Cards
+
 - All PDFs referenced with `/pdfs/` prefix (served from public directory)
 - File sizes displayed prominently (some files are 76MB)
 - PDFs never auto-load - only downloaded on click
