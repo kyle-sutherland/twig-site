@@ -152,6 +152,25 @@ export default function RightsHubPage() {
                 <Bilingual en="Learn More →" fr="En savoir plus →" />
               </Link>
             </div>
+
+            {/* Nova Scotia Card */}
+            <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h3 className="heading text-2xl text-gray-900 mb-4">
+                <Bilingual en="Nova Scotia" fr="Nouvelle-Écosse" />
+              </h3>
+              <p className="text-gray-700 mb-6">
+                <Bilingual
+                  en="Employment standards and worker protections specific to Nova Scotia."
+                  fr="Normes du travail et protections des travailleurs spécifiques à la Nouvelle-Écosse."
+                />
+              </p>
+              <Link
+                href="/rights/nova-scotia"
+                className="inline-block bg-slate-950 outline outline-2 px-6 py-3 text-white outline-offset-0 outline-slate-950 hover:text-slate-950 hover:bg-slate-950/0 transition-colors"
+              >
+                <Bilingual en="Learn More →" fr="En savoir plus →" />
+              </Link>
+            </div>
           </div>
         </div>
       </ContentSection>

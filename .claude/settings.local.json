@@ -7,7 +7,9 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "WebFetch(domain:treeworkersindustrialgroup.work)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "WebFetch(domain:novascotia.ca)",
+      "PowerShell(pnpm build)"
     ],
     "deny": [],
     "ask": []

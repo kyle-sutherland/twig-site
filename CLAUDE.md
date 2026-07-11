@@ -167,7 +167,7 @@ The site uses TypeScript data files for centralized content management:
 - Bilingual support: intro text in both EN and FR
 - Includes government links, NGO resources, and detailed standards
 - Helper function: `getProvinceBySlug()`
-- Complete content for five provinces: BC, Alberta, Ontario, Saskatchewan, Quebec
+- Complete content for six provinces: BC, Alberta, Ontario, Saskatchewan, Quebec, Nova Scotia
 - All employment standards verified from official government sources and labour organizations
 - Includes current minimum wages (as of 2025), overtime rules, deductions, vacation pay, statutory holidays, and workplace safety information
 
@@ -193,6 +193,7 @@ All navigation routes are now implemented:
 - `/rights/ontario` - Ontario employment standards (full content)
 - `/rights/saskatchewan` - Saskatchewan employment standards (full content)
 - `/rights/quebec` - Quebec employment standards (full content, entirely in French)
+- `/rights/nova-scotia` - Nova Scotia employment standards (full content, updated 2026)
 - `/zines` - Fireweed publications page with all PDFs and covers
 
 ### Assets Structure
@@ -236,7 +237,7 @@ The site uses **inline bilingual content** (not a language toggle):
 - **Prose styling**: Uses Tailwind prose classes with custom font family for headings
 
 ### Know Your Rights Implementation
-- Comprehensive employment standards information for five Canadian provinces
+- Comprehensive employment standards information for six Canadian provinces
 - Each province page follows consistent template structure:
   - PageHero with province name
   - Back link to rights hub
@@ -251,6 +252,7 @@ The site uses **inline bilingual content** (not a language toggle):
   - **Ontario**: Minimum wage $17.60/hour (October 1, 2025), weekly overtime after 44 hours (not daily), maximum hours require consent, 4-6% vacation pay
   - **Saskatchewan**: Minimum wage $15.35/hour (October 1, 2025, indexed annually), daily/weekly overtime (whichever greater), 3-4 weeks vacation, WorkSafe Saskatchewan
   - **Quebec**: Salaire minimum 16,10 $/heure (1er mai 2025), heures supplémentaires après 40 heures/semaine, 8 jours fériés, 2-3 semaines de vacances, CNESST
+  - **Nova Scotia**: Minimum wage $16.75/hour (April 1, 2026, rising to $17.00 October 1, 2026), reforestation covered by separate Minimum Wage Order (Logging and Forest Operations), **no overtime entitlement** for logging/forest operations workers, board & lodging deduction max $10.80/day, 6 paid holidays, 4% vacation pay, Safety Branch 1-800-952-2687
 - **Quebec page is entirely in French** including all headings, content, and UI elements
 - All information verified from official government sources and recognized labour organizations
 - Rights hub page (`/rights`) features province selection cards with responsive grid layout

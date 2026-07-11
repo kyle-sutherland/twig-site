@@ -619,6 +619,135 @@ export const provinceRights: ProvinceRights[] = [
       },
     ],
   },
+  {
+    slug: "nova-scotia",
+    name: { en: "Nova Scotia", fr: "Nouvelle-Écosse" },
+    intro: {
+      en: "In Nova Scotia, workers are protected by the Labour Standards Code. Reforestation work falls under the province's special rules for logging and forest operations, so tree planters should pay close attention to the differences — including the exclusion from overtime pay.",
+      fr: "En Nouvelle-Écosse, les travailleurs sont protégés par le Code des normes du travail (Labour Standards Code). Le travail de reboisement relève des règles particulières de la province pour les opérations forestières — les planteurs d'arbres doivent porter une attention particulière aux différences, notamment l'exclusion des heures supplémentaires.",
+    },
+    governmentLinks: [
+      {
+        title: {
+          en: "Nova Scotia Labour Standards",
+          fr: "Normes du travail de la Nouvelle-Écosse",
+        },
+        url: "https://novascotia.ca/lae/employmentrights/",
+        description: {
+          en: "Official government employment rights information",
+          fr: "Informations officielles du gouvernement sur les droits en matière d'emploi",
+        },
+      },
+      {
+        title: {
+          en: "Logging and Forestry Labour Standards",
+          fr: "Normes du travail pour l'exploitation forestière",
+        },
+        url: "https://novascotia.ca/lae/employmentrights/forestry.asp",
+        description: {
+          en: "Special rules for logging, forestry, and reforestation workers",
+          fr: "Règles particulières pour les travailleurs de l'exploitation forestière et du reboisement",
+        },
+      },
+      {
+        title: {
+          en: "Minimum Wage Order (Logging and Forest Operations)",
+          fr: "Décret sur le salaire minimum (opérations forestières)",
+        },
+        url: "https://novascotia.ca/just/regulations/regs/lscmwlfo.htm",
+        description: {
+          en: "Full text of the minimum wage order covering reforestation work",
+          fr: "Texte complet du décret sur le salaire minimum couvrant le travail de reboisement",
+        },
+      },
+    ],
+    ngoLinks: [
+      {
+        title: {
+          en: "Nova Scotia Federation of Labour",
+          fr: "Fédération du travail de la Nouvelle-Écosse",
+        },
+        url: "https://nslabour.ca/",
+        description: {
+          en: "Central labour body advocating for workers across Nova Scotia",
+          fr: "Organisation syndicale centrale défendant les travailleurs de toute la Nouvelle-Écosse",
+        },
+      },
+      {
+        title: {
+          en: "Legal Information Society of Nova Scotia",
+          fr: "Legal Information Society of Nova Scotia",
+        },
+        url: "https://www.legalinfo.org/",
+        description: {
+          en: "Free legal information about employment rights in Nova Scotia",
+          fr: "Informations juridiques gratuites sur les droits en matière d'emploi en Nouvelle-Écosse",
+        },
+      },
+      {
+        title: {
+          en: "Centre for Migrant Worker Rights Nova Scotia",
+          fr: "Centre pour les droits des travailleurs migrants de la Nouvelle-Écosse",
+        },
+        url: "https://www.migrantjusticens.ca/",
+        description: {
+          en: "Support and labour standards information for migrant and seasonal workers",
+          fr: "Soutien et informations sur les normes du travail pour les travailleurs migrants et saisonniers",
+        },
+      },
+    ],
+    standards: [
+      {
+        title: { en: "Minimum Wage", fr: "Salaire minimum" },
+        content: {
+          en: "<strong>$16.75/hour</strong> (effective April 1, 2026), rising to <strong>$17.00/hour</strong> on October 1, 2026<br/>Nova Scotia has a separate Minimum Wage Order for logging and forest operations that explicitly covers reforestation work. All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage. Piece rates (per tree) must work out to at least minimum wage for the hours you worked — the only exemption is for workers paid by wood measurement (board feet or cords) under a written agreement.",
+          fr: "<strong>16,75 $/heure</strong> (en vigueur depuis le 1er avril 2026), passant à <strong>17,00 $/heure</strong> le 1er octobre 2026<br/>La Nouvelle-Écosse possède un décret sur le salaire minimum distinct pour les opérations forestières qui couvre explicitement le travail de reboisement. Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum. Les tarifs à la pièce (par arbre) doivent équivaloir au moins au salaire minimum pour les heures travaillées — la seule exemption vise les travailleurs payés selon le mesurage du bois (pieds-planche ou cordes) en vertu d'une entente écrite.",
+        },
+      },
+      {
+        title: { en: "Overtime", fr: "Heures supplémentaires" },
+        content: {
+          en: "<strong>Important:</strong> Workers in logging and forest operations — including reforestation — are <strong>not entitled to overtime pay</strong> under Nova Scotia's Labour Standards Code. For most other workers, overtime at <strong>1.5 times the regular wage</strong> applies only after 48 hours in a week. Keep detailed daily records of your hours: no matter how many hours you work, your total pay must equal at least minimum wage for every hour worked.",
+          fr: "<strong>Important :</strong> Les travailleurs des opérations forestières — y compris le reboisement — <strong>n'ont pas droit à la rémunération des heures supplémentaires</strong> en vertu du Code des normes du travail de la Nouvelle-Écosse. Pour la plupart des autres travailleurs, les heures supplémentaires à <strong>1,5 fois le salaire régulier</strong> ne s'appliquent qu'après 48 heures par semaine. Tenez un registre quotidien détaillé de vos heures : peu importe le nombre d'heures travaillées, votre paie totale doit équivaloir au moins au salaire minimum pour chaque heure travaillée.",
+        },
+      },
+      {
+        title: { en: "Board and Lodging", fr: "Chambre et pension" },
+        content: {
+          en: "In logging and forest operations, employers may deduct a maximum of <strong>$10.80 per day</strong> from minimum wages for board and lodging. Employers cannot charge you for board or lodging you do not receive, or for meals not eaten.",
+          fr: "Dans les opérations forestières, les employeurs peuvent déduire un maximum de <strong>10,80 $ par jour</strong> du salaire minimum pour la chambre et la pension. Les employeurs ne peuvent pas vous facturer une chambre ou une pension que vous ne recevez pas, ni des repas non consommés.",
+        },
+      },
+      {
+        title: { en: "Deductions", fr: "Déductions" },
+        content: {
+          en: "Deductions must be authorized by federal or Nova Scotia law (taxes, CPP, EI), by court order, or by your written consent. Even with written consent, deductions for lodging, uniforms, or meals cannot bring your earnings below minimum wage. Arbitrary deductions for equipment damage or production mistakes are not permitted.",
+          fr: "Les déductions doivent être autorisées par une loi fédérale ou néo-écossaise (impôts, RPC, AE), par une ordonnance judiciaire ou par votre consentement écrit. Même avec un consentement écrit, les déductions pour l'hébergement, les uniformes ou les repas ne peuvent pas faire descendre vos gains sous le salaire minimum. Les déductions arbitraires pour dommages à l'équipement ou erreurs de production ne sont pas permises.",
+        },
+      },
+      {
+        title: { en: "Statutory Holidays", fr: "Jours fériés" },
+        content: {
+          en: "Nova Scotia has <strong>6 paid holidays</strong>: New Year's Day, Nova Scotia Heritage Day, Good Friday, Canada Day, Labour Day, and Christmas Day. To qualify, you must have been entitled to pay for at least 15 of the 30 calendar days before the holiday and have worked your scheduled shifts before and after it. If you work on a paid holiday, you receive a regular day's pay plus <strong>1.5 times your regular rate</strong> for hours worked. Remembrance Day is covered separately by the Remembrance Day Act.",
+          fr: "La Nouvelle-Écosse compte <strong>6 jours fériés payés</strong> : le jour de l'An, le jour du Patrimoine de la Nouvelle-Écosse, le Vendredi saint, la fête du Canada, la fête du Travail et le jour de Noël. Pour être admissible, vous devez avoir eu droit à une rémunération pendant au moins 15 des 30 jours civils précédant le jour férié et avoir travaillé vos quarts prévus avant et après celui-ci. Si vous travaillez un jour férié, vous recevez une journée normale de salaire plus <strong>1,5 fois votre taux régulier</strong> pour les heures travaillées. Le jour du Souvenir est régi séparément par la Remembrance Day Act.",
+        },
+      },
+      {
+        title: { en: "Vacation Pay", fr: "Indemnité de vacances" },
+        content: {
+          en: "Workers are entitled to <strong>4% vacation pay</strong> on all earnings from the start of employment, with 2 weeks of vacation time after each 12 months of work. Vacation pay increases to <strong>6%</strong> at the start of your 8th year of service, and vacation time increases to 3 weeks after completing 8 years. Vacation pay should be clearly indicated on pay stubs.",
+          fr: "Les travailleurs ont droit à une <strong>indemnité de vacances de 4 %</strong> sur tous leurs gains dès le début de l'emploi, avec 2 semaines de vacances après chaque période de 12 mois de travail. L'indemnité passe à <strong>6 %</strong> au début de la 8e année de service, et les vacances passent à 3 semaines après 8 années complètes de service. Cela doit être clairement indiqué sur les talons de paie.",
+        },
+      },
+      {
+        title: { en: "Workplace Safety", fr: "Sécurité au travail" },
+        content: {
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the Safety Branch of the Department of Labour, Skills and Immigration at <strong>1-800-952-2687</strong> (1-800-9LABOUR), available 24/7. Under Section 43 of Nova Scotia's Occupational Health and Safety Act, all workers have the right to refuse work they have reasonable grounds to believe is unsafe. Workplace injuries are covered by WCB Nova Scotia.",
+          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, contactez la Direction de la sécurité du ministère du Travail, des Compétences et de l'Immigration au <strong>1-800-952-2687</strong> (1-800-9LABOUR), disponible 24 heures sur 24, 7 jours sur 7. En vertu de l'article 43 de la Loi sur la santé et la sécurité au travail de la Nouvelle-Écosse, tous les travailleurs ont le droit de refuser un travail qu'ils ont des motifs raisonnables de croire dangereux. Les accidents du travail sont couverts par la WCB Nova Scotia.",
+        },
+      },
+    ],
+  },
 ];
 
 export function getProvinceBySlug(slug: string): ProvinceRights | undefined {
