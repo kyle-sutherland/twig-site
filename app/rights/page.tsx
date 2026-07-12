@@ -31,6 +31,15 @@ export default function RightsHubPage() {
                   rates paid, hours worked, and any deductions made. Documentation is
                   your strongest tool when enforcing your rights.
                 </p>
+                <p className="text-lg">
+                  This guide is intended as a general educational summary of
+                  employment standards and is not legal advice. Employment rules can
+                  vary depending on the province, industry, occupation, and
+                  individual circumstances involved. While we aim to keep this
+                  information accurate and up to date, workers should consult the
+                  linked legislation, official government resources, or a qualified
+                  legal professional for guidance on specific situations.
+                </p>
               </>
             }
             fr={
@@ -44,11 +53,21 @@ export default function RightsHubPage() {
                   province à l'autre, et les normes d'emploi ne sont pas les mêmes
                   dans tout le pays.
                 </p>
-                <p className="text-lg">
+                <p className="text-lg mb-6">
                   Il est crucial de suivre quotidiennement les arbres que vous
                   plantez, les tarifs à la pièce payés, les heures travaillées et
                   toute déduction effectuée. La documentation est votre meilleur outil
                   pour faire respecter vos droits.
+                </p>
+                <p className="text-lg">
+                  Ce guide se veut un résumé éducatif général des normes d'emploi et
+                  ne constitue pas un avis juridique. Les règles d'emploi peuvent
+                  varier selon la province, le secteur d'activité, la profession et
+                  les circonstances individuelles. Bien que nous cherchions à
+                  maintenir ces renseignements exacts et à jour, les travailleurs
+                  devraient consulter la législation liée, les ressources officielles
+                  du gouvernement ou un professionnel du droit qualifié pour obtenir
+                  des conseils sur des situations particulières.
                 </p>
               </>
             }
