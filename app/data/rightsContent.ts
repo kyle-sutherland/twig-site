@@ -9,6 +9,11 @@ export interface EmploymentStandard {
   content: { en: string; fr: string };
 }
 
+export interface Reference {
+  title: string;
+  url: string;
+}
+
 export interface ProvinceRights {
   slug: string;
   name: { en: string; fr: string };
@@ -16,6 +21,7 @@ export interface ProvinceRights {
   governmentLinks: RightsLink[];
   ngoLinks: RightsLink[];
   standards: EmploymentStandard[];
+  references?: Reference[];
 }
 
 export const provinceRights: ProvinceRights[] = [
@@ -589,36 +595,36 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$16.60/hour</strong> (effective May 1, 2026), adjusted each May 1<br/>All work hours including pre-season training, camp meetings, setup time, and most travel time must be compensated at minimum wage.",
-          fr: "<strong>16,60 $/heure</strong> (en vigueur depuis le 1er mai 2026), ajusté chaque 1er mai<br/>Toutes les heures de travail, y compris la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement doivent être rémunérées au salaire minimum.",
+          en: "<strong>$16.60/hour</strong> (effective May 1, 2026), adjusted each May 1<br/>All work hours — including pre-season training, camp meetings, setup time, and most travel time — must be compensated at minimum wage, portal to portal (i.e., from the moment you are required to be present until you are released). [1]",
+          fr: "<strong>16,60 $/heure</strong> (en vigueur depuis le 1er mai 2026), ajusté chaque 1er mai<br/>Toutes les heures de travail — y compris la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement — doivent être rémunérées au salaire minimum, du début à la fin de la période de travail (« portail à portail »), c'est-à-dire dès le moment où votre présence est exigée jusqu'à celui où vous êtes libéré. [1]",
         },
       },
       {
         title: { en: "Overtime", fr: "Heures supplémentaires" },
         content: {
-          en: "Hours worked beyond <strong>40 hours per week</strong> must be paid at <strong>1.5 times the regular hourly rate</strong> (minimum $24.90/hour at minimum wage). Overtime may also be compensated with equivalent paid leave.",
-          fr: "Les heures travaillées au-delà de <strong>40 heures par semaine</strong> doivent être rémunérées au taux de <strong>1,5 fois le salaire horaire régulier</strong> (minimum 24,90 $/heure au salaire minimum). Les heures supplémentaires peuvent aussi être compensées par un congé équivalent payé.",
+          en: "Hours worked beyond <strong>40 hours per week</strong> must be paid at <strong>1.5 times the regular hourly rate</strong> (minimum $24.90/hour at minimum wage). Overtime may also be compensated with equivalent paid leave. Some workers, such as farm workers, are not entitled to the overtime wage increase. [2] For workers who work in a logging operation or a sawmill, a standard work week is <strong>47 hours</strong>. [2] Exemptions may include senior managers. [2]",
+          fr: "Les heures travaillées au-delà de <strong>40 heures par semaine</strong> doivent être rémunérées au taux de <strong>1,5 fois le salaire horaire régulier</strong> (minimum 24,90 $/heure au salaire minimum). Les heures supplémentaires peuvent aussi être compensées par un congé équivalent payé. Certains travailleurs, comme les travailleurs agricoles, n'ont pas droit à la majoration pour heures supplémentaires. [2] Pour les travailleurs d'une exploitation forestière ou d'une scierie, la semaine normale de travail est de <strong>47 heures</strong>. [2] Les cadres supérieurs peuvent être exemptés. [2]",
         },
       },
       {
         title: { en: "Maximum Working Hours", fr: "Durée maximale du travail" },
         content: {
-          en: "An employee may refuse to work more than <strong>2 hours beyond their regular daily hours</strong> or more than <strong>14 hours of work in a 24-hour period</strong>. An employee may also refuse if the schedule is not set and they must care for a family member.",
-          fr: "Un salarié peut refuser de travailler plus de <strong>2 heures au-delà de ses heures habituelles de travail</strong> ou plus de <strong>14 heures de travail par période de 24 heures</strong>. Le salarié peut aussi refuser de travailler si l'horaire n'est pas fixé pour s'occuper d'un membre de sa famille ou d'un proche.",
+          en: "An employee may refuse to work more than <strong>2 hours beyond their regular daily hours</strong> or more than <strong>14 hours of work in a 24-hour period</strong>. An employee may also refuse if the schedule is not set and they must care for a family member. Employees may also refuse work if they were not informed of their schedule at least <strong>5 days in advance</strong>, subject to exceptions under Quebec labour standards law. [3]",
+          fr: "Un salarié peut refuser de travailler plus de <strong>2 heures au-delà de ses heures habituelles de travail</strong> ou plus de <strong>14 heures de travail par période de 24 heures</strong>. Le salarié peut aussi refuser de travailler si l'horaire n'est pas fixé pour s'occuper d'un membre de sa famille ou d'un proche. Les salariés peuvent également refuser de travailler s'ils n'ont pas été informés de leur horaire au moins <strong>5 jours à l'avance</strong>, sous réserve des exceptions prévues par les normes du travail du Québec. [3]",
         },
       },
       {
         title: { en: "Deductions", fr: "Déductions" },
         content: {
-          en: "An employer may only make deductions from wages if authorized by law, regulation, court order, collective agreement, decree, or a written mandate from the employee. Arbitrary deductions for equipment damage or production mistakes are not permitted.",
-          fr: "L'employeur peut effectuer des déductions sur le salaire seulement si la loi, un règlement, une ordonnance judiciaire, une convention collective, un décret ou un mandat écrit du salarié l'y autorise. Les déductions arbitraires pour dommages à l'équipement ou erreurs de production ne sont pas permises.",
+          en: "An employer may only make deductions from wages if authorized by law, regulation, court order, collective agreement, decree, or a written mandate from the employee. The employer may make deductions from wages if the employee consents thereto in writing, for a specific purpose mentioned in the writing. [4] Arbitrary deductions for equipment damage or production mistakes are not permitted.",
+          fr: "L'employeur peut effectuer des déductions sur le salaire seulement si la loi, un règlement, une ordonnance judiciaire, une convention collective, un décret ou un mandat écrit du salarié l'y autorise. L'employeur peut effectuer une retenue sur le salaire si le salarié y consent par écrit, pour une fin spécifique mentionnée dans cet écrit. [4] Les déductions arbitraires pour dommages à l'équipement ou erreurs de production ne sont pas permises.",
         },
       },
       {
         title: { en: "Statutory Holidays", fr: "Jours fériés" },
         content: {
-          en: "Quebec has <strong>8 paid statutory holidays</strong> per year. The indemnity for each holiday equals <strong>1/20 of wages earned in the 4 complete pay weeks preceding the holiday week</strong>. If you work on a statutory holiday, you receive your holiday indemnity plus your regular wages for hours worked.",
-          fr: "Le Québec compte <strong>8 jours fériés chômés et payés</strong> par année. L'indemnité versée pour chaque jour férié est égale à <strong>1/20 du salaire gagné au cours des 4 semaines complètes de paie précédant la semaine du congé</strong>. Si vous travaillez un jour férié, vous recevez votre indemnité de jour férié plus votre salaire régulier pour les heures travaillées.",
+          en: "Quebec has <strong>8 paid statutory holidays</strong> per year. The indemnity for each holiday equals <strong>1/20 of wages earned in the 4 complete pay weeks preceding the holiday week</strong>. If you work on a statutory holiday, you receive your holiday indemnity plus your regular wages for hours worked. To calculate the indemnity, use the <a href=\"https://www.cnesst.gouv.qc.ca/en/working-conditions/leave/statutory-holidays/statutory-holidays\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">CNESST Statutory Holidays Calculator</a> to ensure complete compliance. [5]",
+          fr: "Le Québec compte <strong>8 jours fériés chômés et payés</strong> par année. L'indemnité versée pour chaque jour férié est égale à <strong>1/20 du salaire gagné au cours des 4 semaines complètes de paie précédant la semaine du congé</strong>. Si vous travaillez un jour férié, vous recevez votre indemnité de jour férié plus votre salaire régulier pour les heures travaillées. Pour calculer l'indemnité, utilisez le <a href=\"https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries-chomes-payes/jours-feries-chomes-payes\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">calculateur des jours fériés de la CNESST</a> afin d'assurer une conformité complète. [5]",
         },
       },
       {
@@ -631,9 +637,39 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Occupational Health and Safety (CNESST)", fr: "Santé et sécurité au travail (CNESST)" },
         content: {
-          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the CNESST at <strong>1-844-838-0808</strong>. All workers have the right to refuse work if they believe it endangers their health, safety, or physical or psychological integrity.",
-          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, blessures, refus de travail dangereux, harcèlement et problèmes d'assainissement, contactez la CNESST au <strong>1-844-838-0808</strong>. Tous les travailleurs ont le droit de refuser d'exécuter un travail s'ils croient que cela met en danger leur santé, leur sécurité ou leur intégrité physique ou psychologique.",
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the CNESST at <strong>1-844-838-0808</strong> or visit <a href=\"https://www.cnesst.gouv.qc.ca/en\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">cnesst.gouv.qc.ca</a>. All workers have the right to refuse work if they believe it endangers their health, safety, or physical or psychological integrity. [6]",
+          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, blessures, refus de travail dangereux, harcèlement et problèmes d'assainissement, contactez la CNESST au <strong>1-844-838-0808</strong> ou visitez <a href=\"https://www.cnesst.gouv.qc.ca/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">cnesst.gouv.qc.ca</a>. Tous les travailleurs ont le droit de refuser d'exécuter un travail s'ils croient que cela met en danger leur santé, leur sécurité ou leur intégrité physique ou psychologique. [6]",
         },
+      },
+    ],
+    references: [
+      {
+        title: "CNESST — Labour Standards in Québec (PDF guide, reviewed source document) [1]",
+        url: "https://www.cnesst.gouv.qc.ca/sites/default/files/documents/labour-standards-quebec.pdf",
+      },
+      {
+        title: "CNESST — Overtime, Standard Work Week & Farm Workers (interpretation guide) [2]",
+        url: "https://www.cnesst.gouv.qc.ca/en/working-conditions/wage-and-pay/wages/overtime",
+      },
+      {
+        title: "Workforce.com — Overtime Laws by Province (Canada) [2]",
+        url: "https://www.workforce.com/ca/resources/overtime-laws-by-province-canada",
+      },
+      {
+        title: "CNESST — Right to Refuse to Work [3]",
+        url: "https://www.cnesst.gouv.qc.ca/en/working-conditions/work-schedule-and-termination-employment/work-schedule/right-refuse-work",
+      },
+      {
+        title: "CNESST — Section 49, Act Respecting Labour Standards (deductions) [4]",
+        url: "https://www.cnesst.gouv.qc.ca/en/node/1147646/interpretation-guide/act-respecting-labour-standards/chapter-iv-larbour-standards-section-391-97/division-i-wages-section-391-511/section-49",
+      },
+      {
+        title: "CNESST — Statutory Holidays Calculator [5]",
+        url: "https://www.cnesst.gouv.qc.ca/en/working-conditions/leave/statutory-holidays/statutory-holidays",
+      },
+      {
+        title: "CNESST — Official Website [6]",
+        url: "https://www.cnesst.gouv.qc.ca/en",
       },
     ],
   },
