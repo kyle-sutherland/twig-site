@@ -191,6 +191,17 @@ export const provinceRights: ProvinceRights[] = [
           fr: "Texte complet du Code des normes d'emploi de l'Alberta",
         },
       },
+      {
+        title: {
+          en: "Report Unsafe Work",
+          fr: "Signaler un travail dangereux",
+        },
+        url: "https://www.alberta.ca/report-unsafe-work",
+        description: {
+          en: "Instructions from the provincial government — if you are concerned about an unsafe work site or conditions, you must report it to your employer or supervisor to determine next steps.",
+          fr: "Instructions du gouvernement provincial — si vous êtes préoccupé par un chantier ou des conditions de travail dangereuses, vous devez le signaler à votre employeur ou à votre superviseur afin de déterminer les prochaines étapes.",
+        },
+      },
     ],
     ngoLinks: [
       {
@@ -220,8 +231,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$15.00/hour</strong> (students under 18: $13.00/hour for the first 28 hours in a week)<br/>Alberta's minimum wage has not increased since October 2018 and is now the lowest in Canada. All work hours including training, camp meetings, setup time, and travel time must be compensated at minimum wage.",
-          fr: "<strong>15,00 $/heure</strong> (étudiants de moins de 18 ans : 13,00 $/heure pour les 28 premières heures d'une semaine)<br/>Le salaire minimum de l'Alberta n'a pas augmenté depuis octobre 2018 et est maintenant le plus bas au Canada. Toutes les heures de travail, y compris la formation, les réunions de camp, le temps de préparation et le temps de déplacement, doivent être rémunérées au salaire minimum.",
+          en: "<strong>$15.00/hour</strong> (students under 18: $13.00/hour for the first 28 hours in a week)<br/>Alberta's minimum wage has not increased since October 2018 and is now the lowest in Canada. All work hours must be compensated at minimum wage, portal to portal. [1]",
+          fr: "<strong>15,00 $/heure</strong> (étudiants de moins de 18 ans : 13,00 $/heure pour les 28 premières heures d'une semaine)<br/>Le salaire minimum de l'Alberta n'a pas augmenté depuis octobre 2018 et est maintenant le plus bas au Canada. Toutes les heures de travail doivent être rémunérées au salaire minimum, du début à la fin de la période de travail (« portail à portail »). [1]",
         },
       },
       {
@@ -237,30 +248,56 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Equipment Damage", fr: "Dommages à l'équipement" },
         content: {
-          en: "Employers <strong>cannot deduct wages</strong> for equipment damage or production mistakes. Such deductions are prohibited under Alberta employment standards.",
-          fr: "Les employeurs <strong>ne peuvent pas déduire des salaires</strong> pour des dommages à l'équipement ou des erreurs de production. Ces déductions sont interdites en vertu des normes d'emploi de l'Alberta.",
+          en: "Employers cannot deduct wages for equipment damage, faulty work, or production mistakes. Such deductions are prohibited under Alberta employment standards. [1]",
+          fr: "Les employeurs ne peuvent pas déduire des salaires pour des dommages à l'équipement, un travail défectueux ou des erreurs de production. Ces déductions sont interdites en vertu des normes d'emploi de l'Alberta. [1]",
         },
       },
       {
         title: { en: "Statutory Holiday Pay", fr: "Indemnité de jour férié" },
         content: {
-          en: "To qualify, you must have worked at least <strong>30 workdays for the employer in the 12 months</strong> before the holiday. If you don't work a holiday that falls on a regular workday, you receive your average daily wage. If you work it, you receive <strong>1.5 times your rate</strong> (minimum $22.50/hour at minimum wage) <strong>plus your average daily wage</strong> — or regular pay plus a future paid day off.",
-          fr: "Pour être admissible, vous devez avoir travaillé au moins <strong>30 jours de travail pour l'employeur dans les 12 mois</strong> précédant le jour férié. Si vous ne travaillez pas un jour férié qui tombe un jour de travail habituel, vous recevez votre salaire quotidien moyen. Si vous le travaillez, vous recevez <strong>1,5 fois votre taux</strong> (minimum 22,50 $/heure au salaire minimum) <strong>plus votre salaire quotidien moyen</strong> — ou votre salaire régulier plus un jour de congé payé ultérieur.",
+          en: "Most employees are entitled to general holiday pay if the holiday is a regular day of work or if they work on a general holiday that is not a regular day of work. Employees are not entitled to general holiday pay if they worked fewer than <strong>30 workdays</strong> for the employer in the 12 months before the holiday, or if other Alberta employment standards disqualification rules apply. [3]<br/>If you don't work a holiday that falls on a regular workday, you receive your average daily wage. If you work it, you receive <strong>1.5 times your rate</strong> (minimum $22.50/hour at minimum wage) <strong>plus your average daily wage</strong> — or regular pay plus a future paid day off.<br/>See more here: <a href=\"https://www.alberta.ca/alberta-general-holidays\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/alberta-general-holidays</a>. [3]",
+          fr: "La plupart des employés ont droit à l'indemnité de jour férié si le jour férié est un jour de travail habituel ou s'ils travaillent un jour férié qui n'est pas un jour de travail habituel. Les employés n'ont pas droit à l'indemnité de jour férié s'ils ont travaillé moins de <strong>30 jours de travail</strong> pour l'employeur dans les 12 mois précédant le jour férié, ou si d'autres règles d'inadmissibilité des normes d'emploi de l'Alberta s'appliquent. [3]<br/>Si vous ne travaillez pas un jour férié qui tombe un jour de travail habituel, vous recevez votre salaire quotidien moyen. Si vous le travaillez, vous recevez <strong>1,5 fois votre taux</strong> (minimum 22,50 $/heure au salaire minimum) <strong>plus votre salaire quotidien moyen</strong> — ou votre salaire régulier plus un jour de congé payé ultérieur.<br/>Pour en savoir plus : <a href=\"https://www.alberta.ca/alberta-general-holidays\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/alberta-general-holidays</a>. [3]",
         },
       },
       {
         title: { en: "Overtime", fr: "Heures supplémentaires" },
         content: {
-          en: "Overtime is the <strong>greater</strong> of hours beyond 8 in a day or beyond 44 in a week, paid at <strong>1.5 times your regular rate</strong> (minimum $22.50/hour at minimum wage). Keep daily records of your hours.",
-          fr: "Les heures supplémentaires correspondent au <strong>plus élevé</strong> des heures au-delà de 8 par jour ou de 44 par semaine, payées à <strong>1,5 fois votre taux régulier</strong> (minimum 22,50 $/heure au salaire minimum). Tenez un registre quotidien de vos heures.",
+          en: "After <strong>8 hours in a day</strong> or <strong>44 hours in a week</strong>, overtime must be paid at <strong>1.5 times the regular rate</strong>. [4]<br/>However, overtime rules, thresholds, and calculation methods can vary depending on the worker's industry classification, occupation, and any applicable exemptions or averaging arrangements. For workers paid exclusively by piece rate, overtime calculations may be based on minimum wage where no hourly wage rate exists. [4][5]<br/>Overtime exemptions may include managers. [5]",
+          fr: "Après <strong>8 heures dans une journée</strong> ou <strong>44 heures dans une semaine</strong>, les heures supplémentaires doivent être payées à <strong>1,5 fois le taux régulier</strong>. [4]<br/>Cependant, les règles, seuils et méthodes de calcul des heures supplémentaires peuvent varier selon la classification de l'industrie, la profession du travailleur, ainsi que les exemptions ou ententes d'étalement applicables. Pour les travailleurs payés exclusivement à la pièce, le calcul des heures supplémentaires peut être basé sur le salaire minimum lorsqu'aucun taux horaire n'existe. [4][5]<br/>Les exemptions aux heures supplémentaires peuvent inclure les cadres. [5]",
         },
       },
       {
         title: { en: "Alberta OHS", fr: "SST de l'Alberta" },
         content: {
-          en: "For workplace safety issues including illness, injury, unsafe work refusal, harassment, and sanitation, contact Alberta Occupational Health and Safety (OHS). Workers have the right to refuse unsafe work.",
-          fr: "Pour les questions de sécurité au travail, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et l'assainissement, contactez la Santé et sécurité au travail (SST) de l'Alberta. Les travailleurs ont le droit de refuser un travail dangereux.",
+          en: "For workplace safety issues including illness, injury, unsafe work refusal, harassment, and sanitation, contact Alberta Occupational Health and Safety (OHS) at <a href=\"https://www.alberta.ca/occupational-health-safety\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/occupational-health-safety</a>. Workers have the right to refuse unsafe work. [6]",
+          fr: "Pour les questions de sécurité au travail, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et l'assainissement, contactez la Santé et sécurité au travail (SST) de l'Alberta à <a href=\"https://www.alberta.ca/occupational-health-safety\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/occupational-health-safety</a>. Les travailleurs ont le droit de refuser un travail dangereux. [6]",
         },
+      },
+    ],
+    references: [
+      {
+        title: "Alberta.ca — Employment Standards (minimum wage, deductions) [1]",
+        url: "https://www.alberta.ca/employment-standards",
+      },
+      {
+        title: "Alberta.ca — Report Unsafe Work [2]",
+        url: "https://www.alberta.ca/report-unsafe-work",
+      },
+      {
+        title: "Alberta.ca — Alberta General Holidays (holiday pay eligibility) [3]",
+        url: "https://www.alberta.ca/alberta-general-holidays",
+      },
+      {
+        title: "Alberta.ca — Overtime Hours and Overtime Pay [4]",
+        url: "https://www.alberta.ca/overtime-hours-overtime-pay",
+      },
+      {
+        title: "Workforce.com — Overtime Laws by Province (Canada) [5]",
+        url: "https://www.workforce.com/ca/resources/overtime-laws-by-province-canada",
+      },
+      {
+        title: "Alberta.ca — Occupational Health and Safety [6]",
+        url: "https://www.alberta.ca/occupational-health-safety",
       },
     ],
   },
