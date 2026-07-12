@@ -118,7 +118,7 @@ export default function QuebecRightsPage() {
             </h2>
             <ol className="space-y-2 list-decimal list-inside text-gray-700">
               {data.references.map((reference, index) => (
-                <li key={index}>
+                <li key={index} id={reference.id} className="scroll-mt-24">
                   <a
                     href={reference.url}
                     target="_blank"

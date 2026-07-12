@@ -10,8 +10,10 @@ export interface EmploymentStandard {
 }
 
 export interface Reference {
+  id: string;
   title: string;
   url: string;
+  location?: string;
 }
 
 export interface ProvinceRights {
@@ -66,6 +68,17 @@ export const provinceRights: ProvinceRights[] = [
           fr: "Guide officiel des normes d'emploi particulières pour les travailleurs en sylviculture, y compris les tarifs à la pièce et les heures supplémentaires",
         },
       },
+      {
+        title: {
+          en: "How to Report an Injury and What to Expect",
+          fr: "Comment signaler une blessure et à quoi s'attendre",
+        },
+        url: "https://www.worksafebc.com/en/claims/report-workplace-injury-illness/how-workers-report-workplace-injury-illness",
+        description: {
+          en: "Helpful instructions from WorkSafeBC.",
+          fr: "Instructions utiles de WorkSafeBC.",
+        },
+      },
     ],
     ngoLinks: [
       {
@@ -106,15 +119,15 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$18.25/hour</strong> (effective June 1, 2026), adjusted every June 1 based on BC's average inflation<br/>This includes pre-season training, camp meetings, setup time, and most travel time. If you are paid piece rates, your earnings each pay period must average at least minimum wage for all hours worked — employers must top up any shortfall and cannot offset it against better pay periods.",
-          fr: "<strong>18,25 $/heure</strong> (en vigueur depuis le 1er juin 2026), ajusté chaque 1er juin selon l'inflation moyenne de la C.-B.<br/>Cela inclut la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement. Si vous êtes payé à la pièce, vos gains de chaque période de paie doivent équivaloir au moins au salaire minimum pour toutes les heures travaillées — l'employeur doit combler tout écart et ne peut pas le compenser avec de meilleures périodes de paie.",
+          en: "<strong>$18.25/hour</strong> (effective June 1, 2026), adjusted every June 1 based on BC's average inflation<br/>All work hours are paid portal to portal. <a href=\"#bc-ref-5\" class=\"citation-link\">[5]</a> If you are paid piece rates, your earnings each pay period must average at least minimum wage for all hours worked — employers must top up any shortfall and cannot offset it against better pay periods.",
+          fr: "<strong>18,25 $/heure</strong> (en vigueur depuis le 1er juin 2026), ajusté chaque 1er juin selon l'inflation moyenne de la C.-B.<br/>Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#bc-ref-5\" class=\"citation-link\">[5]</a> Si vous êtes payé à la pièce, vos gains de chaque période de paie doivent équivaloir au moins au salaire minimum pour toutes les heures travaillées — l'employeur doit combler tout écart et ne peut pas le compenser avec de meilleures périodes de paie.",
         },
       },
       {
         title: { en: "Overtime", fr: "Heures supplémentaires" },
         content: {
-          en: "If you are paid <strong>piece rates</strong>: for hours between 8 and 12 in a day you must receive the greater of your piece-rate earnings or <strong>1.5 times minimum wage</strong> ($27.38/hour); hours beyond 12 in a day must be paid at <strong>double your piece rate</strong>. If you are paid hourly, standard overtime applies: 1.5 times your wage after 8 hours in a day and double after 12.",
-          fr: "Si vous êtes payé <strong>à la pièce</strong> : pour les heures entre 8 et 12 par jour, vous devez recevoir le plus élevé de vos gains à la pièce ou de <strong>1,5 fois le salaire minimum</strong> (27,38 $/heure) ; les heures au-delà de 12 par jour doivent être payées au <strong>double de votre tarif à la pièce</strong>. Si vous êtes payé à l'heure, les heures supplémentaires standard s'appliquent : 1,5 fois votre salaire après 8 heures par jour et le double après 12.",
+          en: "If you are paid <strong>piece rates</strong>: for hours between 8 and 12 in a day you must receive the greater of your piece-rate earnings or <strong>1.5 times minimum wage</strong> ($27.38/hour); hours beyond 12 in a day must be paid at <strong>double your piece rate</strong>. <a href=\"#bc-ref-5\" class=\"citation-link\">[5]</a><br/>If you are paid hourly, hours beyond <strong>8 per day (up to 12 hours)</strong> require premium pay at <strong>1.5 times your regular wage</strong>. Hours exceeding <strong>12 per day</strong> must be paid at <strong>double your regular wage rate</strong>. <a href=\"#bc-ref-4\" class=\"citation-link\">[4]</a><br/>Overtime exemptions may include managers. <a href=\"#bc-ref-4\" class=\"citation-link\">[4]</a>",
+          fr: "Si vous êtes payé <strong>à la pièce</strong> : pour les heures entre 8 et 12 par jour, vous devez recevoir le plus élevé de vos gains à la pièce ou de <strong>1,5 fois le salaire minimum</strong> (27,38 $/heure) ; les heures au-delà de 12 par jour doivent être payées au <strong>double de votre tarif à la pièce</strong>. <a href=\"#bc-ref-5\" class=\"citation-link\">[5]</a><br/>Si vous êtes payé à l'heure, les heures au-delà de <strong>8 heures par jour (jusqu'à 12 heures)</strong> doivent être payées à <strong>1,5 fois votre salaire régulier</strong>. Les heures au-delà de <strong>12 heures par jour</strong> doivent être payées au <strong>double de votre taux de salaire régulier</strong>. <a href=\"#bc-ref-4\" class=\"citation-link\">[4]</a><br/>Les exemptions aux heures supplémentaires peuvent inclure les cadres. <a href=\"#bc-ref-4\" class=\"citation-link\">[4]</a>",
         },
       },
       {
@@ -134,30 +147,61 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Deductions", fr: "Déductions" },
         content: {
-          en: "Employers cannot deduct their business costs from your wages — including equipment damage, production mistakes, or missing gear. Any permitted deduction requires proper authorization and must appear on your pay stub.",
-          fr: "Les employeurs ne peuvent pas déduire leurs coûts d'entreprise de votre salaire — y compris les dommages à l'équipement, les erreurs de production ou le matériel manquant. Toute déduction permise nécessite une autorisation appropriée et doit figurer sur votre talon de paie.",
+          en: "Employers cannot deduct their business costs from your wages — including equipment damage, production mistakes, or missing gear. Any permitted deduction requires proper authorization and must appear on your pay stub. Employers cannot make deductions for equipment damage, production mistakes, or other arbitrary reasons. <a href=\"#bc-ref-2\" class=\"citation-link\">[2]</a>",
+          fr: "Les employeurs ne peuvent pas déduire leurs coûts d'entreprise de votre salaire — y compris les dommages à l'équipement, les erreurs de production ou le matériel manquant. Toute déduction permise nécessite une autorisation appropriée et doit figurer sur votre talon de paie. Les employeurs ne peuvent pas effectuer de déductions pour des dommages à l'équipement, des erreurs de production ou d'autres motifs arbitraires. <a href=\"#bc-ref-2\" class=\"citation-link\">[2]</a>",
         },
       },
       {
         title: { en: "Statutory Holidays", fr: "Jours fériés" },
         content: {
-          en: "Workers are entitled to statutory holiday pay. If required to work on a statutory holiday, you receive your average daily wage plus time-and-a-half for hours worked. For silviculture workers, employers may instead pay an additional <strong>4.4% of gross earnings</strong> in lieu of statutory holiday pay — check your pay stubs to make sure you receive one or the other.",
-          fr: "Les travailleurs ont droit à une indemnité de jour férié. Si vous êtes obligé de travailler un jour férié, vous recevez votre salaire quotidien moyen plus une fois et demie pour les heures travaillées. Pour les travailleurs en sylviculture, l'employeur peut plutôt verser un supplément de <strong>4,4 % des gains bruts</strong> au lieu de l'indemnité de jour férié — vérifiez vos talons de paie pour vous assurer de recevoir l'un ou l'autre.",
+          en: "Under BC employment standards regulations for silviculture workers, most standard statutory holiday provisions do not apply if the employer instead provides statutory holiday compensation equal to <strong>4.4% of gross earnings</strong> on each pay cheque, or, for piece-rate workers, compensation calculated using a <strong>1.044 multiplier</strong> on the applicable piece rate. <a href=\"#bc-ref-3\" class=\"citation-link\">[3]</a> Check your pay stubs to make sure you receive this compensation.",
+          fr: "En vertu de la réglementation des normes d'emploi de la C.-B. applicable aux travailleurs en sylviculture, la plupart des dispositions habituelles sur les jours fériés ne s'appliquent pas si l'employeur verse plutôt une indemnité de jour férié équivalant à <strong>4,4 % des gains bruts</strong> à chaque paie ou, pour les travailleurs payés à la pièce, une compensation calculée à l'aide d'un <strong>multiplicateur de 1,044</strong> appliqué au tarif à la pièce applicable. <a href=\"#bc-ref-3\" class=\"citation-link\">[3]</a> Vérifiez vos talons de paie pour vous assurer de recevoir cette compensation.",
         },
       },
       {
         title: { en: "Vacation Pay", fr: "Indemnité de vacances" },
         content: {
-          en: "Tree planters are entitled to <strong>4% vacation pay</strong> on all earnings (<strong>6%</strong> after 5 years with the same employer). For silviculture workers this is often paid as a percentage added to each cheque instead of vacation time — it must be clearly indicated on pay stubs.",
-          fr: "Les planteurs d'arbres ont droit à une <strong>indemnité de vacances de 4 %</strong> sur tous leurs gains (<strong>6 %</strong> après 5 ans chez le même employeur). Pour les travailleurs en sylviculture, elle est souvent versée en pourcentage ajouté à chaque paie au lieu de vacances — cela doit être clairement indiqué sur les talons de paie.",
+          en: "Under BC employment standards regulations for silviculture workers, standard vacation pay provisions do not apply if the employer instead provides vacation pay equal to <strong>4% of gross earnings</strong> on each pay cheque, increasing to <strong>6%</strong> after five consecutive years of employment. For piece-rate workers, employers may instead provide compensation calculated using a <strong>1.04 multiplier</strong> on the applicable piece rate, increasing to <strong>1.06</strong> after five consecutive years. <a href=\"#bc-ref-3\" class=\"citation-link\">[3]</a> This must be clearly indicated on pay stubs.",
+          fr: "En vertu de la réglementation des normes d'emploi de la C.-B. applicable aux travailleurs en sylviculture, les dispositions habituelles sur l'indemnité de vacances ne s'appliquent pas si l'employeur verse plutôt une indemnité de vacances équivalant à <strong>4 % des gains bruts</strong> à chaque paie, augmentant à <strong>6 %</strong> après cinq années consécutives d'emploi. Pour les travailleurs payés à la pièce, l'employeur peut plutôt verser une compensation calculée à l'aide d'un <strong>multiplicateur de 1,04</strong> appliqué au tarif à la pièce applicable, augmentant à <strong>1,06</strong> après cinq années consécutives. <a href=\"#bc-ref-3\" class=\"citation-link\">[3]</a> Cela doit être clairement indiqué sur les talons de paie.",
         },
       },
       {
         title: { en: "WorkSafeBC", fr: "WorkSafeBC" },
         content: {
-          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact WorkSafeBC. All workers have the right to refuse unsafe work.",
-          fr: "Pour les préoccupations de santé et de sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, communiquez avec WorkSafeBC. Tous les travailleurs ont le droit de refuser un travail dangereux.",
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact WorkSafeBC. All workers have the right to refuse unsafe work. If you're injured on the job, see WorkSafeBC's guidance on how to report it. <a href=\"#bc-ref-1\" class=\"citation-link\">[1]</a>",
+          fr: "Pour les préoccupations de santé et de sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, communiquez avec WorkSafeBC. Tous les travailleurs ont le droit de refuser un travail dangereux. Si vous êtes blessé au travail, consultez les instructions de WorkSafeBC sur la façon de le signaler. <a href=\"#bc-ref-1\" class=\"citation-link\">[1]</a>",
         },
+      },
+    ],
+    // Note: worksafebc.com and gov.bc.ca pages expose no readable content-section anchor ids
+    // (verified via curl, not just WebFetch, which 403s on these domains) — WorkSafeBC's
+    // headings use opaque server-generated GUIDs with no static label to match reliably, and
+    // gov.bc.ca pages have no heading ids at all. References link to the plain page URL.
+    references: [
+      {
+        id: "bc-ref-1",
+        title: "WorkSafeBC — How to Report an Injury and What to Expect [1]",
+        url: "https://www.worksafebc.com/en/claims/report-workplace-injury-illness/how-workers-report-workplace-injury-illness",
+      },
+      {
+        id: "bc-ref-2",
+        title: "BC Gov — Employment Standards, Deductions [2]",
+        url: "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/wages/deductions",
+      },
+      {
+        id: "bc-ref-3",
+        title: "BC Gov — Employment Standards Regulation, Part 7 §37.9 (Silviculture Workers) [3]",
+        url: "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/forms-resources/igm/esr-part-7-section-37-9",
+      },
+      {
+        id: "bc-ref-4",
+        title: "Workforce.com — Overtime Laws by Province (Canada), British Columbia section [4]",
+        url: "https://www.workforce.com/ca/resources/overtime-laws-by-province-canada",
+      },
+      {
+        id: "bc-ref-5",
+        title: "BC Gov — Hiring Silviculture Workers [5]",
+        url: "https://www2.gov.bc.ca/gov/content/employment-business/employment-standards-advice/employment-standards/hiring/silviculture-workers",
       },
     ],
   },
@@ -231,8 +275,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$15.00/hour</strong> (students under 18: $13.00/hour for the first 28 hours in a week)<br/>Alberta's minimum wage has not increased since October 2018 and is now the lowest in Canada. All work hours must be compensated at minimum wage, portal to portal. [1]",
-          fr: "<strong>15,00 $/heure</strong> (étudiants de moins de 18 ans : 13,00 $/heure pour les 28 premières heures d'une semaine)<br/>Le salaire minimum de l'Alberta n'a pas augmenté depuis octobre 2018 et est maintenant le plus bas au Canada. Toutes les heures de travail doivent être rémunérées au salaire minimum, du début à la fin de la période de travail (« portail à portail »). [1]",
+          en: "<strong>$15.00/hour</strong> (students under 18: $13.00/hour for the first 28 hours in a week)<br/>Alberta's minimum wage has not increased since October 2018 and is now the lowest in Canada. All work hours must be compensated at minimum wage, portal to portal. <a href=\"#ab-ref-1\" class=\"citation-link\">[1]</a>",
+          fr: "<strong>15,00 $/heure</strong> (étudiants de moins de 18 ans : 13,00 $/heure pour les 28 premières heures d'une semaine)<br/>Le salaire minimum de l'Alberta n'a pas augmenté depuis octobre 2018 et est maintenant le plus bas au Canada. Toutes les heures de travail doivent être rémunérées au salaire minimum, du début à la fin de la période de travail (« portail à portail »). <a href=\"#ab-ref-1\" class=\"citation-link\">[1]</a>",
         },
       },
       {
@@ -248,54 +292,64 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Equipment Damage", fr: "Dommages à l'équipement" },
         content: {
-          en: "Employers cannot deduct wages for equipment damage, faulty work, or production mistakes. Such deductions are prohibited under Alberta employment standards. [1]",
-          fr: "Les employeurs ne peuvent pas déduire des salaires pour des dommages à l'équipement, un travail défectueux ou des erreurs de production. Ces déductions sont interdites en vertu des normes d'emploi de l'Alberta. [1]",
+          en: "Employers cannot deduct wages for equipment damage, faulty work, or production mistakes. Such deductions are prohibited under Alberta employment standards. <a href=\"#ab-ref-1\" class=\"citation-link\">[1]</a>",
+          fr: "Les employeurs ne peuvent pas déduire des salaires pour des dommages à l'équipement, un travail défectueux ou des erreurs de production. Ces déductions sont interdites en vertu des normes d'emploi de l'Alberta. <a href=\"#ab-ref-1\" class=\"citation-link\">[1]</a>",
         },
       },
       {
         title: { en: "Statutory Holiday Pay", fr: "Indemnité de jour férié" },
         content: {
-          en: "Most employees are entitled to general holiday pay if the holiday is a regular day of work or if they work on a general holiday that is not a regular day of work. Employees are not entitled to general holiday pay if they worked fewer than <strong>30 workdays</strong> for the employer in the 12 months before the holiday, or if other Alberta employment standards disqualification rules apply. [3]<br/>If you don't work a holiday that falls on a regular workday, you receive your average daily wage. If you work it, you receive <strong>1.5 times your rate</strong> (minimum $22.50/hour at minimum wage) <strong>plus your average daily wage</strong> — or regular pay plus a future paid day off.<br/>See more here: <a href=\"https://www.alberta.ca/alberta-general-holidays\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/alberta-general-holidays</a>. [3]",
-          fr: "La plupart des employés ont droit à l'indemnité de jour férié si le jour férié est un jour de travail habituel ou s'ils travaillent un jour férié qui n'est pas un jour de travail habituel. Les employés n'ont pas droit à l'indemnité de jour férié s'ils ont travaillé moins de <strong>30 jours de travail</strong> pour l'employeur dans les 12 mois précédant le jour férié, ou si d'autres règles d'inadmissibilité des normes d'emploi de l'Alberta s'appliquent. [3]<br/>Si vous ne travaillez pas un jour férié qui tombe un jour de travail habituel, vous recevez votre salaire quotidien moyen. Si vous le travaillez, vous recevez <strong>1,5 fois votre taux</strong> (minimum 22,50 $/heure au salaire minimum) <strong>plus votre salaire quotidien moyen</strong> — ou votre salaire régulier plus un jour de congé payé ultérieur.<br/>Pour en savoir plus : <a href=\"https://www.alberta.ca/alberta-general-holidays\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/alberta-general-holidays</a>. [3]",
+          en: "Most employees are entitled to general holiday pay if the holiday is a regular day of work or if they work on a general holiday that is not a regular day of work. Employees are not entitled to general holiday pay if they worked fewer than <strong>30 workdays</strong> for the employer in the 12 months before the holiday, or if other Alberta employment standards disqualification rules apply. <a href=\"#ab-ref-3\" class=\"citation-link\">[3]</a><br/>If you don't work a holiday that falls on a regular workday, you receive your average daily wage. If you work it, you receive <strong>1.5 times your rate</strong> (minimum $22.50/hour at minimum wage) <strong>plus your average daily wage</strong> — or regular pay plus a future paid day off.<br/>See more here: <a href=\"https://www.alberta.ca/alberta-general-holidays\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/alberta-general-holidays</a>. <a href=\"#ab-ref-3\" class=\"citation-link\">[3]</a>",
+          fr: "La plupart des employés ont droit à l'indemnité de jour férié si le jour férié est un jour de travail habituel ou s'ils travaillent un jour férié qui n'est pas un jour de travail habituel. Les employés n'ont pas droit à l'indemnité de jour férié s'ils ont travaillé moins de <strong>30 jours de travail</strong> pour l'employeur dans les 12 mois précédant le jour férié, ou si d'autres règles d'inadmissibilité des normes d'emploi de l'Alberta s'appliquent. <a href=\"#ab-ref-3\" class=\"citation-link\">[3]</a><br/>Si vous ne travaillez pas un jour férié qui tombe un jour de travail habituel, vous recevez votre salaire quotidien moyen. Si vous le travaillez, vous recevez <strong>1,5 fois votre taux</strong> (minimum 22,50 $/heure au salaire minimum) <strong>plus votre salaire quotidien moyen</strong> — ou votre salaire régulier plus un jour de congé payé ultérieur.<br/>Pour en savoir plus : <a href=\"https://www.alberta.ca/alberta-general-holidays\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/alberta-general-holidays</a>. <a href=\"#ab-ref-3\" class=\"citation-link\">[3]</a>",
         },
       },
       {
         title: { en: "Overtime", fr: "Heures supplémentaires" },
         content: {
-          en: "After <strong>8 hours in a day</strong> or <strong>44 hours in a week</strong>, overtime must be paid at <strong>1.5 times the regular rate</strong>. [4]<br/>However, overtime rules, thresholds, and calculation methods can vary depending on the worker's industry classification, occupation, and any applicable exemptions or averaging arrangements. For workers paid exclusively by piece rate, overtime calculations may be based on minimum wage where no hourly wage rate exists. [4][5]<br/>Overtime exemptions may include managers. [5]",
-          fr: "Après <strong>8 heures dans une journée</strong> ou <strong>44 heures dans une semaine</strong>, les heures supplémentaires doivent être payées à <strong>1,5 fois le taux régulier</strong>. [4]<br/>Cependant, les règles, seuils et méthodes de calcul des heures supplémentaires peuvent varier selon la classification de l'industrie, la profession du travailleur, ainsi que les exemptions ou ententes d'étalement applicables. Pour les travailleurs payés exclusivement à la pièce, le calcul des heures supplémentaires peut être basé sur le salaire minimum lorsqu'aucun taux horaire n'existe. [4][5]<br/>Les exemptions aux heures supplémentaires peuvent inclure les cadres. [5]",
+          en: "After <strong>8 hours in a day</strong> or <strong>44 hours in a week</strong>, overtime must be paid at <strong>1.5 times the regular rate</strong>. <a href=\"#ab-ref-4\" class=\"citation-link\">[4]</a><br/>However, overtime rules, thresholds, and calculation methods can vary depending on the worker's industry classification, occupation, and any applicable exemptions or averaging arrangements. For workers paid exclusively by piece rate, overtime calculations may be based on minimum wage where no hourly wage rate exists. <a href=\"#ab-ref-4\" class=\"citation-link\">[4]</a><a href=\"#ab-ref-5\" class=\"citation-link\">[5]</a><br/>Overtime exemptions may include managers. <a href=\"#ab-ref-5\" class=\"citation-link\">[5]</a>",
+          fr: "Après <strong>8 heures dans une journée</strong> ou <strong>44 heures dans une semaine</strong>, les heures supplémentaires doivent être payées à <strong>1,5 fois le taux régulier</strong>. <a href=\"#ab-ref-4\" class=\"citation-link\">[4]</a><br/>Cependant, les règles, seuils et méthodes de calcul des heures supplémentaires peuvent varier selon la classification de l'industrie, la profession du travailleur, ainsi que les exemptions ou ententes d'étalement applicables. Pour les travailleurs payés exclusivement à la pièce, le calcul des heures supplémentaires peut être basé sur le salaire minimum lorsqu'aucun taux horaire n'existe. <a href=\"#ab-ref-4\" class=\"citation-link\">[4]</a><a href=\"#ab-ref-5\" class=\"citation-link\">[5]</a><br/>Les exemptions aux heures supplémentaires peuvent inclure les cadres. <a href=\"#ab-ref-5\" class=\"citation-link\">[5]</a>",
         },
       },
       {
         title: { en: "Alberta OHS", fr: "SST de l'Alberta" },
         content: {
-          en: "For workplace safety issues including illness, injury, unsafe work refusal, harassment, and sanitation, contact Alberta Occupational Health and Safety (OHS) at <a href=\"https://www.alberta.ca/occupational-health-safety\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/occupational-health-safety</a>. Workers have the right to refuse unsafe work. [6]",
-          fr: "Pour les questions de sécurité au travail, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et l'assainissement, contactez la Santé et sécurité au travail (SST) de l'Alberta à <a href=\"https://www.alberta.ca/occupational-health-safety\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/occupational-health-safety</a>. Les travailleurs ont le droit de refuser un travail dangereux. [6]",
+          en: "For workplace safety issues including illness, injury, unsafe work refusal, harassment, and sanitation, contact Alberta Occupational Health and Safety (OHS) at <a href=\"https://www.alberta.ca/occupational-health-safety\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/occupational-health-safety</a>. Workers have the right to refuse unsafe work. <a href=\"#ab-ref-6\" class=\"citation-link\">[6]</a>",
+          fr: "Pour les questions de sécurité au travail, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et l'assainissement, contactez la Santé et sécurité au travail (SST) de l'Alberta à <a href=\"https://www.alberta.ca/occupational-health-safety\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">alberta.ca/occupational-health-safety</a>. Les travailleurs ont le droit de refuser un travail dangereux. <a href=\"#ab-ref-6\" class=\"citation-link\">[6]</a>",
         },
       },
     ],
+    // Note: alberta.ca and workforce.com pages expose no content-section anchor ids in their
+    // raw HTML (verified via curl, not just WebFetch) — only nav/footer boilerplate ids exist.
+    // Deep-linking via URL fragment isn't possible for these sources; the exact section is
+    // named in the title text instead so the citation is still as specific as the source allows.
     references: [
       {
-        title: "Alberta.ca — Employment Standards (minimum wage, deductions) [1]",
+        id: "ab-ref-1",
+        title: "Alberta.ca — Employment Standards, \"Deductions from earnings\" and \"Minimum wage\" sections [1]",
         url: "https://www.alberta.ca/employment-standards",
       },
       {
+        id: "ab-ref-2",
         title: "Alberta.ca — Report Unsafe Work [2]",
         url: "https://www.alberta.ca/report-unsafe-work",
       },
       {
-        title: "Alberta.ca — Alberta General Holidays (holiday pay eligibility) [3]",
+        id: "ab-ref-3",
+        title: "Alberta.ca — Alberta General Holidays, \"Eligibility\" section [3]",
         url: "https://www.alberta.ca/alberta-general-holidays",
       },
       {
-        title: "Alberta.ca — Overtime Hours and Overtime Pay [4]",
+        id: "ab-ref-4",
+        title: "Alberta.ca — Overtime Hours and Overtime Pay, \"Basic rules\" and \"Employee eligibility\" sections [4]",
         url: "https://www.alberta.ca/overtime-hours-overtime-pay",
       },
       {
-        title: "Workforce.com — Overtime Laws by Province (Canada) [5]",
+        id: "ab-ref-5",
+        title: "Workforce.com — Overtime Laws by Province (Canada), Alberta section [5]",
         url: "https://www.workforce.com/ca/resources/overtime-laws-by-province-canada",
       },
       {
+        id: "ab-ref-6",
         title: "Alberta.ca — Occupational Health and Safety [6]",
         url: "https://www.alberta.ca/occupational-health-safety",
       },
@@ -632,36 +686,36 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$16.60/hour</strong> (effective May 1, 2026), adjusted each May 1<br/>All work hours — including pre-season training, camp meetings, setup time, and most travel time — must be compensated at minimum wage, portal to portal (i.e., from the moment you are required to be present until you are released). [1]",
-          fr: "<strong>16,60 $/heure</strong> (en vigueur depuis le 1er mai 2026), ajusté chaque 1er mai<br/>Toutes les heures de travail — y compris la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement — doivent être rémunérées au salaire minimum, du début à la fin de la période de travail (« portail à portail »), c'est-à-dire dès le moment où votre présence est exigée jusqu'à celui où vous êtes libéré. [1]",
+          en: "<strong>$16.60/hour</strong> (effective May 1, 2026), adjusted each May 1<br/>All work hours — including pre-season training, camp meetings, setup time, and most travel time — must be compensated at minimum wage, portal to portal (i.e., from the moment you are required to be present until you are released). <a href=\"#qc-ref-1\" class=\"citation-link\">[1]</a>",
+          fr: "<strong>16,60 $/heure</strong> (en vigueur depuis le 1er mai 2026), ajusté chaque 1er mai<br/>Toutes les heures de travail — y compris la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement — doivent être rémunérées au salaire minimum, du début à la fin de la période de travail (« portail à portail »), c'est-à-dire dès le moment où votre présence est exigée jusqu'à celui où vous êtes libéré. <a href=\"#qc-ref-1\" class=\"citation-link\">[1]</a>",
         },
       },
       {
         title: { en: "Overtime", fr: "Heures supplémentaires" },
         content: {
-          en: "Hours worked beyond <strong>40 hours per week</strong> must be paid at <strong>1.5 times the regular hourly rate</strong> (minimum $24.90/hour at minimum wage). Overtime may also be compensated with equivalent paid leave. Some workers, such as farm workers, are not entitled to the overtime wage increase. [2] For workers who work in a logging operation or a sawmill, a standard work week is <strong>47 hours</strong>. [2] Exemptions may include senior managers. [2]",
-          fr: "Les heures travaillées au-delà de <strong>40 heures par semaine</strong> doivent être rémunérées au taux de <strong>1,5 fois le salaire horaire régulier</strong> (minimum 24,90 $/heure au salaire minimum). Les heures supplémentaires peuvent aussi être compensées par un congé équivalent payé. Certains travailleurs, comme les travailleurs agricoles, n'ont pas droit à la majoration pour heures supplémentaires. [2] Pour les travailleurs d'une exploitation forestière ou d'une scierie, la semaine normale de travail est de <strong>47 heures</strong>. [2] Les cadres supérieurs peuvent être exemptés. [2]",
+          en: "Hours worked beyond <strong>40 hours per week</strong> must be paid at <strong>1.5 times the regular hourly rate</strong> (minimum $24.90/hour at minimum wage). Overtime may also be compensated with equivalent paid leave. Some workers, such as farm workers, are not entitled to the overtime wage increase. <a href=\"#qc-ref-2\" class=\"citation-link\">[2]</a><a href=\"#qc-ref-3\" class=\"citation-link\">[3]</a> For workers who work in a logging operation or a sawmill, a standard work week is <strong>47 hours</strong>. <a href=\"#qc-ref-2\" class=\"citation-link\">[2]</a> Exemptions may include senior managers. <a href=\"#qc-ref-2\" class=\"citation-link\">[2]</a><a href=\"#qc-ref-3\" class=\"citation-link\">[3]</a>",
+          fr: "Les heures travaillées au-delà de <strong>40 heures par semaine</strong> doivent être rémunérées au taux de <strong>1,5 fois le salaire horaire régulier</strong> (minimum 24,90 $/heure au salaire minimum). Les heures supplémentaires peuvent aussi être compensées par un congé équivalent payé. Certains travailleurs, comme les travailleurs agricoles, n'ont pas droit à la majoration pour heures supplémentaires. <a href=\"#qc-ref-2\" class=\"citation-link\">[2]</a><a href=\"#qc-ref-3\" class=\"citation-link\">[3]</a> Pour les travailleurs d'une exploitation forestière ou d'une scierie, la semaine normale de travail est de <strong>47 heures</strong>. <a href=\"#qc-ref-2\" class=\"citation-link\">[2]</a> Les cadres supérieurs peuvent être exemptés. <a href=\"#qc-ref-2\" class=\"citation-link\">[2]</a><a href=\"#qc-ref-3\" class=\"citation-link\">[3]</a>",
         },
       },
       {
         title: { en: "Maximum Working Hours", fr: "Durée maximale du travail" },
         content: {
-          en: "An employee may refuse to work more than <strong>2 hours beyond their regular daily hours</strong> or more than <strong>14 hours of work in a 24-hour period</strong>. An employee may also refuse if the schedule is not set and they must care for a family member. Employees may also refuse work if they were not informed of their schedule at least <strong>5 days in advance</strong>, subject to exceptions under Quebec labour standards law. [3]",
-          fr: "Un salarié peut refuser de travailler plus de <strong>2 heures au-delà de ses heures habituelles de travail</strong> ou plus de <strong>14 heures de travail par période de 24 heures</strong>. Le salarié peut aussi refuser de travailler si l'horaire n'est pas fixé pour s'occuper d'un membre de sa famille ou d'un proche. Les salariés peuvent également refuser de travailler s'ils n'ont pas été informés de leur horaire au moins <strong>5 jours à l'avance</strong>, sous réserve des exceptions prévues par les normes du travail du Québec. [3]",
+          en: "An employee may refuse to work more than <strong>2 hours beyond their regular daily hours</strong> or more than <strong>14 hours of work in a 24-hour period</strong>. An employee may also refuse if the schedule is not set and they must care for a family member. Employees may also refuse work if they were not informed of their schedule at least <strong>5 days in advance</strong>, subject to exceptions under Quebec labour standards law. <a href=\"#qc-ref-4\" class=\"citation-link\">[4]</a>",
+          fr: "Un salarié peut refuser de travailler plus de <strong>2 heures au-delà de ses heures habituelles de travail</strong> ou plus de <strong>14 heures de travail par période de 24 heures</strong>. Le salarié peut aussi refuser de travailler si l'horaire n'est pas fixé pour s'occuper d'un membre de sa famille ou d'un proche. Les salariés peuvent également refuser de travailler s'ils n'ont pas été informés de leur horaire au moins <strong>5 jours à l'avance</strong>, sous réserve des exceptions prévues par les normes du travail du Québec. <a href=\"#qc-ref-4\" class=\"citation-link\">[4]</a>",
         },
       },
       {
         title: { en: "Deductions", fr: "Déductions" },
         content: {
-          en: "An employer may only make deductions from wages if authorized by law, regulation, court order, collective agreement, decree, or a written mandate from the employee. The employer may make deductions from wages if the employee consents thereto in writing, for a specific purpose mentioned in the writing. [4] Arbitrary deductions for equipment damage or production mistakes are not permitted.",
-          fr: "L'employeur peut effectuer des déductions sur le salaire seulement si la loi, un règlement, une ordonnance judiciaire, une convention collective, un décret ou un mandat écrit du salarié l'y autorise. L'employeur peut effectuer une retenue sur le salaire si le salarié y consent par écrit, pour une fin spécifique mentionnée dans cet écrit. [4] Les déductions arbitraires pour dommages à l'équipement ou erreurs de production ne sont pas permises.",
+          en: "An employer may only make deductions from wages if authorized by law, regulation, court order, collective agreement, decree, or a written mandate from the employee. The employer may make deductions from wages if the employee consents thereto in writing, for a specific purpose mentioned in the writing. <a href=\"#qc-ref-5\" class=\"citation-link\">[5]</a> Arbitrary deductions for equipment damage or production mistakes are not permitted.",
+          fr: "L'employeur peut effectuer des déductions sur le salaire seulement si la loi, un règlement, une ordonnance judiciaire, une convention collective, un décret ou un mandat écrit du salarié l'y autorise. L'employeur peut effectuer une retenue sur le salaire si le salarié y consent par écrit, pour une fin spécifique mentionnée dans cet écrit. <a href=\"#qc-ref-5\" class=\"citation-link\">[5]</a> Les déductions arbitraires pour dommages à l'équipement ou erreurs de production ne sont pas permises.",
         },
       },
       {
         title: { en: "Statutory Holidays", fr: "Jours fériés" },
         content: {
-          en: "Quebec has <strong>8 paid statutory holidays</strong> per year. The indemnity for each holiday equals <strong>1/20 of wages earned in the 4 complete pay weeks preceding the holiday week</strong>. If you work on a statutory holiday, you receive your holiday indemnity plus your regular wages for hours worked. To calculate the indemnity, use the <a href=\"https://www.cnesst.gouv.qc.ca/en/working-conditions/leave/statutory-holidays/statutory-holidays\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">CNESST Statutory Holidays Calculator</a> to ensure complete compliance. [5]",
-          fr: "Le Québec compte <strong>8 jours fériés chômés et payés</strong> par année. L'indemnité versée pour chaque jour férié est égale à <strong>1/20 du salaire gagné au cours des 4 semaines complètes de paie précédant la semaine du congé</strong>. Si vous travaillez un jour férié, vous recevez votre indemnité de jour férié plus votre salaire régulier pour les heures travaillées. Pour calculer l'indemnité, utilisez le <a href=\"https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries-chomes-payes/jours-feries-chomes-payes\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">calculateur des jours fériés de la CNESST</a> afin d'assurer une conformité complète. [5]",
+          en: "Quebec has <strong>8 paid statutory holidays</strong> per year. The indemnity for each holiday equals <strong>1/20 of wages earned in the 4 complete pay weeks preceding the holiday week</strong>. If you work on a statutory holiday, you receive your holiday indemnity plus your regular wages for hours worked. <a href=\"#qc-ref-7\" class=\"citation-link\">[7]</a> To calculate the indemnity, use the <a href=\"https://www.cnesst.gouv.qc.ca/en/working-conditions/leave/statutory-holidays/calculating-indemnity-statutory-holiday\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">CNESST guide to calculating the statutory holiday indemnity</a> to ensure complete compliance. <a href=\"#qc-ref-6\" class=\"citation-link\">[6]</a>",
+          fr: "Le Québec compte <strong>8 jours fériés chômés et payés</strong> par année. L'indemnité versée pour chaque jour férié est égale à <strong>1/20 du salaire gagné au cours des 4 semaines complètes de paie précédant la semaine du congé</strong>. Si vous travaillez un jour férié, vous recevez votre indemnité de jour férié plus votre salaire régulier pour les heures travaillées. <a href=\"#qc-ref-7\" class=\"citation-link\">[7]</a> Pour calculer l'indemnité, consultez le <a href=\"https://www.cnesst.gouv.qc.ca/fr/conditions-travail/conges/jours-feries/calculer-indemnites-pour-un-jour-ferie\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">guide de la CNESST sur le calcul de l'indemnité de jour férié</a> afin d'assurer une conformité complète. <a href=\"#qc-ref-6\" class=\"citation-link\">[6]</a>",
         },
       },
       {
@@ -674,38 +728,60 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Occupational Health and Safety (CNESST)", fr: "Santé et sécurité au travail (CNESST)" },
         content: {
-          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the CNESST at <strong>1-844-838-0808</strong> or visit <a href=\"https://www.cnesst.gouv.qc.ca/en\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">cnesst.gouv.qc.ca</a>. All workers have the right to refuse work if they believe it endangers their health, safety, or physical or psychological integrity. [6]",
-          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, blessures, refus de travail dangereux, harcèlement et problèmes d'assainissement, contactez la CNESST au <strong>1-844-838-0808</strong> ou visitez <a href=\"https://www.cnesst.gouv.qc.ca/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">cnesst.gouv.qc.ca</a>. Tous les travailleurs ont le droit de refuser d'exécuter un travail s'ils croient que cela met en danger leur santé, leur sécurité ou leur intégrité physique ou psychologique. [6]",
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact the CNESST at <strong>1-844-838-0808</strong> or visit <a href=\"https://www.cnesst.gouv.qc.ca/en\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">cnesst.gouv.qc.ca</a>. All workers have the right to refuse work if they believe it endangers their health, safety, or physical or psychological integrity. <a href=\"#qc-ref-8\" class=\"citation-link\">[8]</a>",
+          fr: "Pour les préoccupations de santé et sécurité, y compris les maladies, blessures, refus de travail dangereux, harcèlement et problèmes d'assainissement, contactez la CNESST au <strong>1-844-838-0808</strong> ou visitez <a href=\"https://www.cnesst.gouv.qc.ca/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">cnesst.gouv.qc.ca</a>. Tous les travailleurs ont le droit de refuser d'exécuter un travail s'ils croient que cela met en danger leur santé, leur sécurité ou leur intégrité physique ou psychologique. <a href=\"#qc-ref-8\" class=\"citation-link\">[8]</a>",
         },
       },
     ],
+    // Note: cnesst.gouv.qc.ca content pages generally expose no usable content-section anchor
+    // ids either (verified via curl on the overtime, right-to-refuse, and Section 49 pages —
+    // only footer boilerplate ids exist). Where a page links out to a more specific dedicated
+    // sub-page for the exact fact cited, that more specific URL is used instead of the general
+    // landing page. The PDF guide's page numbers were verified by downloading it directly
+    // (WebFetch 403s on this file; a plain curl with a browser User-Agent succeeds) and
+    // extracting text per-page with `pdftotext -layout`, splitting on the \f page-break marker.
     references: [
       {
-        title: "CNESST — Labour Standards in Québec (PDF guide, reviewed source document) [1]",
+        id: "qc-ref-1",
+        title: "CNESST — Labour Standards in Québec (PDF guide), general minimum-wage guidance [1]",
         url: "https://www.cnesst.gouv.qc.ca/sites/default/files/documents/labour-standards-quebec.pdf",
       },
       {
-        title: "CNESST — Overtime, Standard Work Week & Farm Workers (interpretation guide) [2]",
-        url: "https://www.cnesst.gouv.qc.ca/en/working-conditions/wage-and-pay/wages/overtime",
+        id: "qc-ref-2",
+        title: "CNESST — Labour Standards in Québec (PDF guide), \"Overtime\" section, p. 8 [2]",
+        url: "https://www.cnesst.gouv.qc.ca/sites/default/files/documents/labour-standards-quebec.pdf#page=8",
+        location: "p. 8",
       },
       {
-        title: "Workforce.com — Overtime Laws by Province (Canada) [2]",
+        id: "qc-ref-3",
+        title: "Workforce.com — Overtime Laws by Province (Canada), Quebec section [3]",
         url: "https://www.workforce.com/ca/resources/overtime-laws-by-province-canada",
       },
       {
-        title: "CNESST — Right to Refuse to Work [3]",
+        id: "qc-ref-4",
+        title: "CNESST — Right to Refuse to Work [4]",
         url: "https://www.cnesst.gouv.qc.ca/en/working-conditions/work-schedule-and-termination-employment/work-schedule/right-refuse-work",
       },
       {
-        title: "CNESST — Section 49, Act Respecting Labour Standards (deductions) [4]",
-        url: "https://www.cnesst.gouv.qc.ca/en/node/1147646/interpretation-guide/act-respecting-labour-standards/chapter-iv-larbour-standards-section-391-97/division-i-wages-section-391-511/section-49",
+        id: "qc-ref-5",
+        title: "CNESST — Labour Standards in Québec (PDF guide), \"Deductions\" section (Article 49), p. 6 [5]",
+        url: "https://www.cnesst.gouv.qc.ca/sites/default/files/documents/labour-standards-quebec.pdf#page=6",
+        location: "p. 6",
       },
       {
-        title: "CNESST — Statutory Holidays Calculator [5]",
-        url: "https://www.cnesst.gouv.qc.ca/en/working-conditions/leave/statutory-holidays/statutory-holidays",
+        id: "qc-ref-6",
+        title: "CNESST — Calculating the Indemnity for a Statutory Holiday [6]",
+        url: "https://www.cnesst.gouv.qc.ca/en/working-conditions/leave/statutory-holidays/calculating-indemnity-statutory-holiday",
       },
       {
-        title: "CNESST — Official Website [6]",
+        id: "qc-ref-7",
+        title: "CNESST — Labour Standards in Québec (PDF guide), statutory holiday indemnity calculation, p. 10 [7]",
+        url: "https://www.cnesst.gouv.qc.ca/sites/default/files/documents/labour-standards-quebec.pdf#page=10",
+        location: "p. 10",
+      },
+      {
+        id: "qc-ref-8",
+        title: "CNESST — Official Website [8]",
         url: "https://www.cnesst.gouv.qc.ca/en",
       },
     ],
