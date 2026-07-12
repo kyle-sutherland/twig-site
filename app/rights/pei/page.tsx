@@ -110,6 +110,30 @@ export default function PEIRightsPage() {
         </div>
       </ContentSection>
 
+      {data.references && data.references.length > 0 && (
+        <ContentSection variant="white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="heading text-2xl md:text-3xl mb-6 text-gray-900">
+              <Bilingual en="References" fr="Références" />
+            </h2>
+            <ol className="space-y-2 list-decimal list-inside text-gray-700">
+              {data.references.map((reference, index) => (
+                <li key={index} id={reference.id} className="scroll-mt-24">
+                  <a
+                    href={reference.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-700 hover:underline wrap-break-word"
+                  >
+                    {reference.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </ContentSection>
+      )}
+
       <ContentSection variant="green">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading text-3xl md:text-4xl mb-6">
