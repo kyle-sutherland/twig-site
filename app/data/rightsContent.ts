@@ -275,8 +275,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$15.00/hour</strong> (students under 18: $13.00/hour for the first 28 hours in a week)<br/>Alberta's minimum wage has not increased since October 2018 and is now the lowest in Canada. All work hours must be compensated at minimum wage, portal to portal. <a href=\"#ab-ref-1\" class=\"citation-link\">[1]</a>",
-          fr: "<strong>15,00 $/heure</strong> (étudiants de moins de 18 ans : 13,00 $/heure pour les 28 premières heures d'une semaine)<br/>Le salaire minimum de l'Alberta n'a pas augmenté depuis octobre 2018 et est maintenant le plus bas au Canada. Toutes les heures de travail doivent être rémunérées au salaire minimum, du début à la fin de la période de travail (« portail à portail »). <a href=\"#ab-ref-1\" class=\"citation-link\">[1]</a>",
+          en: "<strong>$15.00/hour</strong> (students under 18: $13.00/hour for the first 28 hours in a week)<br/>Alberta's minimum wage has not increased since October 2018 and is now the lowest in Canada. <a href=\"#ab-ref-1\" class=\"citation-link\">[1]</a> You must be paid for all hours you work: travel from the employer's business or a place designated by the employer to a work site — and between work sites — counts as work time, but the regular commute between home and work does not. <a href=\"#ab-ref-7\" class=\"citation-link\">[7]</a>",
+          fr: "<strong>15,00 $/heure</strong> (étudiants de moins de 18 ans : 13,00 $/heure pour les 28 premières heures d'une semaine)<br/>Le salaire minimum de l'Alberta n'a pas augmenté depuis octobre 2018 et est maintenant le plus bas au Canada. <a href=\"#ab-ref-1\" class=\"citation-link\">[1]</a> Vous devez être payé pour toutes les heures travaillées : les déplacements entre l'établissement de l'employeur (ou un lieu qu'il désigne) et le chantier — ou entre deux chantiers — comptent comme du temps de travail, mais le trajet habituel entre le domicile et le travail n'en fait pas partie. <a href=\"#ab-ref-7\" class=\"citation-link\">[7]</a>",
         },
       },
       {
@@ -352,6 +352,11 @@ export const provinceRights: ProvinceRights[] = [
         id: "ab-ref-6",
         title: "Alberta.ca — Occupational Health and Safety [6]",
         url: "https://www.alberta.ca/occupational-health-safety",
+      },
+      {
+        id: "ab-ref-7",
+        title: "Alberta.ca — Hours of Work and Rest, \"Travel time\" section [7]",
+        url: "https://www.alberta.ca/hours-work-rest",
       },
     ],
   },
@@ -436,8 +441,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$17.60/hour</strong>, rising to <strong>$17.95/hour</strong> on October 1, 2026 (adjusted annually based on the Consumer Price Index)<br/>All work hours are paid portal to portal. Students under 18 working 28 hours/week or less: $16.60/hour, rising to $16.90 on October 1, 2026.",
-          fr: "<strong>17,60 $/heure</strong>, passant à <strong>17,95 $/heure</strong> le 1er octobre 2026 (ajusté annuellement selon l'Indice des prix à la consommation)<br/>Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). Étudiants de moins de 18 ans travaillant 28 heures/semaine ou moins : 16,60 $/heure, passant à 16,90 $ le 1er octobre 2026.",
+          en: "<strong>$17.60/hour</strong>, rising to <strong>$17.95/hour</strong> on October 1, 2026 (adjusted annually based on the Consumer Price Index)<br/>You must be paid for all time you spend working or required to stay at the workplace (other than unpaid eating periods): required training and travel during the course of the workday count as work time, but the commute between home and work does not. <a href=\"#on-ref-7\" class=\"citation-link\">[7]</a> Students under 18 working 28 hours/week or less: $16.60/hour, rising to $16.90 on October 1, 2026.",
+          fr: "<strong>17,60 $/heure</strong>, passant à <strong>17,95 $/heure</strong> le 1er octobre 2026 (ajusté annuellement selon l'Indice des prix à la consommation)<br/>Vous devez être payé pour tout le temps où vous travaillez ou devez rester sur les lieux de travail (sauf les périodes de repas non payées) : la formation obligatoire et les déplacements effectués au cours de la journée de travail comptent comme du temps de travail, mais le trajet entre le domicile et le travail n'en fait pas partie. <a href=\"#on-ref-7\" class=\"citation-link\">[7]</a> Étudiants de moins de 18 ans travaillant 28 heures/semaine ou moins : 16,60 $/heure, passant à 16,90 $ le 1er octobre 2026.",
         },
       },
       {
@@ -518,6 +523,11 @@ export const provinceRights: ProvinceRights[] = [
         title: "Office of the Worker Adviser — About the OWA [6]",
         url: "https://www.owa.gov.on.ca/en/about/",
       },
+      {
+        id: "on-ref-7",
+        title: "Ontario.ca — Your Guide to the Employment Standards Act, Hours of Work, \"Travel time\" and \"Training time\" sections [7]",
+        url: "https://www.ontario.ca/document/your-guide-employment-standards-act-0/hours-work",
+      },
     ],
   },
   {
@@ -590,8 +600,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$15.35/hour</strong>, rising to <strong>$15.70/hour</strong> on October 1, 2026<br/>Saskatchewan's minimum wage is indexed annually using a formula that gives equal weight to changes in the Consumer Price Index and the Average Hourly Wage for Saskatchewan. All work hours are paid portal to portal. <a href=\"#sk-ref-1\" class=\"citation-link\">[1]</a>",
-          fr: "<strong>15,35 $/heure</strong>, passant à <strong>15,70 $/heure</strong> le 1er octobre 2026<br/>Le salaire minimum de la Saskatchewan est indexé annuellement selon une formule accordant un poids égal aux variations de l'Indice des prix à la consommation et du salaire horaire moyen en Saskatchewan. Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#sk-ref-1\" class=\"citation-link\">[1]</a>",
+          en: "<strong>$15.35/hour</strong>, rising to <strong>$15.70/hour</strong> on October 1, 2026<br/>Saskatchewan's minimum wage is indexed annually using a formula that gives equal weight to changes in the Consumer Price Index and the Average Hourly Wage for Saskatchewan. <a href=\"#sk-ref-1\" class=\"citation-link\">[1]</a> You must be paid for all time you are required to work or to remain at your employer's disposal — for example, if you are directed to stay through a meal break, that time must be paid. <a href=\"#sk-ref-6\" class=\"citation-link\">[6]</a>",
+          fr: "<strong>15,35 $/heure</strong>, passant à <strong>15,70 $/heure</strong> le 1er octobre 2026<br/>Le salaire minimum de la Saskatchewan est indexé annuellement selon une formule accordant un poids égal aux variations de l'Indice des prix à la consommation et du salaire horaire moyen en Saskatchewan. <a href=\"#sk-ref-1\" class=\"citation-link\">[1]</a> Vous devez être payé pour tout le temps où vous devez travailler ou demeurer à la disposition de votre employeur — par exemple, si l'on vous demande de rester pendant la pause-repas, ce temps doit être rémunéré. <a href=\"#sk-ref-6\" class=\"citation-link\">[6]</a>",
         },
       },
       {
@@ -667,6 +677,11 @@ export const provinceRights: ProvinceRights[] = [
         id: "sk-ref-5",
         title: "Saskatchewan.ca — Ministry of Labour Relations and Workplace Safety [5]",
         url: "https://www.saskatchewan.ca/government/government-structure/ministries/labour-relations-and-workplace-safety",
+      },
+      {
+        id: "sk-ref-6",
+        title: "Saskatchewan.ca — Work Schedules and Breaks (time at the employer's disposal must be paid) [6]",
+        url: "https://www.saskatchewan.ca/business/employment-standards/work-schedules-permits-and-modified-work-arrangements/work-schedules-and-breaks",
       },
     ],
   },
@@ -751,8 +766,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$16.60/hour</strong> (effective May 1, 2026), adjusted each May 1<br/>All work hours — including pre-season training, camp meetings, setup time, and most travel time — must be compensated at minimum wage, portal to portal (i.e., from the moment you are required to be present until you are released). <a href=\"#qc-ref-1\" class=\"citation-link\">[1]</a>",
-          fr: "<strong>16,60 $/heure</strong> (en vigueur depuis le 1er mai 2026), ajusté chaque 1er mai<br/>Toutes les heures de travail — y compris la formation en début de saison, les réunions de camp, le temps de préparation et la plupart des temps de déplacement — doivent être rémunérées au salaire minimum, du début à la fin de la période de travail (« portail à portail »), c'est-à-dire dès le moment où votre présence est exigée jusqu'à celui où vous êtes libéré. <a href=\"#qc-ref-1\" class=\"citation-link\">[1]</a>",
+          en: "<strong>$16.60/hour</strong> (effective May 1, 2026), adjusted each May 1 <a href=\"#qc-ref-1\" class=\"citation-link\">[1]</a><br/>You are deemed to be at work — and must be paid — while waiting for work to be assigned at the workplace, during breaks granted by the employer, during travel required by the employer, and during any trial or training period required by the employer (including pre-season training and camp meetings); the regular commute between home and work is not covered. <a href=\"#qc-ref-9\" class=\"citation-link\">[9]</a>",
+          fr: "<strong>16,60 $/heure</strong> (en vigueur depuis le 1er mai 2026), ajusté chaque 1er mai <a href=\"#qc-ref-1\" class=\"citation-link\">[1]</a><br/>Vous êtes réputé au travail — et devez être payé — lorsque vous attendez qu'on vous assigne du travail sur les lieux de travail, pendant les pauses accordées par l'employeur, durant les déplacements exigés par l'employeur et pendant toute période d'essai ou de formation exigée par l'employeur (y compris la formation de début de saison et les réunions de camp) ; le trajet habituel entre le domicile et le travail n'est pas visé. <a href=\"#qc-ref-9\" class=\"citation-link\">[9]</a>",
         },
       },
       {
@@ -849,6 +864,12 @@ export const provinceRights: ProvinceRights[] = [
         title: "CNESST — Official Website [8]",
         url: "https://www.cnesst.gouv.qc.ca/en",
       },
+      {
+        id: "qc-ref-9",
+        title: "CNESST — Labour Standards in Québec (PDF guide), \"Hours of work and presence\" section, p. 7 [9]",
+        url: "https://www.cnesst.gouv.qc.ca/sites/default/files/documents/labour-standards-quebec.pdf#page=7",
+        location: "p. 7",
+      },
     ],
   },
   {
@@ -932,8 +953,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$16.75/hour</strong> (effective April 1, 2026), rising to <strong>$17.00/hour</strong> on October 1, 2026<br/>Nova Scotia has a separate Minimum Wage Order for logging and forest operations that explicitly covers reforestation work. All work hours are paid portal to portal. <a href=\"#ns-ref-1\" class=\"citation-link\">[1]</a> Piece rates (per tree) must work out to at least minimum wage for the hours you worked — the only exemption is for workers paid by wood measurement (board feet or cords) under a written agreement. <a href=\"#ns-ref-1\" class=\"citation-link\">[1]</a>",
-          fr: "<strong>16,75 $/heure</strong> (en vigueur depuis le 1er avril 2026), passant à <strong>17,00 $/heure</strong> le 1er octobre 2026<br/>La Nouvelle-Écosse possède un décret sur le salaire minimum distinct pour les opérations forestières qui couvre explicitement le travail de reboisement. Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#ns-ref-1\" class=\"citation-link\">[1]</a> Les tarifs à la pièce (par arbre) doivent équivaloir au moins au salaire minimum pour les heures travaillées — la seule exemption vise les travailleurs payés selon le mesurage du bois (pieds-planche ou cordes) en vertu d'une entente écrite. <a href=\"#ns-ref-1\" class=\"citation-link\">[1]</a>",
+          en: "<strong>$16.75/hour</strong> (effective April 1, 2026), rising to <strong>$17.00/hour</strong> on October 1, 2026<br/>Nova Scotia has a separate Minimum Wage Order for logging and forest operations that explicitly covers reforestation work. <a href=\"#ns-ref-1\" class=\"citation-link\">[1]</a> Every hour you work must be paid at least the minimum rate: piece rates (per tree) must work out to at least minimum wage for the hours you worked — the only exemption is for workers paid by wood measurement (board feet or cords) under a written agreement. <a href=\"#ns-ref-1\" class=\"citation-link\">[1]</a>",
+          fr: "<strong>16,75 $/heure</strong> (en vigueur depuis le 1er avril 2026), passant à <strong>17,00 $/heure</strong> le 1er octobre 2026<br/>La Nouvelle-Écosse possède un décret sur le salaire minimum distinct pour les opérations forestières qui couvre explicitement le travail de reboisement. <a href=\"#ns-ref-1\" class=\"citation-link\">[1]</a> Chaque heure travaillée doit être payée au moins au taux minimum : les tarifs à la pièce (par arbre) doivent équivaloir au moins au salaire minimum pour les heures travaillées — la seule exemption vise les travailleurs payés selon le mesurage du bois (pieds-planche ou cordes) en vertu d'une entente écrite. <a href=\"#ns-ref-1\" class=\"citation-link\">[1]</a>",
         },
       },
       {
@@ -1069,8 +1090,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$16.00/hour</strong>, rising to <strong>$16.40/hour</strong> on October 1, 2026<br/>Manitoba's minimum wage is adjusted every October 1 based on inflation. All work hours are paid portal to portal. <a href=\"#mb-ref-1\" class=\"citation-link\">[1]</a>",
-          fr: "<strong>16,00 $/heure</strong>, passant à <strong>16,40 $/heure</strong> le 1er octobre 2026<br/>Le salaire minimum du Manitoba est ajusté chaque 1er octobre en fonction de l'inflation. Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#mb-ref-1\" class=\"citation-link\">[1]</a>",
+          en: "<strong>$16.00/hour</strong>, rising to <strong>$16.40/hour</strong> on October 1, 2026<br/>Manitoba's minimum wage is adjusted every October 1 based on inflation. <a href=\"#mb-ref-1\" class=\"citation-link\">[1]</a> You must be paid for all hours you work; if you report for a scheduled shift of 3 hours or more and are sent home early, you must still be paid for at least 3 hours. <a href=\"#mb-ref-6\" class=\"citation-link\">[6]</a>",
+          fr: "<strong>16,00 $/heure</strong>, passant à <strong>16,40 $/heure</strong> le 1er octobre 2026<br/>Le salaire minimum du Manitoba est ajusté chaque 1er octobre en fonction de l'inflation. <a href=\"#mb-ref-1\" class=\"citation-link\">[1]</a> Vous devez être payé pour toutes les heures travaillées ; si vous vous présentez pour un quart prévu de 3 heures ou plus et qu'on vous renvoie plus tôt, vous devez quand même être payé pour au moins 3 heures. <a href=\"#mb-ref-6\" class=\"citation-link\">[6]</a>",
         },
       },
       {
@@ -1083,8 +1104,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Deductions", fr: "Déductions" },
         content: {
-          en: "Employers can only deduct what is required by law (taxes, CPP, EI) or what you agree to in writing for things that directly benefit you. Deductions for <strong>equipment damage, faulty work, cash shortages, or uniforms are prohibited</strong>. Employers must provide personal protective equipment at no cost to workers. <a href=\"#mb-ref-3\" class=\"citation-link\">[3]</a>",
-          fr: "Les employeurs ne peuvent déduire que ce qui est exigé par la loi (impôts, RPC, AE) ou ce que vous acceptez par écrit pour des choses qui vous profitent directement. Les déductions pour <strong>dommages à l'équipement, travail défectueux, manques de caisse ou uniformes sont interdites</strong>. Les employeurs doivent fournir l'équipement de protection individuelle sans frais aux travailleurs. <a href=\"#mb-ref-3\" class=\"citation-link\">[3]</a>",
+          en: "Employers can only deduct what is required by law (taxes, CPP, EI) or what you agree to in writing for things that directly benefit you. Deductions for <strong>equipment damage, faulty work, cash shortages, or uniforms are prohibited</strong>. Employers must provide personal protective equipment at no cost to workers. <a href=\"#mb-ref-3\" class=\"citation-link\">[3]</a> There are exceptions for safety headwear and some safety footwear. Contact the Workplace Safety and Health Branch at 204-945-3446 or visit <a href=\"https://www.safemanitoba.com\">safemanitoba.com</a> for more information.",
+          fr: "Les employeurs ne peuvent déduire que ce qui est exigé par la loi (impôts, RPC, AE) ou ce que vous acceptez par écrit pour des choses qui vous profitent directement. Les déductions pour <strong>dommages à l'équipement, travail défectueux, manques de caisse ou uniformes sont interdites</strong>. Les employeurs doivent fournir l'équipement de protection individuelle sans frais aux travailleurs. <a href=\"#mb-ref-3\" class=\"citation-link\">[3]</a> Il existe des exceptions pour les casques de sécurité et certaines chaussures de sécurité. Communiquez avec la Direction de la sécurité et de l'hygiène du travail (Workplace Safety and Health Branch) au 204-945-3446 ou visitez <a href=\"https://www.safemanitoba.com\">safemanitoba.com</a> pour plus d'informations.",
         },
       },
       {
@@ -1144,14 +1165,19 @@ export const provinceRights: ProvinceRights[] = [
         title: "Manitoba — Workplace Safety and Health [5]",
         url: "https://www.gov.mb.ca/labour/safety/",
       },
+      {
+        id: "mb-ref-6",
+        title: "Manitoba — Employment Standards Factsheet: A Quick Guide (reporting pay) [6]",
+        url: "https://www.gov.mb.ca/labour/standards/doc,quick_guide,factsheet.html",
+      },
     ],
   },
   {
     slug: "new-brunswick",
     name: { en: "New Brunswick", fr: "Nouveau-Brunswick" },
     intro: {
-      en: "In New Brunswick, workers are protected by the Employment Standards Act. Tree planters should note that overtime in New Brunswick is calculated at 1.5 times the minimum wage — not your regular wage — one of the weakest overtime standards in the country.",
-      fr: "Au Nouveau-Brunswick, les travailleurs sont protégés par la Loi sur les normes d'emploi. Les planteurs d'arbres doivent savoir que les heures supplémentaires au Nouveau-Brunswick sont calculées à 1,5 fois le salaire minimum — et non votre salaire régulier — l'une des normes d'heures supplémentaires les plus faibles au pays.",
+      en: "In New Brunswick, workers are protected by the Employment Standards Act. Tree planters should note that overtime in New Brunswick is calculated at 1.5 times the minimum wage — not your regular wage.",
+      fr: "Au Nouveau-Brunswick, les travailleurs sont protégés par la Loi sur les normes d'emploi. Les planteurs d'arbres doivent savoir que les heures supplémentaires au Nouveau-Brunswick sont calculées à 1,5 fois le salaire minimum — et non votre salaire régulier.",
     },
     governmentLinks: [
       {
@@ -1216,8 +1242,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$15.90/hour</strong> (effective April 1, 2026), adjusted each April based on the Consumer Price Index<br/>All employees paid by salary, commission, or <strong>piece work</strong> must receive at least minimum wage for every hour worked. All work hours are paid portal to portal. <a href=\"#nb-ref-1\" class=\"citation-link\">[1]</a>",
-          fr: "<strong>15,90 $/heure</strong> (en vigueur depuis le 1er avril 2026), ajusté chaque avril selon l'Indice des prix à la consommation<br/>Tous les employés payés au salaire, à la commission ou <strong>à la pièce</strong> doivent recevoir au moins le salaire minimum pour chaque heure travaillée. Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#nb-ref-1\" class=\"citation-link\">[1]</a>",
+          en: "<strong>$15.90/hour</strong> (effective April 1, 2026), adjusted each April based on the Consumer Price Index<br/>All employees paid by salary, commission, or <strong>piece work</strong> must receive at least minimum wage for every hour worked. <a href=\"#nb-ref-1\" class=\"citation-link\">[1]</a>",
+          fr: "<strong>15,90 $/heure</strong> (en vigueur depuis le 1er avril 2026), ajusté chaque avril selon l'Indice des prix à la consommation<br/>Tous les employés payés au salaire, à la commission ou <strong>à la pièce</strong> doivent recevoir au moins le salaire minimum pour chaque heure travaillée. <a href=\"#nb-ref-1\" class=\"citation-link\">[1]</a>",
         },
       },
       {
@@ -1346,8 +1372,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$17.00/hour</strong> (effective April 1, 2026), rising to <strong>$17.30/hour</strong> on October 1, 2026 — the highest minimum wage in Atlantic Canada. All work hours are paid portal to portal. <a href=\"#pei-ref-1\" class=\"citation-link\">[1]</a>",
-          fr: "<strong>17,00 $/heure</strong> (en vigueur depuis le 1er avril 2026), passant à <strong>17,30 $/heure</strong> le 1er octobre 2026 — le salaire minimum le plus élevé du Canada atlantique. Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#pei-ref-1\" class=\"citation-link\">[1]</a>",
+          en: "<strong>$17.00/hour</strong> (effective April 1, 2026), rising to <strong>$17.30/hour</strong> on October 1, 2026 — the highest minimum wage in Atlantic Canada. Every employee must be paid at least the minimum wage for every hour worked, with overtime pay for additional hours. <a href=\"#pei-ref-1\" class=\"citation-link\">[1]</a>",
+          fr: "<strong>17,00 $/heure</strong> (en vigueur depuis le 1er avril 2026), passant à <strong>17,30 $/heure</strong> le 1er octobre 2026 — le salaire minimum le plus élevé du Canada atlantique. Chaque employé doit recevoir au moins le salaire minimum pour chaque heure travaillée, avec une rémunération des heures supplémentaires pour les heures additionnelles. <a href=\"#pei-ref-1\" class=\"citation-link\">[1]</a>",
         },
       },
       {
@@ -1401,8 +1427,8 @@ export const provinceRights: ProvinceRights[] = [
       },
       {
         id: "pei-ref-3",
-        title: "PEI Employment Standards Act (PDF, new Act in force June 30, 2026) [3]",
-        url: "https://www.princeedwardisland.ca/sites/default/files/legislation/e-06-2-employment_standards_act.pdf",
+        title: "PEI Employment Standards Act (RSPEI 1988, c E-6.3, new Act in force June 30, 2026) [3]",
+        url: "https://www.princeedwardisland.ca/en/legislation/employment-standards-act",
       },
     ],
   },
@@ -1476,8 +1502,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$16.35/hour</strong> (effective April 1, 2026), adjusted each April 1 based on the national Consumer Price Index<br/>All work hours are paid portal to portal. <a href=\"#nl-ref-1\" class=\"citation-link\">[1]</a> Employers must pay you at least twice a month, within 7 days of the end of the pay period.",
-          fr: "<strong>16,35 $/heure</strong> (en vigueur depuis le 1er avril 2026), ajusté chaque 1er avril selon l'Indice des prix à la consommation national<br/>Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#nl-ref-1\" class=\"citation-link\">[1]</a> Les employeurs doivent vous payer au moins deux fois par mois, dans les 7 jours suivant la fin de la période de paie.",
+          en: "<strong>$16.35/hour</strong> (effective April 1, 2026), adjusted each April 1 based on the national Consumer Price Index<br/>You must be paid at least minimum wage for every hour you work. <a href=\"#nl-ref-1\" class=\"citation-link\">[1]</a> Employers must pay you at least twice a month, within 7 days of the end of the pay period.",
+          fr: "<strong>16,35 $/heure</strong> (en vigueur depuis le 1er avril 2026), ajusté chaque 1er avril selon l'Indice des prix à la consommation national<br/>Vous devez recevoir au moins le salaire minimum pour chaque heure travaillée. <a href=\"#nl-ref-1\" class=\"citation-link\">[1]</a> Les employeurs doivent vous payer au moins deux fois par mois, dans les 7 jours suivant la fin de la période de paie.",
         },
       },
       {
@@ -1497,8 +1523,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Vacation Pay", fr: "Indemnité de vacances" },
         content: {
-          en: "Workers are entitled to <strong>4% vacation pay</strong>, with 2 weeks of annual vacation after 12 months of continuous service (if you worked at least 90% of available working hours). Vacation pay increases to <strong>6% and 3 weeks</strong> only after <strong>15 years</strong> with the same employer — the longest threshold in Canada. Vacation pay should be clearly indicated on pay stubs. <a href=\"#nl-ref-2\" class=\"citation-link\">[2]</a><a href=\"#nl-ref-3\" class=\"citation-link\">[3]</a>",
-          fr: "Les travailleurs ont droit à une <strong>indemnité de vacances de 4 %</strong>, avec 2 semaines de vacances annuelles après 12 mois de service continu (si vous avez travaillé au moins 90 % des heures de travail disponibles). L'indemnité ne passe à <strong>6 % et 3 semaines</strong> qu'après <strong>15 ans</strong> chez le même employeur — le seuil le plus long au Canada. Cela doit être clairement indiqué sur les talons de paie. <a href=\"#nl-ref-2\" class=\"citation-link\">[2]</a><a href=\"#nl-ref-3\" class=\"citation-link\">[3]</a>",
+          en: "Workers are entitled to <strong>4% vacation pay</strong>, with 2 weeks of annual vacation after 12 months of continuous service (if you worked at least 90% of normal working hours). Vacation pay increases to <strong>6% and 3 weeks</strong> only after <strong>15 years</strong> with the same employer — the longest threshold in Canada. Vacation pay should be clearly indicated on pay stubs. <a href=\"#nl-ref-2\" class=\"citation-link\">[2]</a><a href=\"#nl-ref-3\" class=\"citation-link\">[3]</a>",
+          fr: "Les travailleurs ont droit à une <strong>indemnité de vacances de 4 %</strong>, avec 2 semaines de vacances annuelles après 12 mois de service continu (si vous avez travaillé au moins 90 % des heures normales de travail). L'indemnité ne passe à <strong>6 % et 3 semaines</strong> qu'après <strong>15 ans</strong> chez le même employeur — le seuil le plus long au Canada. Cela doit être clairement indiqué sur les talons de paie. <a href=\"#nl-ref-2\" class=\"citation-link\">[2]</a><a href=\"#nl-ref-3\" class=\"citation-link\">[3]</a>",
         },
       },
       {
