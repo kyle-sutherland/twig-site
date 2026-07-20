@@ -131,14 +131,33 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="py-12 lg:py-16">
               <div className="pb-4">
-                <p className="heading md:text-7xl pb-2">
-                  WANT TO BECOME A MEMBER?
-                </p>
-                <p className="text-lg">
-                  Have questions about... blah blah blah let's get in touch
-                  about it! Some one will reach out to within a week or an
-                  undetermined about of time in the planting season
-                </p>
+                <Bilingual
+                  en={
+                    <>
+                      <p className="heading md:text-7xl pb-2">
+                        WANT TO BECOME A MEMBER?
+                      </p>
+                      <p className="text-lg">
+                        Have questions about... blah blah blah let's get in touch
+                        about it! Some one will reach out to within a week or an
+                        undetermined about of time in the planting season
+                      </p>
+                    </>
+                  }
+                  fr={
+                    <>
+                      <p className="heading md:text-7xl pb-2">
+                        VOUS VOULEZ DEVENIR MEMBRE?
+                      </p>
+                      <p className="text-lg">
+                        Vous avez des questions à propos de... bla bla bla,
+                        parlons-en! Quelqu'un vous recontactera dans un délai
+                        d'une semaine, ou un délai indéterminé selon la saison
+                        de plantation.
+                      </p>
+                    </>
+                  }
+                />
               </div>
               <div className="flex flex-col lg:flex-row lg:space-x-10 space-x-4 space-y-4">
                 <div className="lg:w-1/2">
