@@ -8,6 +8,7 @@ interface PDFCardProps {
   title: string;
   titleFr?: string;
   description: string;
+  descriptionFr?: string;
   pdfUrl: string;
   pdfUrlFr?: string;
   fileSize: string;
@@ -21,6 +22,7 @@ export default function PDFCard({
   title,
   titleFr,
   description,
+  descriptionFr,
   pdfUrl,
   pdfUrlFr,
   fileSize,
@@ -30,6 +32,7 @@ export default function PDFCard({
   const { lang } = useLang();
 
   const displayTitle = lang === "fr" && titleFr ? titleFr : title;
+  const displayDescription = lang === "fr" && descriptionFr ? descriptionFr : description;
   const displayPdfUrl = lang === "fr" && pdfUrlFr ? pdfUrlFr : pdfUrl;
   const displayFileSize = lang === "fr" && fileSizeFr ? fileSizeFr : fileSize;
 
@@ -49,7 +52,7 @@ export default function PDFCard({
           <div className="absolute inset-0 flex items-start justify-center overflow-hidden pointer-events-none">
             <div className="translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out w-full h-full bg-black/70 flex items-start justify-center pt-6 px-6">
               <div className="text-center">
-                <p className="text-white text-sm mb-4">{description}</p>
+                <p className="text-white text-sm mb-4">{displayDescription}</p>
                 <p className="text-white/80 text-xs mb-4">
                   File size: {displayFileSize}
                 </p>

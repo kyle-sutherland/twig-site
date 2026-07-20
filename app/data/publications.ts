@@ -6,6 +6,7 @@ export interface Publication {
   issue?: number;
   year: number;
   description: string;
+  descriptionFr?: string;
   coverImage: string;
   pdfUrl: string;
   pdfUrlFr?: string;
@@ -87,6 +88,8 @@ export const publications: Publication[] = [
     year: 2025,
     description:
       "A comprehensive manual for unskilled labour in the tree planting industry, available in both English and French.",
+    descriptionFr:
+      "Un manuel complet pour le travail non qualifié dans l'industrie de la plantation d'arbres, disponible en anglais et en français.",
     coverImage: "/covers/manualof-unskilled-labour-cover.jpg",
     pdfUrl: "/pdfs/manual-of-unskilled-labour.pdf",
     pdfUrlFr: "/pdfs/manuel-du-travail-non-qualifie-francais-pdf-lisible.pdf",

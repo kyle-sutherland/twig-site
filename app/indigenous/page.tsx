@@ -57,6 +57,25 @@ export default function IndigenousSolidarityPage() {
                   véritable solidarité ouvrière doit inclure la solidarité avec les
                   peuples autochtones dont nous travaillons sur les terres.
                 </p>
+                <p className="text-lg mb-6">
+                  TWIG s'engage à :
+                </p>
+                <ul className="list-disc list-inside text-lg space-y-3 ml-4 mb-8">
+                  <li>Soutenir la souveraineté autochtone et les droits territoriaux</li>
+                  <li>
+                    Sensibiliser les travailleuses et travailleurs forestiers à
+                    l'histoire coloniale de la foresterie
+                  </li>
+                  <li>
+                    Respecter les protocoles autochtones et les relations au territoire
+                  </li>
+                  <li>
+                    Amplifier les voix autochtones en matière de justice environnementale
+                  </li>
+                  <li>
+                    Bâtir des relations réciproques avec les communautés autochtones
+                  </li>
+                </ul>
               </>
             }
           />
@@ -69,9 +88,14 @@ export default function IndigenousSolidarityPage() {
             <Bilingual en="Resource" fr="Ressource" />
           </h2>
           <p className="text-gray-900 text-lg mb-8 text-center">
-            Download our Indigenous Solidarity zine to learn more about the
-            intersection of worker rights and Indigenous sovereignty in the
-            forestry industry.
+            <Bilingual
+              en="Download our Indigenous Solidarity zine to learn more about the
+              intersection of worker rights and Indigenous sovereignty in the
+              forestry industry."
+              fr="Téléchargez notre zine Solidarité Autochtone pour en apprendre
+              davantage sur les liens entre la solidarité ouvrière et la
+              souveraineté autochtone dans l'industrie sylvicole."
+            />
           </p>
           <div className="flex justify-center">
             <div className="max-w-sm">
@@ -79,6 +103,7 @@ export default function IndigenousSolidarityPage() {
                 coverImage="/logo/twig-logo-transparent-white.png"
                 title="Indigenous Solidarity 2021"
                 description="A resource exploring the connections between worker solidarity and Indigenous land rights in the silviculture industry."
+                descriptionFr="Une ressource explorant les liens entre la solidarité ouvrière et les droits territoriaux autochtones dans l'industrie sylvicole. (Ce document n'est actuellement disponible qu'en anglais.)"
                 pdfUrl="/pdfs/indigenous-solidarity-2021.pdf"
                 fileSize="4.2 MB"
               />
@@ -89,18 +114,41 @@ export default function IndigenousSolidarityPage() {
 
       <ContentSection variant="green">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="heading text-3xl md:text-4xl mb-6">Learn More</h2>
-          <p className="text-lg mb-6">
-            Indigenous solidarity is an ongoing commitment that requires
-            listening, learning, and taking action. If you want to get involved
-            or learn more about TWIG's Indigenous solidarity work, get in touch.
-          </p>
-          <a
-            href="mailto:treeworkersindustrialgroup@gmail.com"
-            className="inline-block bg-white/0 outline-2 px-8 py-4 text-xl outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
-          >
-            Contact Us
-          </a>
+          <Bilingual
+            en={
+              <>
+                <h2 className="heading text-3xl md:text-4xl mb-6">Learn More</h2>
+                <p className="text-lg mb-6">
+                  Indigenous solidarity is an ongoing commitment that requires
+                  listening, learning, and taking action. If you want to get involved
+                  or learn more about TWIG's Indigenous solidarity work, get in touch.
+                </p>
+                <a
+                  href="mailto:treeworkersindustrialgroup@gmail.com"
+                  className="inline-block bg-white/0 outline-2 px-8 py-4 text-xl outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
+                >
+                  Contact Us
+                </a>
+              </>
+            }
+            fr={
+              <>
+                <h2 className="heading text-3xl md:text-4xl mb-6">En savoir plus</h2>
+                <p className="text-lg mb-6">
+                  La solidarité autochtone est un engagement continu qui exige
+                  l'écoute, l'apprentissage et l'action. Si vous souhaitez vous
+                  impliquer ou en apprendre davantage sur le travail de solidarité
+                  autochtone de TWIG, contactez-nous.
+                </p>
+                <a
+                  href="mailto:treeworkersindustrialgroup@gmail.com"
+                  className="inline-block bg-white/0 outline-2 px-8 py-4 text-xl outline-offset-0 outline-white hover:text-slate-950 hover:bg-white transition-colors"
+                >
+                  Contactez-nous
+                </a>
+              </>
+            }
+          />
         </div>
       </ContentSection>
     </main>
