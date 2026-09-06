@@ -20,7 +20,7 @@ export default function ZinesPage() {
           en: 'Fireweed Publications',
           fr: 'Publications Fireweed',
         }}
-        backgroundImage='/photo/njbc.png'
+        backgroundImage='/photo/IMG_7836-EDIT.jpg'
       />
 
       <ContentSection variant='grey'>
