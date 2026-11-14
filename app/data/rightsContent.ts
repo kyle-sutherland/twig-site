@@ -119,8 +119,8 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Minimum Wage", fr: "Salaire minimum" },
         content: {
-          en: "<strong>$18.25/hour</strong> (effective June 1, 2026), adjusted every June 1 based on BC's average inflation<br/>All work hours are paid portal to portal. <a href=\"#bc-ref-5\" class=\"citation-link\">[5]</a> If you are paid piece rates, your earnings each pay period must average at least minimum wage for all hours worked — employers must top up any shortfall and cannot offset it against better pay periods.",
-          fr: "<strong>18,25 $/heure</strong> (en vigueur depuis le 1er juin 2026), ajusté chaque 1er juin selon l'inflation moyenne de la C.-B.<br/>Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#bc-ref-5\" class=\"citation-link\">[5]</a> Si vous êtes payé à la pièce, vos gains de chaque période de paie doivent équivaloir au moins au salaire minimum pour toutes les heures travaillées — l'employeur doit combler tout écart et ne peut pas le compenser avec de meilleures périodes de paie.",
+          en: "<strong>$18.25/hour</strong> (effective June 1, 2026), adjusted every June 1 based on BC's average inflation<br/>All work hours are paid portal to portal. <a href=\"#bc-ref-5\" class=\"citation-link\">[5]</a> If you are paid piece rates, your earnings each pay period must average at least minimum wage for all hours worked — employers must top up any shortfall and cannot offset it against better pay periods. The worker is entitled to either the total of their piece rate or the total of the their hourly wages, whichever is greater.",
+          fr: "<strong>18,25 $/heure</strong> (en vigueur depuis le 1er juin 2026), ajusté chaque 1er juin selon l'inflation moyenne de la C.-B.<br/>Toutes les heures de travail sont rémunérées du début à la fin de la période de travail (« portail à portail »). <a href=\"#bc-ref-5\" class=\"citation-link\">[5]</a> Si vous êtes payé à la pièce, vos gains de chaque période de paie doivent équivaloir au moins au salaire minimum pour toutes les heures travaillées — l'employeur doit combler tout écart et ne peut pas le compenser avec de meilleures périodes de paie.", //TODO: complete translation
         },
       },
       {
@@ -147,7 +147,7 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "Deductions", fr: "Déductions" },
         content: {
-          en: "Employers cannot deduct their business costs from your wages — including equipment damage, production mistakes, or missing gear. Any permitted deduction requires proper authorization and must appear on your pay stub. Employers cannot make deductions for equipment damage, production mistakes, or other arbitrary reasons. <a href=\"#bc-ref-2\" class=\"citation-link\">[2]</a>",
+          en: "Employers cannot deduct their business costs from your wages — including equipment damage, production mistakes, or missing gear. Any permitted deduction requires proper authorization and must appear on your pay stub. Employers cannot make deductions for equipment damage, production mistakes, overclaim, quality fines, or other arbitrary reasons. <a href=\"#bc-ref-2\" class=\"citation-link\">[2]</a>", //TODO: Complete translation
           fr: "Les employeurs ne peuvent pas déduire leurs coûts d'entreprise de votre salaire — y compris les dommages à l'équipement, les erreurs de production ou le matériel manquant. Toute déduction permise nécessite une autorisation appropriée et doit figurer sur votre talon de paie. Les employeurs ne peuvent pas effectuer de déductions pour des dommages à l'équipement, des erreurs de production ou d'autres motifs arbitraires. <a href=\"#bc-ref-2\" class=\"citation-link\">[2]</a>",
         },
       },
@@ -168,7 +168,7 @@ export const provinceRights: ProvinceRights[] = [
       {
         title: { en: "WorkSafeBC", fr: "WorkSafeBC" },
         content: {
-          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact WorkSafeBC. All workers have the right to refuse unsafe work. If you're injured on the job, see WorkSafeBC's guidance on how to report it. <a href=\"#bc-ref-1\" class=\"citation-link\">[1]</a>",
+          en: "For health and safety concerns including illness, injury, unsafe work refusal, harassment, and sanitation issues, contact WorkSafeBC. All workers have the right to refuse unsafe work. If you're injured on the job, see WorkSafeBC's guidance on how to report it. <a href=\"#bc-ref-1\" class=\"citation-link\">[1]</a>Where possible, workers should first raise health and safety concerns through their Joint Health and Safety Committee, worker health and safety representative, or employer, giving the employer an opportunity to investigate and address the issue before escalating it to WorkSafeBC. If the employer fails to investigate or adequately address the concern, workers can then bring the issue to WorkSafeBC.", //TODO: Complete translation
           fr: "Pour les préoccupations de santé et de sécurité, y compris les maladies, les blessures, le refus de travail dangereux, le harcèlement et les problèmes d'assainissement, communiquez avec WorkSafeBC. Tous les travailleurs ont le droit de refuser un travail dangereux. Si vous êtes blessé au travail, consultez les instructions de WorkSafeBC sur la façon de le signaler. <a href=\"#bc-ref-1\" class=\"citation-link\">[1]</a>",
         },
       },
